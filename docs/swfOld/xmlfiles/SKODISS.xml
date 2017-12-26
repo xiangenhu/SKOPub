@@ -1,0 +1,36 @@
+<DISS play="" UID="">
+  <Discussion play="" UID="">
+    <DiscussionItem Response="Y/N" play="" UID="">
+      <teacherRespond ResponseBy="Teacher" play="Msg_3_0_0_0" UID="Msg_3_0_0_0">Type Feedback Here</teacherRespond>
+      <avatarSay avatar="Student1" play="Msg_3_0_0_1" UID="Msg_3_0_0_1">Type Answer Here</avatarSay>
+    </DiscussionItem>
+    <DiscussionItem Response="Y/N" play="" UID="">
+      <teacherRespond ResponseBy="Teacher" play="Msg_3_0_1_0" UID="Msg_3_0_1_0">Type Feedback Here</teacherRespond>
+      <avatarSay avatar="Student1" play="Msg_3_0_1_1" UID="Msg_3_0_1_1">Type Answer Here</avatarSay>
+    </DiscussionItem>
+    <DiscussionItem Response="Y/N" play="" UID="">
+      <teacherRespond ResponseBy="Teacher" play="Msg_3_0_2_0" UID="Msg_3_0_2_0">Type Feedback Here</teacherRespond>
+      <avatarSay avatar="Student1" play="Msg_3_0_2_1" UID="Msg_3_0_2_1">Type Answer Here</avatarSay>
+    </DiscussionItem>
+  </Discussion>
+  <ITEM type="scene" play="" UID="">
+    <TITLE play="" UID=""><![CDATA[This is a test]]></TITLE>
+    <NOTES play="" UID=""><![CDATA[]]></NOTES>
+    <mattextS play="Msg_3_1_2" UID="Msg_3_1_2"><![CDATA[Hello]]></mattextS>
+    <mattextR play="" UID=""><![CDATA[]]></mattextR>
+    <mattextD play="" UID=""><![CDATA[]]></mattextD>
+    <PageConfig play="" UID="">
+      <BKIMG play="" UID=""><![CDATA[]]></BKIMG>
+      <CompLocation X="0" Y="0" play="" UID=""/>
+      <AVATAR Teacher="" Student1="" Student2="" Student3="" useStudent1="false" useStudent2="false" useStudent3="false" showStudent1="true" showStudent2="true" showStudent3="true" showTeacher="true" TX="0" S1X="0" S2X="0" S3X="0" TY="0" S1Y="0" S2Y="0" S3Y="0" useTeacher="true" TeacherPub="" Student1Pub="" Student2Pub="" Student3Pub="" play="" UID=""/>
+      <MediaURLXML play="" UID=""></MediaURLXML>
+      <mediaTypeXML play="" UID="">MovieOnly</mediaTypeXML>
+      <SKOMsg play="" UID=""/>
+      <POPChoice Title="" Message="" enabled="false" play="" UID=""/>
+      <UseAIML play="" UID="">0</UseAIML>
+      <AllowBookMark play="" UID="">0</AllowBookMark>
+      <PlayStyle delay="10" play="" UID="">auto</PlayStyle>
+      <EnableBigImage play="" UID="">0</EnableBigImage>
+    </PageConfig>
+  </ITEM>
+</DISS>

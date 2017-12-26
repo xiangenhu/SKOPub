@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LCCFeedBack>
+	<POSF>
+		<PF>
+		Excellent!
+		</PF>
+		<PF>
+		Great!
+		</PF>
+		<PF>
+		Perfect!
+		</PF>
+		<PF>
+		Well done!
+		</PF>
+		<PF>
+		Great job!
+		</PF>
+		<PF>
+		Good job!
+		</PF>
+		<PF>
+		Excellent answer!
+		</PF>
+		<PF>
+		Right.
+		</PF>
+		<PF>
+		Very good.
+		</PF>
+		<PF>
+		Nice job!
+		</PF>
+		<PF>
+		Good answer!
+		</PF>
+	</POSF>
+	<NEGF>
+		<NF>
+		No, that's incorrect
+		</NF>
+		<NF>
+		No.
+		</NF>
+		<NF>	
+		Well, I don't think that's quite right.
+		</NF>
+		<NF>	
+		Not quite.
+		</NF>
+		<NF>	
+		That is not quite right.
+		</NF>
+		<NF>	
+		Um, sorry, not quite.
+		</NF>
+		<NF>	
+		That's not quite it.
+		</NF>
+		<NF>	
+		No, that's not the right answer.
+		</NF>
+		<NF>	
+		No, that's not the correct answer.
+		</NF>
+		<NF>	
+		No, you are on the wrong track.
+		</NF>
+		<NF>	
+		Not really.
+		</NF>
+		<NF>	
+		Um, that's not completely correct.
+		</NF>
+	</NEGF>
+	<NEUF>
+		<NUF>
+		okay. but can you give me a little more on that?
+		</NUF>
+		<NUF>
+		Alright, but please give me a little more on this. 
+		</NUF>
+		<NUF>
+		Kind of,but there is a little more you can add.
+		</NUF>
+		<NUF>
+		Yeah, but we need to try to cover a few more points
+		</NUF>
+		<NUF>
+		Almost there, Just give me a little more
+		</NUF>
+	</NEUF>
+</LCCFeedBack> 

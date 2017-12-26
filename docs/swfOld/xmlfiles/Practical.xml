@@ -1,0 +1,620 @@
+﻿<AutoTutorScript xmlns="">
+  <Agents>
+    <Agent name="Student" gender="Male" title="" firstName="Student" lastName="B" displayName="Student">
+      <SpeechCan name="PositiveFeedback">
+        <Item text="That is what I thought!" speech=" " />
+        <Item text="I agree!" speech=" " />
+        <Item text="Yeah!" speech=" " />
+        <Item text="I think so too." speech=" " />
+        <Item text="That is my answer." speech=" " />
+        <Item text="You look smart." speech=" " />
+      </SpeechCan>
+      <SpeechCan name="MetaComRsp">
+        <Item text="Once again." speech=" " />
+        <Item text="Once more." speech=" " />
+        <Item text="Let me say that again." speech=" " />
+        <Item text="Let me repeat." speech=" " />
+        <Item text="Okay." speech=" " />
+      </SpeechCan>
+      <SpeechCan name="PromptStart">
+        <Item text="I think the answer is something like this." speech=" " />
+        <Item text="I think I know a part of the answer. " speech=" " />
+      </SpeechCan>
+      <SpeechCan name="Pump">
+        <Item text="And can you tell me more?" speech=" " />
+        <Item text="What else?" speech=" " />
+        <Item text="Anything else?" speech=" " />
+        <Item text="Is there anything else about that?" speech=" " />
+        <Item text="Alright. Could you elaborate on that a little?" speech=" " />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedback">
+        <Item text="I'm not so sure about that." speech=" " />
+        <Item text="I don't think so." speech=" " />
+        <Item text="I don't think that is right." speech=" " />
+      </SpeechCan>
+      <SpeechCan name="NeutralFeedback">
+        <Item text="Okay." speech=" " />
+        <Item text="Alright." speech=" " />
+        <Item text="OK." speech=" " />
+      </SpeechCan>
+      <SpeechCan name="MetaCogRsp">
+        <Item text="Come on, I'm sure you can tell me something." speech=" " />
+        <Item text="Come on, give me what you know." speech=" " />
+        <Item text="Could you at least try to give me an answer?  I really need your help." speech=" " />
+      </SpeechCan>
+      <SpeechCan name="HintStart">
+        <Item text="I have a question." speech=" " />
+        <Item text="Maybe you can help me." speech=" " />
+      </SpeechCan>
+    </Agent>
+    <Agent name="Tutor" gender="Female" title="Dr." firstName="Tutor" lastName="A" displayName="Tutor">
+      <SpeechCan name="PositiveFeedback">
+        <Item text="That is what I thought!" speech=" " />
+        <Item text="I agree!" speech=" " />
+        <Item text="I agree!" speech=" " />
+        <Item text="Yeah!" speech=" " />
+        <Item text="Great!" speech=" " />
+        <Item text="Nice job!" speech=" " />
+        <Item text="Perfect!" speech=" " />
+        <Item text="Good answer." speech=" " />
+        <Item text="Good job!" speech=" " />
+        <Item text="Good." speech=" " />
+        <Item text="Right." speech=" " />
+        <Item text="Excellent." speech=" " />
+        <Item text="Brilliant!" speech=" " />
+        <Item text="Yeah, that's right." speech=" " />
+      </SpeechCan>
+      <SpeechCan name="MetaComRsp">
+        <Item text="Once again." speech=" " />
+        <Item text="Once more." speech=" " />
+        <Item text="Let me say that again." speech=" " />
+        <Item text="Let me repeat." speech=" " />
+        <Item text="Okay." speech=" " />
+      </SpeechCan>
+      <SpeechCan name="PromptStart">
+        <Item text="I bet you know this." speech=" " />
+        <Item text="Try this." speech=" " />
+        <Item text="I bet you can get this." speech=" " />
+        <Item text="See if you can get this." speech=" " />
+        <Item text="Let's try this." speech=" " />
+        <Item text="I bet you can get this." speech=" " />
+        <Item text="See if you know the answer to this." speech=" " />
+        <Item text="I bet you know the answer to this." speech=" " />
+        <Item text="I think you can get this." speech=" " />
+        <Item text="I am sure you can get this." speech=" " />
+        <Item text="What about this." speech=" " />
+      </SpeechCan>
+      <SpeechCan name="PumpBlank">
+        <Item text="Do you need more time to think about it?" speech=" " />
+      </SpeechCan>
+      <SpeechCan name="Pump">
+        <Item text="And can you add to that?" speech=" " />
+        <Item text="What else?" speech=" " />
+        <Item text="Um,anything else?" speech=" " />
+        <Item text="Um, what else can you say about it?" speech=" " />
+        <Item text="Um, can you add anything to that?" speech=" " />
+        <Item text="Is there anything you can add to this?" speech=" " />
+        <Item text="Okay, I'm sure you can say more about this." speech=" " />
+        <Item text="And can you add to that?" speech=" " />
+        <Item text="Alright. Could you elaborate on that a little?" speech="" />
+      </SpeechCan>
+      <SpeechCan name="NegativeFeedback">
+        <Item text="No." speech=" " />
+        <Item text="Not really." speech="" />
+        <Item text="That's not right." speech="" />
+        <Item text="That's wrong." speech="" />
+      </SpeechCan>
+      <SpeechCan name="NeutralFeedback">
+        <Item text="Alright." speech=" " />
+        <Item text="All right." speech=" " />
+        <Item text="OK." speech=" " />
+      </SpeechCan>
+      <SpeechCan name="MetaCogRsp">
+        <Item text="Let's work through it together." speech=" " />
+        <Item text="Come on, I'm sure you can tell me something." speech=" " />
+        <Item text="I bet you have something to say that could answer at least part of the question." speech=" " />
+        <Item text="Come on, give me what you know, and we'll go from there." speech=" " />
+        <Item text="Could you at least try to give me an answer?  That way, we'll have something as a starting place to work from." speech=" " />
+        <Item text="If you give me some answer, we can start building from there." speech=" " />
+        <Item text="Try to answer, so that we have a starting point from which to build." speech=" " />
+        <Item text="If you give me some sort of an answer, we can at least start from there and build." speech=" " />
+      </SpeechCan>
+      <SpeechCan name="IrrelRsp">
+        <Item text="What you said is not relevant to our conversation." speech=" " />
+      </SpeechCan>
+      <SpeechCan name="HintStart">
+        <Item text="This might help." speech=" " />
+        <Item text="Consider this." speech=" " />
+        <Item text="Think about this. " speech=" " />
+        <Item text="Look at it this way." speech=" " />
+        <Item text="Let me help you a little." speech=" " />
+        <Item text="Let's try this together." speech=" " />
+        <Item text="Let me help you, here." speech=" " />
+      </SpeechCan>
+    </Agent>
+  </Agents>
+  <SpeechActs>
+    <SpeechAct name="MetaCog">\b(believed?|comprehend(ed)?|confus(ed)?|explained|follow(ed)?|guess(ed)?|imagined?|interpret(ed)?|known?|knew|know|messed|recogniz(ed)?|seen?|saw|suppos(ed)?|sure|idea|clue|lost|[Ff]orgot|confused|help|think|get|thought|understand|understood)\b</SpeechAct>
+    <SpeechAct name="MetaCom">\b([|add|added|[Aa]nswer|answered|[Cc]larify|clarified|miss|missed|modify|modified|note|noted|[Rr]epeat|repeated|[Rr]estate|[Rr]ephrase|[Ee]laborate|[Ee]xplain|restated|[Ss]ay|said|saying|speak|spoken|ask|wait|pardon|excuse|speaking|specify|[Ss]pecific|specified|[Tt]ell|told|telling|[Qq]uestion)\b</SpeechAct>
+    <SpeechAct name="Yes">\b([Yy]es|[Yy]ep|[Yy]eah|[Yy]a|[Dd]efinitely|[Aa]ffirmative|[Oo]kay|[Hh]mm|[Oo]k|mm|um)\b</SpeechAct>
+    <SpeechAct name="No">\b([Nn]o|[Nn]ope|[Nn]ah?|[Nn]ot|[Nn]egative|[Nn]O)\b</SpeechAct>
+  </SpeechActs>
+  <RigidPacks>
+    <RigidPack name="Closing" usedIn="">
+      <Item id="1" agent="Student" text="I did not realize that this problem requires such a deep reasoning." speech="\lookleft\ I did not realize that this problem requires such a deep reasoning." />
+      <Item id="2" agent="Tutor" text="I am glad you realized that now." speech="I am glad you realized that now." />
+    </RigidPack>
+    <RigidPack name="Opening" usedIn="">
+      <Item id="1" agent="Student" text="The video is paused." speech="\lookleft\ The video is paused." />
+      <Item id="2" agent="Tutor" text="Do you see that pack is released?" speech="\lookright\ Do you see that pack is released?" />
+      <Item id="3" agent="Student" text="Yes, I do." speech="\nod\ Yes, I do." />
+      <Item id="4" agent="Tutor" text="_user_ and _Student_, I am going to ask you about the pack." speech="_user_ and _Student_, I am going to ask you about the pack." />
+    </RigidPack>
+  </RigidPacks>
+  <TutoringPacks>
+    <TutoringPack name="TP1">
+      <Questions>
+        <Question id="1" agent="Tutor" text="The airplane was flying horizontally and dropped the packet right above the target. Will the packet hit the target? Explain." speech="" media="">
+          <Answers>
+            <Answer name="IdealAnswer" agent="Tutor" type="Good" text="After the packet is released, the only force acting on the packet will be gravity. There will be no horizontal force on the packet. Therefore, the packet will continue with a constant horizontal velocity, same as the airplane at the time of release. When the packet touches the ground, the packet will have travelled the same horizontal distance as the airplane. So, the packet will miss the target by the distance it covers horizontally.&#xD;&#xA;" speech="" keys="\bforce\b, \bgravity\b|\bvertical\b|\bdown, \bno horizontal force\b|nt horizontal force|zero horizontal force|horizontal force is zero, constant|same, horizontal velocity, miss the target| nt hit the target|not hit the target|n't the target" threshold="0.9" />
+          </Answers>
+        </Question>
+      </Questions>
+      <Expectations>
+        <Expectation id="1" text="The packet has a horizontal velocity same as the airplane at the time of release.">
+          <Answers>
+            <Answer name="GoodExpAnswerByTutor" agent="Tutor" type="Good" text="The packet has a horizontal velocity same as the airplane at the time of release." speech="" keys="same|equal, horizontal velocity" threshold="" />
+          </Answers>
+          <Hints>
+            <Hint id="1" agent="Tutor" text="What can you say about the packet's velocity at the point of release?" speech="" media="">
+              <Answers>
+                <Answer name="TutorGood" agent="Tutor" type="Good" text="The packet has the same velocity as the plane." speech="" keys="same|constant|not change|unchanged, velocity" threshold="" />
+              </Answers>
+            </Hint>
+            <Hint id="2" agent="Tutor" text="In which direction is the velocity of the packet , at the point of release?" speech="" media="">
+              <Answers>
+                <Answer name="TutorGood" agent="Tutor" type="Good" text="The velocity is in the horizontal direction." speech="" keys="horizontal" threshold="" />
+              </Answers>
+            </Hint>
+            <Hint id="3" agent="Tutor" text="What would happen to the packet's horizontal velocity at the point of release?" speech="" media="">
+              <Answers>
+                <Answer name="TutorGood" agent="Tutor" type="Good" text="The packet's velocity stays the same as that of the plane." speech="" keys="same|constant" threshold="" />
+              </Answers>
+            </Hint>
+          </Hints>
+          <Prompts>
+            <Prompt id="1" agent="Tutor" text="The velocities of the objects before and just after the packet's release are __________?" speech="The velocities of the objects before and just after the packet's release are, what?" media="">
+              <Answers>
+                <Answer name="Good1" agent="Tutor" type="Good" text="the same." speech="" keys="same|equal|equiv|identical" threshold="" />
+              </Answers>
+            </Prompt>
+            <Prompt id="2" agent="Tutor" text="Immediately after its release, the packet has the same horizontal velocity as______?" speech="Immediately after its release, the packet has the same horizontal velocity as, what?" media="">
+              <Answers>
+                <Answer name="Good" agent="Tutor" type="Good" text="the plane." speech="" keys="plane|aircraft" threshold="" />
+              </Answers>
+            </Prompt>
+            <Prompt id="3" agent="Tutor" text="At the point of release, the plane's velocity is the same as that of the __________?" speech="At the point of release, the plane's velocity is the same as that of the, what?" media="">
+              <Answers>
+                <Answer name="Good" agent="Tutor" type="Good" text="the packet" speech="" keys="packet|object" threshold="" />
+              </Answers>
+            </Prompt>
+          </Prompts>
+        </Expectation>
+        <Expectation id="2" text="After release, the only force acting on the packet is gravity.">
+          <Answers>
+            <Answer name="TutorGood" agent="Tutor" type="Good" text="After release, the only force acting on the packet is gravity." speech="" keys="gravity, down, force" threshold="" />
+          </Answers>
+          <Hints>
+            <Hint id="1" agent="Tutor" text="What can you say about the force on the packet after release?" speech="" media="">
+              <Answers>
+                <Answer name="TutorGood" agent="Tutor" type="Good" text="Gravity is the only force acting on the packet." speech="" keys="gravity|down|vertical, force" threshold="" />
+              </Answers>
+            </Hint>
+            <Hint id="2" agent="Tutor" text="What can you say about the net force acting on the packet after release?" speech="" media="">
+              <Answers>
+                <Answer name="TutorGood" agent="Tutor" type="Good" text="Gravity is the only force acting on the packet after release." speech="" keys="gravity|down|vertical, force" threshold="" />
+              </Answers>
+            </Hint>
+          </Hints>
+          <Prompts>
+            <Prompt id="1" agent="Tutor" text=" After release gravity is the only force acting on __________?" speech=" After release gravity is the only force acting on, what?" media="">
+              <Answers>
+                <Answer name="Good" agent="Tutor" type="Good" text="acting on the packet" speech="" keys="packet|object" threshold="" />
+              </Answers>
+            </Prompt>
+            <Prompt id="2" agent="Tutor" text="After its release, the packet will be affected by the force of __________?" speech="After its release, the packet will be affected by the force of, what?" media="">
+              <Answers>
+                <Answer name="Good" agent="Tutor" type="Good" text="the force of gravity" speech="" keys="gravity|earth" threshold="" />
+              </Answers>
+            </Prompt>
+          </Prompts>
+        </Expectation>
+        <Expectation id="3" text="After release, there are no horizontal forces acting on the packet.">
+          <Answers>
+            <Answer name="TutorGood" agent="Tutor" type="Good" text="After release, there are no horizontal forces acting on the packet." speech="" keys="no horizontal force|zero horizontal force" threshold="" />
+          </Answers>
+          <Hints>
+            <Hint id="1" agent="Tutor" text="What can you say about the horizontal forces on the packet?" speech="" media="">
+              <Answers>
+                <Answer name="TutorGood" agent="Tutor" type="Good" text="There are no horizontal forces on the packet." speech="" keys="\bno horizontal force|zero horizontal force" threshold="" />
+              </Answers>
+            </Hint>
+            <Hint id="2" agent="Tutor" text="After release, in which direction is there zero force on the packet?" speech="" media="">
+              <Answers>
+                <Answer name="TutorGood" agent="Tutor" type="Good" text="In the horizontal direction." speech="" keys="horizontal" threshold="" />
+              </Answers>
+            </Hint>
+          </Hints>
+          <Prompts>
+            <Prompt id="1" agent="Tutor" text="There are zero horizontal forces acting on the __________?" speech="There are zero horizontal forces acting on the, what?" media="">
+              <Answers>
+                <Answer name="Good" agent="Tutor" type="Good" text="that packet." speech="" keys="packet|object" threshold="" />
+              </Answers>
+            </Prompt>
+            <Prompt id="2" agent="Tutor" text="There are zero horizontal forces on the packet after __________?" speech="There are zero horizontal forces on the packet after, what?" media="">
+              <Answers>
+                <Answer name="Good" agent="Tutor" type="Good" text="after release." speech="" keys="release|drop|drop|separate" threshold="" />
+              </Answers>
+            </Prompt>
+          </Prompts>
+        </Expectation>
+        <Expectation id="4" text="The packet will continue with a constant horizontal velocity after its release.">
+          <Answers>
+            <Answer name="TutorGood" agent="Tutor" type="Good" text="The packet will continue with a constant horizontal velocity after its release." speech="" keys="constant|equal, horizontal velocity" threshold="" />
+          </Answers>
+          <Hints>
+            <Hint id="1" agent="Tutor" text="What can you say about the horizontal velocity of the packet after release?" speech="" media="">
+              <Answers>
+                <Answer name="TutorGood" agent="Tutor" type="Good" text="It is equal to the plane's velocity at the point of release." speech="" keys="same|equal|constant|unchanged" threshold="" />
+              </Answers>
+            </Hint>
+            <Hint id="2" agent="Tutor" text="At what time does the horizontal velocity of the packet change?" speech="" media="">
+              <Answers>
+                <Answer name="TutorGood" agent="Tutor" type="Good" text="The packet continues to have a constant horizontal velocity after its release." speech="" keys="same|constant|not changed|unchanged" threshold="" />
+              </Answers>
+            </Hint>
+          </Hints>
+          <Prompts>
+            <Prompt id="1" agent="Tutor" text=" The packet continues with the same horizontal velocity at  __________?" speech=" The packet continues with the same horizontal velocity at, what?" media="">
+              <Answers>
+                <Answer name="Good" agent="Tutor" type="Good" text="at release" speech="" keys="release|drop|seperat" threshold="" />
+              </Answers>
+            </Prompt>
+          </Prompts>
+        </Expectation>
+        <Expectation id="5" text="The packet will miss the target by the distance it covers horizontally. ">
+          <Answers>
+            <Answer name="TutorGood" agent="Tutor" type="Good" text="The packet will miss the target by the distance it covers horizontally. " speech="" keys="miss|not hit, target" threshold="" />
+          </Answers>
+          <Hints>
+            <Hint id="1" agent="Tutor" text="What can you say about the packet's final location relative to the target?" speech="" media="">
+              <Answers>
+                <Answer name="TutorGood" agent="Tutor" type="Good" text="The packet will miss the target." speech="" keys="miss|not hit" threshold="" />
+              </Answers>
+            </Hint>
+            <Hint id="2" agent="Tutor" text="What can you say about the packet's horizontal distance relative to the target?" speech="" media="">
+              <Answers>
+                <Answer name="TutorGood" agent="Tutor" type="Good" text="The packet will miss the target by the distance covered during the time it falls." speech="" keys="miss|not hit" threshold="" />
+              </Answers>
+            </Hint>
+          </Hints>
+          <Prompts>
+            <Prompt id="1" agent="" text="" speech="" media="">
+              <Answers>
+                <Answer name="" agent="" type="" text="" speech="" keys="" threshold="" />
+              </Answers>
+            </Prompt>
+          </Prompts>
+        </Expectation>
+        <Expectation id="6" text="The packet and the plane would each cover the same horizontal distance.">
+          <Answers>
+            <Answer name="TutorGood" agent="Tutor" type="Good" text="The packet and the plane would each cover the same horizontal distance." speech="" keys="same|equal, horizontal, distance" threshold="" />
+          </Answers>
+          <Hints>
+            <Hint id="1" agent="Tutor" text="What can you say about the horizontal distances that the packet and the plane cover?" speech="" media="">
+              <Answers>
+                <Answer name="TutorGood" agent="Tutor" type="Good" text="The distances are equal." speech="" keys="same|equal" threshold="" />
+              </Answers>
+            </Hint>
+            <Hint id="2" agent="Tutor" text="What can you say about the horizontal movement of the packet and the plane in terms of distance?" speech="" media="">
+              <Answers>
+                <Answer name="TutorGood" agent="Tutor" type="Good" text="They each cover the same horizontal distance." speech="" keys="same|equal" threshold="" />
+              </Answers>
+            </Hint>
+          </Hints>
+           <Prompts>
+            <Prompt id="1" agent="" text="" speech="" media="">
+              <Answers>
+                <Answer name="" agent="" type="" text="" speech="" keys="" threshold="" />
+              </Answers>
+            </Prompt>
+          </Prompts>
+        </Expectation>
+      </Expectations>
+      <Misconceptions>
+        <Misconception id="1" text="There is no horizontal force acting on the packet.">
+          <Answers>
+            <Answer name="GoodMiscAnswerByTutor" agent="Tutor" type="Good" text="The only significant force acting is the vertical force of  gravity. The horizontal component of the earth gravitational force is zero." speech="" keys="horizontal force, zero" threshold="" />
+            <Answer name="GoodMiscAnswerByStudent" agent="Student" type="Bad" text="There is no horizontal force acting on the packet." speech="" keys="no horizontal force" threshold="" />
+          </Answers>
+          <Hints>
+            <Hint id="1" agent="Tutor" text="" speech="" media="">
+              <Answers>
+                <Answer name="" agent="Tutor" type="Good" text="" speech="" keys="" threshold="" />
+              </Answers>
+            </Hint>
+          </Hints>
+           <Prompts>
+            <Prompt id="1" agent="" text="" speech="" media="">
+              <Answers>
+                <Answer name="" agent="" type="" text="" speech="" keys="" threshold="" />
+              </Answers>
+            </Prompt>
+          </Prompts>
+        </Misconception>
+      </Misconceptions>
+    </TutoringPack>
+  </TutoringPacks>
+  <Rules>
+    <Rule name="Start" status="Start" response="" event="" hasItem="" priority="" frequency="" description="This is the begining of the conversation.">
+      <Action agent="System" act="SetStatus" data="Opening" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="Opening" status="Opening" response="" event="" hasItem="" priority="" frequency="" description="This rule deliveres an opening pack if it is available.">
+      <Action agent="System" act="DeliverRigidPack" data="Opening" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="" id="2" />
+      <Action agent="Tutor" act="SetStatus" data="GetTutoringPack" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
+    </Rule>
+    <Rule name="NoMoreTutoringPack" status="GetTutoringPack" response="" event="" hasItem="" priority="" frequency="" description="Turnes to final closing when all tutoring packs have been covered.">
+      <Action agent="System" act="SetStatus" data="Closing" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="StartTutoring" status="GetTutoringPack" response="" event="" hasItem="true" priority="" frequency="" description="Turnes to the main question of the next tutoring pack.">
+      <Action agent="System" act="SetStatus" data="MainQuestion" id="1" />
+      <Action agent="System" act="GetRule" data="" id="2" />
+    </Rule>
+    <Rule name="AskMQ" status="MainQuestion" response="" event="" hasItem="" priority="" frequency="" description="Ask the main question, assuming that there is always at least one main question prepared for the tutor agent.">
+      <Action agent="Tutor" act="AskMainQuestion" data="" id="1" />
+      <Action agent="System" act="SetStatus" data="AskMainQuestion" id="2" />
+      <Action agent="System" act="WaitForInput" data="20" id="3" />
+    </Rule>
+    <Rule name="FB2MQGood" status="AskMainQuestion" response="Main-Good" event="" hasItem="" priority="1" frequency="" description="User's answer is ideal. Give feedback and turn to positive transition pack.">
+      <Action agent="Student" act="GiveFeedback" data="PositiveFeedback" id="1" />
+      <Action agent="Tutor" act="GiveFeedback" data="PositiveFeedback" id="2" />
+      <Action agent="System" act="SetStatus" data="PositiveTransition" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
+    </Rule>
+    <Rule name="FB2MQBad" status="AskMainQuestion" response="Main-Bad" event="" hasItem="" priority="2" frequency="" description="User's answer is bad. Give feedback and get into expectation.">
+      <Action agent="Tutor" act="GiveFeedback" data="NegativeFeedback" id="1" />
+      <Action agent="System" act="GetExpectation" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="GetExpectation" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
+    </Rule>
+    <Rule name="MQMiscCorrection" status="AskMainQuestion" response="HasMisconception" event="" hasItem="" priority="3" frequency="" description="User's answer contains a misconception. Correct it and get into an expectation. Assuption: there is always a good answer and a bad answer in each misconception.">
+      <Action agent="Tutor" act="MiscAnswer" data="Good" id="1" />
+      <Action agent="System" act="GetExpectation" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="GetExpectation" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
+    </Rule>
+    <Rule name="PumpBlank" status="AskMainQuestion" response="Blank" event="" hasItem="" priority="1" frequency="" description="User's answer is blank, give a pump.">
+      <Action agent="Tutor" act="CannedExpression" data="PumpBlank" id="1" />
+      <Action agent="System" act="SetStatus" data="Pump" id="2" />
+      <Action agent="System" act="WaitForInput" data="20" id="3" />
+    </Rule>
+    <Rule name="TryMQRepeat" status="AskMainQuestion" response="MetaCom" event="" hasItem="" priority="4" frequency="" description="User wants to repeat the question. Look for the second main question.">
+      <Action agent="Tutor" act="GetMainQuestion" data="" id="1" />
+      <Action agent="System" act="SetStatus" data="GetMoreMainQuestion" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="CannotRepeatMQ" status="GetMoreMainQuestion" response="" event="" hasItem="false" priority="" frequency="" description="When user asks to repeat the question, get into expectation if there no more main question.">
+      <Action agent="System" act="GetExpectation" data="" id="1" />
+      <Action agent="System" act="SetStatus" data="GetExpectation" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="RepeatMQ" status="GetMoreMainQuestion" response="" event="" hasItem="true" priority="" frequency="" description="Repeat the main question if there is more main question when user asks to repeat the question.">
+      <Action agent="Tutor" act="CannedExpression" data="MetaComRsp" id="1" />
+      <Action agent="Tutor" act="AskMainQuestion" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="AskMainQuestion" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
+    </Rule>
+    <Rule name="FB2MQMetaCog" status="AskMainQuestion" response="MetaCog" event="" hasItem="" priority="5" frequency="" description="When user gives MetaCog, give MetaCog repsonse and get into expectation.">
+      <Action agent="Tutor" act="CannedExpression" data="MetaCogRsp" id="1" />
+      <Action agent="System" act="GetExpectation" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="GetExpectation" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
+    </Rule>
+    <Rule name="FB2MQIrrelevant" status="AskMainQuestion" response="Main-Irrelevant" event="" hasItem="" priority="6" frequency="" description="User's answer is irrelevant. Give irrelevant response and get into expectation.">
+      <Action agent="Tutor" act="CannedExpression" data="IrrelRsp" id="1" />
+      <Action agent="System" act="GetExpectation" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="GetExpectation" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
+    </Rule>
+    <Rule name="Pump" status="AskMainQuestion" response="" event="" hasItem="" priority="7" frequency="" description="For all other situations, give a pump.">
+      <Action agent="Tutor" act="CannedExpression" data="Pump" id="1" />
+      <Action agent="System" act="SetStatus" data="Pump" id="2" />
+      <Action agent="System" act="WaitForInput" data="20" id="3" />
+    </Rule>
+    <Rule name="FB2PumpGood" status="Pump" response="Main-Good" event="" hasItem="" priority="1" frequency="" description="User's answer is ideal. Closing current tutoring pack and find next tutoring pack.">
+      <Action agent="Student" act="GiveFeedback" data="PositiveFeedback" id="1" />
+      <Action agent="Tutor" act="GiveFeedback" data="PositiveFeedback" id="2" />
+      <Action agent="System" act="SetStatus" data="PositiveTransition" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
+    </Rule>
+    <Rule name="FB2PumpBad" status="Pump" response="Main-Bad" event="" hasItem="" priority="2" frequency="" description="User's answer is bad. Student agrees and gives a bad answer. Tutor corrects and get into expectation.">
+      <Action agent="Student" act="GiveFeedback" data="PositiveFeedback" id="1" />
+      <Action agent="Student" act="Answer" data="Bad" id="2" />
+      <Action agent="Tutor" act="GiveFeedback" data="NegativeFeedback" id="3" />
+      <Action agent="System" act="GetExpectation" data="" id="4" />
+      <Action agent="System" act="SetStatus" data="GetExpectation" id="5" />
+      <Action agent="System" act="GetRule" data="" id="6" />
+    </Rule>
+    <Rule name="PumpMiscCorrection" status="Pump" response="HasMisconception" event="" hasItem="" priority="3" frequency="" description="User's answer contains a misconception. Correct it and get into expectation.">
+      <Action agent="Tutor" act="MiscAnswer" data="Good" id="1" />
+      <Action agent="System" act="GetExpectation" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="GetExpectation" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
+    </Rule>
+    <Rule name="NeutralFB" status="Pump" response="" event="" hasItem="" priority="4" frequency="" description="All other cases, get into expectation.">
+      <Action agent="Tutor" act="GiveFeedback" data="NeutralFeedback" id="1" />
+      <Action agent="System" act="GetExpectation" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="GetExpectation" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
+    </Rule>
+    <Rule name="NoMoreExpectation" status="GetExpectation" response="" event="" hasItem="false" priority="" frequency="" description="When no more expectation available, get into negative transition.">
+      <Action agent="Tutor" act="GiveFeedback" data="NeutralFeedback" id="1" />
+      <Action agent="System" act="SetStatus" data="NegativeTransition" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="StartExpectation" status="GetExpectation" response="" event="" hasItem="true" priority="" frequency="" description="Try to find a student hint when an expectation is available.">
+      <Action agent="Student" act="GetHint" data="" id="1" />
+      <Action agent="System" act="SetStatus" data="GetStudentHint" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="NoMoreStudentHint" status="GetStudentHint" response="" event="" hasItem="false" priority="" frequency="" description="Try to find a tutor hint if there is no student hint.">
+      <Action agent="Tutor" act="GetHint" data="" id="1" />
+      <Action agent="System" act="SetStatus" data="GetTutorHint" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="StudentHint" status="GetStudentHint" response="" event="" hasItem="true" priority="" frequency="" description="Deliver student hint if there is any.">
+      <Action agent="Student" act="CannedExpression" data="HintStart" id="1" />
+      <Action agent="Student" act="DeliverHint" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="Hint" id="3" />
+      <Action agent="System" act="WaitForInput" data="20" id="4" />
+    </Rule>
+    <Rule name="NoMoreTutorHint" status="GetTutorHint" response="" event="" hasItem="false" priority="" frequency="" description="Try to find a studentn prompt if there is not tutor hint.">
+      <Action agent="Student" act="GetPrompt" data="" id="1" />
+      <Action agent="System" act="SetStatus" data="GetStudentPrompt" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="TutorHint" status="GetTutorHint" response="" event="" hasItem="true" priority="" frequency="" description="Deliver tutor hint if there is any.">
+      <Action agent="Tutor" act="CannedExpression" data="HintStart" id="1" />
+      <Action agent="Tutor" act="DeliverHint" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="Hint" id="3" />
+      <Action agent="System" act="WaitForInput" data="20" id="4" />
+    </Rule>
+    <Rule name="NoMoreStudentPrompt" status="GetStudentPrompt" response="" event="" hasItem="false" priority="" frequency="" description="Try to find a tutor prompt if there is no student prompt.">
+      <Action agent="Tutor" act="GetPrompt" data="" id="1" />
+      <Action agent="System" act="SetStatus" data="GetTutorPrompt" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="StudentPrompt" status="GetStudentPrompt" response="" event="" hasItem="true" priority="" frequency="" description="Deliver student prompt if there is any.">
+      <Action agent="Student" act="DeliverPrompt" data="" id="1" />
+      <Action agent="System" act="SetStatus" data="Prompt" id="2" />
+      <Action agent="System" act="WaitForInput" data="20" id="3" />
+    </Rule>
+    <Rule name="NoMoreTutorPrompt" status="GetTutorPrompt" response="" event="" hasItem="false" priority="" frequency="" description="Try to find a good answer to the expectation when no more prompt is available.">
+      <Action agent="Tutor" act="GetAnswer" data="Good" id="1" />
+      <Action agent="System" act="SetStatus" data="GetExpectationAnswer" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="TutorPrompt" status="GetTutorPrompt" response="" event="" hasItem="true" priority="" frequency="" description="Deliver tutor prompt if there is any.">
+      <Action agent="Tutor" act="CannedExpression" data="PromptStart" id="1" />
+      <Action agent="Tutor" act="DeliverPrompt" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="Prompt" id="3" />
+      <Action agent="System" act="WaitForInput" data="20" id="4" />
+    </Rule>
+    <Rule name="Assertion" status="GetExpectationAnswer" response="" event="" hasItem="true" priority="" frequency="" description="Deliver assertion and get into another expectation.">
+      <Action agent="Tutor" act="Answer" data="Good" id="1" />
+      <Action agent="System" act="GetExpectation" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="GetExpectation" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
+    </Rule>
+    <Rule name="NoAssertion" status="GetExpectationAnswer" response="" event="" hasItem="false" priority="" frequency="" description="Get into another expectation if no assertion available.">
+      <Action agent="System" act="GetExpectation" data="" id="1" />
+      <Action agent="System" act="SetStatus" data="GetExpectation" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="FB2HintMQGood" status="Hint" response="Main-Good" event="" hasItem="" priority="1" frequency="" description="User' answer is ideal. Go to positive transition.">
+      <Action agent="Student" act="Answer" data="Good" id="1" />
+      <Action agent="Tutor" act="GiveFeedback" data="PositiveFeedback" id="2" />
+      <Action agent="System" act="SetStatus" data="PositiveTransition" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
+    </Rule>
+    <Rule name="FB2HintExpGood" status="Hint" response="Exp-Good" event="" hasItem="" priority="2" frequency="" description="User's answer is good to the expectation. Give positive feedback and turn to another expectation.">
+      <Action agent="Tutor" act="GiveFeedback" data="PositiveFeedback" id="1" />
+      <Action agent="System" act="GetExpectation" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="GetExpectation" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
+    </Rule>
+    <Rule name="FB2HintGood" status="Hint" response="Hint-Good" event="" hasItem="" priority="3" frequency="" description="User's answer is good to hint. Give feedback and turn to another hint.">
+      <Action agent="Student" act="GiveFeedback" data="PositiveFeedback" id="1" />
+      <Action agent="Student" act="Answer" data="Good" id="2" />
+      <Action agent="Tutor" act="GiveFeedback" data="PositiveFeedback" id="3" />
+      <Action agent="Student" act="GetHint" data="" id="4" />
+      <Action agent="System" act="SetStatus" data="GetStudentHint" id="5" />
+      <Action agent="System" act="GetRule" data="" id="6" />
+    </Rule>
+    <Rule name="FB2HintBad" status="Hint" response="Hint-Bad" event="" hasItem="" priority="4" frequency="" description="User's answer is bad to hint. Student agent agrees wrongly. Tutor agent corrects. Turn to next hint.">
+      <Action agent="Student" act="GiveFeedback" data="PositiveFeedback" id="1" />
+      <Action agent="Student" act="Answer" data="Bad" id="2" />
+      <Action agent="Tutor" act="GiveFeedback" data="NegativeFeedback" id="3" />
+      <Action agent="Student" act="GetHint" data="" id="4" />
+      <Action agent="System" act="SetStatus" data="GetStudentHint" id="5" />
+      <Action agent="System" act="GetRule" data="" id="6" />
+    </Rule>
+    <Rule name="HintMiscCorrection" status="Hint" response="HasMisconception" event="" hasItem="" priority="5" frequency="" description="User's answer contains misconception. Correct it and turn to next hint.">
+      <Action agent="Tutor" act="MiscAnswer" data="Good" id="1" />
+      <Action agent="Student" act="GetHint" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="GetStudentHint" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
+    </Rule>
+    <Rule name="TryAnotherHint" status="Hint" response="Any" event="" hasItem="" priority="6" frequency="" description="All other hint reponses. Turn to next hint.">
+      <Action agent="Student" act="GetHint" data="" id="1" />
+      <Action agent="System" act="SetStatus" data="GetStudentHint" id="2" />
+      <Action agent="System" act="GetRule" data="" id="3" />
+    </Rule>
+    <Rule name="FB2PromptMQGood" status="Prompt" response="Main-Good" event="" hasItem="" priority="1" frequency="" description="User's prompt answer convers main question. Give feedback and turn to trainsition.">
+      <Action agent="Student" act="Answer" data="Good" id="1" />
+      <Action agent="Tutor" act="GiveFeedback" data="PositiveFeedback" id="2" />
+      <Action agent="System" act="SetStatus" data="PositiveTransition" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
+    </Rule>
+    <Rule name="FB2PromptExpGood" status="Prompt" response="Exp-Good" event="" hasItem="" priority="2" frequency="" description="User's answer covers the expectation. Give feedback and turn to the next expectation.">
+      <Action agent="Student" act="Answer" data="Good" id="1" />
+      <Action agent="Tutor" act="GiveFeedback" data="PositiveFeedback" id="2" />
+      <Action agent="System" act="GetExpectation" data="" id="3" />
+      <Action agent="System" act="SetStatus" data="GetExpectation" id="4" />
+      <Action agent="System" act="GetRule" data="" id="5" />
+    </Rule>
+    <Rule name="FB2PromptGood" status="Prompt" response="Promp-Good" event="" hasItem="" priority="3" frequency="" description="User's answer is good to the prompt. Give feedback and turn to the next prompt.">
+      <Action agent="Student" act="GiveFeedback" data="PositiveFeedback" id="1" />
+      <Action agent="Student" act="Answer" data="Good" id="2" />
+      <Action agent="Tutor" act="GiveFeedback" data="PositiveFeedback" id="3" />
+      <Action agent="Student" act="GetPrompt" data="" id="4" />
+      <Action agent="System" act="SetStatus" data="GetStudentPrompt" id="5" />
+      <Action agent="System" act="GetRule" data="" id="6" />
+    </Rule>
+    <Rule name="FB2PromptBad" status="Prompt" response="Prompt-Bad" event="" hasItem="" priority="4" frequency="" description="User's prompt answer is bad, give feedback and turn to the next prompt.">
+      <Action agent="Student" act="GiveFeedback" data="PositiveFeedback" id="1" />
+      <Action agent="Student" act="Answer" data="Bad" id="2" />
+      <Action agent="Tutor" act="GiveFeedback" data="NegativeFeedback" id="3" />
+      <Action agent="Tutor" act="Answer" data="Good" id="4" />
+      <Action agent="Student" act="GetPrompt" data="" id="5" />
+      <Action agent="System" act="SetStatus" data="GetStudentPrompt" id="6" />
+      <Action agent="System" act="GetRule" data="" id="7" />
+    </Rule>
+    <Rule name="TryAnotherPrompt" status="Prompt" response="" event="" hasItem="" priority="5" frequency="" description="Any other prompt responses, give prompt answer and turn to next prompt.">
+      <Action agent="Tutor" act="Answer" data="Good" id="1" />
+      <Action agent="Student" act="GetPrompt" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="GetStudentPrompt" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
+    </Rule>
+    <Rule name="NegTransition" status="NegativeTransition" response="" event="" hasItem="" priority="" frequency="" description="Negative transition to next tutoring pack.">
+      <Action agent="System" act="DeliverRigidPack" data="NegativeTransition" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="GetTutoringPack" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
+    </Rule>
+    <Rule name="PosTransition" status="PositiveTransition" response="" event="" hasItem="" priority="" frequency="" description="Positive transition to next tutoring pack.">
+      <Action agent="System" act="DeliverRigidPack" data="PositiveTransition" id="1" />
+      <Action agent="System" act="GetTutoringPack" data="" id="2" />
+      <Action agent="System" act="SetStatus" data="GetTutoringPack" id="3" />
+      <Action agent="System" act="GetRule" data="" id="4" />
+    </Rule>
+    <Rule name="Closing" status="Closing" response="" event="" hasItem="" priority="" frequency="" description="Final closing">
+      <Action agent="System" act="DeliverRigidPack" data="Closing" id="1" />
+      <Action agent="System" act="SetStatus" data="End" id="2" />
+    </Rule>
+  </Rules>
+</AutoTutorScript>
