@@ -1,0 +1,12 @@
+<itemType label="Reasoning" HelpURL="skoscripttype3"> 
+<item value="Analyze" name="Analyze" note="add note here" selected="false"
+      hint="Determine, describe, or use relationships between variables or objects in mathematical situations, and make valid inferences from given information."/> 
+<item value="Generalize/Specialize" name="Generalize/Specialize" note="add note here" selected="false"
+      hint="Extend the domain to which the result of mathematical thinking and problem solving is applicable by restating results in more general and more widely applicable terms."/> 
+<item value="Integrate/Synthesize" name="Integrate/Synthesize" note="add note here" selected="false"
+      hint="Make connections between different elements of knowledge and related representations, and make linkages between related mathematical ideas. Combine mathematical facts, concepts, and procedures to establish results, and combine results to produce a further result."/> 
+<item value="Justify" name="Justify" note="add note here" selected="false"
+      hint="Provide a justification by reference to known mathematical results or properties."/> 
+<item value="Solve Non-routine Problems" name="Solve Non-routine Problems" note="add note here" selected="false"
+      hint="Solve problems set in mathematical or real life contexts where students are unlikely to have encountered closely similar items, and apply mathematical facts, concepts, and procedures in unfamiliar or complex contexts."/> 
+</itemType>

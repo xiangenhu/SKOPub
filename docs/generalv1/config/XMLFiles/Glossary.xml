@@ -1,0 +1,286 @@
+<Glossary>
+	<term>
+		<termID>acquisition</termID>
+		<Description>The obtaining of information in any manner, including direct observation, liaison with official agencies, or solicitation from official, unofficial, or public sources.</Description>
+	</term>
+	<term>
+		<termID>armed forces</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>accountability</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>Agency</termID>
+		<Description></Description>
+	</term> 
+	<term>
+		<termID>board</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>Command</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>chain of command</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>command and control</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>Component</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>combatant commander</termID>
+		<Description>A commander of one of the unified or specified combatant commands established by the President. Also called CCDR. See also combatant command; specified combatant command; unified combatant command.</Description>
+	</term>
+	<term>
+		<termID>control</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>contract support integration</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>contractors authorized to accompany the force</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>contracting officer</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>centralized control</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>capability</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>Contingency</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>common-user logistics</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>current</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>course</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>compromise</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>combatant command</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>contractor management</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>clear</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>deployment</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>decentralized execution</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>establishment</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>force</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>functions</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>force protection</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>graphic</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>interagency</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>integration</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>Information</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>joint</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>joint publication</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>joint staff</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>joint force</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>joint force commander</termID>
+		<Description>A general term applied to a combatant commander, subunified commander, or joint task force commander authorized to exercise combatant command (command authority) or operational control over a joint force. Also called JFC. See also joint force.</Description>
+	</term>
+	<term>
+		<termID>joint acquisition review board</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>joint contracting support board</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>key point</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>logistics</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>logistic support</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>moment</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>mission</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>order</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>operational area</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>organic</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>office</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>operational environment</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>operational contract support</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>personnel</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>procedures</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>phase</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>protection</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>planning phase</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>release</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>responsibility</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>redeployment</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>requirements</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>space</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>support</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>system</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>security</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>staff</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>synchronization</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>spot</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>Theater</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>Trend</termID>
+		<Description></Description>
+	</term>
+	<term>
+		<termID>United States</termID>
+		<Description></Description>
+	</term>
+</Glossary>
