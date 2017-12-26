@@ -136,7 +136,7 @@
             attributes.name = "authoring";
             attributes.align = "middle";
             swfobject.embedSWF(
-                "../SWF/authoring.SWF", "flashContent", 
+                "../SWF/authoring.swf", "flashContent", 
                 "1024", "768", 
                 swfVersionStr, xiSwfUrlStr, 
                 flashvars, params, attributes);
