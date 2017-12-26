@@ -59,7 +59,7 @@
 	    flashvars.LRSPassword = qs("LRSPassword","password");
 		
 	    var baseurl = window.location.href;
-	    var index = baseurl.toUpperCase().indexOf("AUTHORING");
+	    var index = baseurl.toUpperCase().indexOf("AUTHOR");
 	    baseurl = baseurl.substr(0, index-1);
 	    flashvars.serverbaseURL = qs("BURL",baseurl);
         flashvars.LoginPoint = qs("LoginPoint",window.location.href);
