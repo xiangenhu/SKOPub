@@ -130,7 +130,7 @@
 		flashvars.SeverCTrY = qs("H5SC","USA");
 		flashvars.html5Start = qs("H5ST","ASAT");
 		
-		flashvars.TestAvtarURL== qs("TAURL","http://autotutor.x-in-y.com/AT/Test.html");
+		flashvars.TestAvtarURL= qs("TAURL","http://autotutor.x-in-y.com/AT/Test.html");
 		
             var params = {};
             params.quality = "high";
