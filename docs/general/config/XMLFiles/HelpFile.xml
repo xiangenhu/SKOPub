@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HelpItems>
+    
+    <item name="FIB">
+    <![CDATA[
+Help content for Fill-in-Blank
+			]]>	
+    </item>
+    <item name="MATCHING">
+    <![CDATA[
+Help content for matching question
+			]]>	
+    </item>
+    <item name="MatchingAuthoring">
+    <![CDATA[
+Help content for authoring pairs 
+			]]>	
+    </item>
+    <item name="MC">
+    <![CDATA[
+Help content for Multiple Choice
+			]]>	
+    </item>
+      <item name="Choice_Author">
+    <![CDATA[
+Help content for authoring choices
+			]]>	
+    </item>
+    <item name="SeedDisplay">
+    <![CDATA[
+Help content for seed question for displaying
+			]]>	
+    </item>
+    
+    <item name="questionBox">
+    <![CDATA[
+Help content for seed question for displaying
+			]]>	
+    </item>
+    
+    
+    <item name="SeedSpoken">
+    <![CDATA[
+Help content forseed question for avatar
+			]]>	
+    </item>
+    
+    
+    <item name="ID">
+    <![CDATA[
+Help content Information delivery
+			]]>	
+    </item>
+    
+    <item name="H1ST">
+    <![CDATA[
+Help content for Hint, spoken text
+			]]>	
+    </item>
+    
+    <item name="H1DT">
+    <![CDATA[
+Help content for Hint, display text
+			]]>	
+    </item>
+    
+    
+    <item name="EST">
+    <![CDATA[
+Help content for Expectation, spoken text
+			]]>	
+    </item>
+    
+    <item name="EDT">
+    <![CDATA[
+Help content for Expectation, display text
+			]]>	
+    </item>
+    
+    
+    
+    <item name="INTRO">
+    <![CDATA[
+Help content for Introduction
+			]]>	
+    </item>
+    
+    
+    
+    
+    <item name="H4ST">
+    <![CDATA[
+Help content for Hint, spoken text
+			]]>	
+    </item>
+    
+    <item name="H4DT">
+    <![CDATA[
+Help content for Hint, display text
+			]]>	
+    </item>
+    <item name="H3ST">
+    <![CDATA[
+Help content for Hint, spoken text
+			]]>	
+    </item>
+    
+    <item name="H3DT">
+    <![CDATA[
+Help content for Hint, display text
+			]]>	
+    </item>
+    
+    <item name="H2ST">
+    <![CDATA[
+Help content for Hint, spoken text
+			]]>	
+    </item>
+    
+    <item name="H2DT">
+    <![CDATA[
+Help content for Hint, display text
+			]]>	
+    </item>
+    
+</HelpItems>

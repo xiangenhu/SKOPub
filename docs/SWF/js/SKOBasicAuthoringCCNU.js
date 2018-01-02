@@ -41,14 +41,14 @@
 		
 		flashvars.MediaBase = qs("MediaBase","/1024768/"); 
 		
-        flashvars.ASAT = qs("ASAT","0");
+        flashvars.ASAT = qs("ASAT","1");
 	    flashvars.CA = qs("CA","0");
-	    flashvars.MC = qs("MC","1");
-	    flashvars.MA = qs("MA","1");
-	    flashvars.FIB = qs("FIB","1");
-	    flashvars.SR = qs("SR","1");
+	    flashvars.MC = qs("MC","0");
+	    flashvars.MA = qs("MA","0");
+	    flashvars.FIB = qs("FIB","0");
+	    flashvars.SR = qs("SR","0");
 	    flashvars.ID = qs("ID","1");
-	    flashvars.TU = qs("TU","1");
+	    flashvars.TU = qs("TU","0");
 	    flashvars.GI = qs("GI","0");
 		flashvars.trialog = qs("trialog","0");
 		// What is the address in Learning Record Store
@@ -86,11 +86,11 @@
 		flashvars.ASAT = qs("ASAT","0");
 		
 		flashvars.UNLIMITED = qs("UNLIMITED","1");
-	    flashvars.ASATAgents = qs("asatAT","0");
-	    flashvars.ASATSpeechActs = qs("asatSA","0");         
-	    flashvars.ASATRigidPacks = qs("asatRP","0");       
+	    flashvars.ASATAgents = qs("asatAT","1");
+	    flashvars.ASATSpeechActs = qs("asatSA","1");         
+	    flashvars.ASATRigidPacks = qs("asatRP","1");       
 	    flashvars.ASATTutoringPacks = qs("asatTP","1");  
-	    flashvars.ASATRules = qs("asatRL","0");
+	    flashvars.ASATRules = qs("asatRL","1");
 	    flashvars.helpLocation = qs("helpLo","http://help.skoonline.org/en/");
 	    flashvars.SL = qs("SL","0"); //save logs
 	    flashvars.contentAnalysis=qs("ca","0"); // 1 means it will be cantent analysis
@@ -127,7 +127,9 @@
 	    flashvars.saveP = qs("saveP","0"); // Save load profile
 				flashvars.html5PlayURL = qs("H5Url","http://www.auto-tutor.com/AT/index.html?");
 		flashvars.SeverCTrY = qs("H5SC","China");
-		flashvars.html5Start = qs("H5ST","ID");
+		flashvars.html5Start = qs("H5ST","ASAT");
+		
+		flashvars.TestAvtarURL= qs("TAURL","http://autotutor.x-in-y.com/AT/Test.html");
             var params = {};
             params.quality = "high";
             params.bgcolor = "#fdf0f0";
@@ -138,7 +140,7 @@
             attributes.name = "authoring";
             attributes.align = "middle";
             swfobject.embedSWF(
-                "../SWF/authoring.swf", "flashContent", 
+                "../SWF/authoring.SWF", "flashContent", 
                 "1024", "768", 
                 swfVersionStr, xiSwfUrlStr, 
                 flashvars, params, attributes);

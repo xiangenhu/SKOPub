@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 sp1 (http://www.altova.com) by Xiangen Hu (University of Memphis) -->
+<RTTrialogueRules xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="RTTrialogueRules.xsd">
+	<Tutor LastAction="Start">
+		<Student Response="All">
+			<Actions>
+				<Action>TAQuestion</Action>
+			</Actions>
+		</Student>
+	</Tutor>
+	<Tutor LastAction="TAQuestion">
+		<Student Response="AllExpectationCovered">
+			<Actions>
+				<Action>TAPositiveFeedback</Action>
+				<Action>TATRNS</Action>								
+				<Action>TASummary</Action>
+			</Actions>
+		</Student>
+		<Student Response="OtherExpectationCovered">
+			<Actions>
+				<Action>TAPositiveFeedback</Action>
+				<Action>TASummarizeNewlyCoveredExpectations</Action>
+				<Action>TAChooseNewExpectation</Action>
+				<Action>TATRNH</Action>				
+				<Action>TAHint</Action>
+			</Actions>
+		</Student>
+		<Student Response="ModerateContribution">
+			<Actions>
+				<Action>TANeutralFeedback</Action>
+				<Action>TAChooseNewExpectation</Action>
+				<Action>TATRNH</Action>								
+				<Action>TAHint</Action>
+			</Actions>
+		</Student>
+		<Student Response="LowContribution">
+			<Actions>
+				<Action>TANegativeFeedback</Action>
+				<Action>TAChooseNewExpectation</Action>
+				<Action>TATRNH</Action>								
+				<Action>TAHint</Action>
+			</Actions>
+		</Student>
+	</Tutor>
+	<Tutor LastAction="TAHint">
+		<Student Response="AllExpectationCovered">
+			<Actions>
+				<Action>TAPositiveFeedback</Action>
+				<Action>TATRNS</Action>												
+				<Action>TASummary</Action>
+			</Actions>
+		</Student>
+		<Student Response="OtherExpectationCovered">
+			<Actions>
+				<Action>TANeutralFeedback</Action>
+				<Action>TATRND</Action>
+				<Action>TASummarizeNewlyCoveredExpectations</Action>
+				<Action>TATRNH</Action>								
+				<Action>TAHint</Action>
+			</Actions>
+		</Student>
+		<Student Response="CurrentExpectationCovered">
+			<Actions>
+				<Action>TAPositiveFeedback</Action>
+				<Action>TATRNS</Action>																
+				<Action>TASummarizeNewlyCoveredExpectations</Action>
+				<Action>TAChooseNewExpectation</Action>
+				<Action>TATRNH</Action>												
+				<Action>TAHint</Action>
+			</Actions>
+		</Student>
+		<Student Response="ModerateContribution">
+			<Actions>
+				<Action>TANeutralFeedback</Action>
+				<Action>TATRNH</Action>															
+				<Action>TAHint</Action>
+			</Actions>
+		</Student>
+		<Student Response="LowContribution">
+			<Actions>
+				<Action>TANegativeFeedback</Action>
+				<Action>TATRNH</Action>																
+				<Action>TAHint</Action>
+			</Actions>
+		</Student>
+	</Tutor>
+</RTTrialogueRules>

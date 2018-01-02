@@ -1,0 +1,86 @@
+<html>
+	<head>
+        <script src="../swf/js/jquery.min.js"></script>
+        <script type="text/javascript" src="../swf/js//xapiwrapper.min.js"></script>
+    </head>
+	<body>
+		<center>
+			<iframe id="ChildPanel" src="http://www.auto-tutor.com/1024768/general/xAPIplayer.html?ServerType=NONGAE&skoserver=http://ccnu.x-in-y.com:8889&DSSPP=http://ccnu.x-in-y.com:8889"
+				width="1024" height="768" seamless frameboard="0"></iframe>
+		</center>  
+	</body>
+	<script>
+		$(document).ready(function()  
+		{  
+    		var loc = window.location.toString(),  
+    		params = loc.split('?')[1],  
+    		iframe = document.getElementById("ChildPanel");  
+			iframe.src = iframe.src + '&xAPI=1&' + params;  
+		});
+		
+		function listener(event){
+  			var jsonObj = JSON.parse(event.data);
+  			var msgObj = JSON.parse(jsonObj.msg);
+  			var result = msgObj.Message.result 
+			console.log(result);
+  			
+  			if (result){
+  				
+	  			result_obj = JSON.parse(result)
+
+	  			var date = Date.parse(result_obj.timestamp);
+	  			var timestamp = new Date(date).toISOString();
+	  			
+  				var verb = {"id":"http://www.skoonline.org/verbs/"+result_obj.SRT, "display":{"en-US":result_obj.SRT}};
+  				var act = {
+  					"id":"http://www.skoonline.org/actor/" + result_obj.Response.agent+"_"+result_obj.SID,
+  					"definition":{
+  						"name":{"en-US": result_obj.SRT},
+  						"description":{"en-US": "http://www.skoonline.org/type/" + result_obj.SRT},
+  						"type":"http://www.skoonline.org/type/" + result_obj.SRT
+  					}
+  				};
+
+	  			var context = {
+	  				"extensions":{
+	  							"http://www.skoonline.org/STDetails":{
+	  							"Param":result_obj.URLParam,	  							
+	  							"Stimulus":result_obj.Stimulus,
+								"Response":result_obj.Response,
+	  							"SRType": result_obj.SRT,
+	  							"parentURL":result_obj.SKOid,
+	  							}
+	  						}
+	  			};
+
+	  			var stmt = {
+	  				"actor": {
+	  					"account": {
+	  						"name": result_obj.SID,
+	  						"homePage": "http://www.skoonline.org"
+	  					}
+	  				},
+	  				"verb": verb,
+	  				"object": act,
+	  				"context":context,
+	  				"version": "1.0.1"
+	  			};
+				var conf = {
+					"endpoint": result_obj.LRS.LRSURL,
+					"user": result_obj.LRS.LRSAdmin,
+					"password": result_obj.LRS.LRSPassword,
+				};
+				if (result_obj.xAPI==="1"){
+					ADL.XAPIWrapper.changeConfig(conf);
+					ADL.XAPIWrapper.sendStatement(stmt);
+				}
+  			}
+		}
+
+		if (window.addEventListener){
+  			addEventListener("message", listener, false)
+		} else {
+  			attachEvent("onmessage", listener)
+		}
+	</script>
+</html>

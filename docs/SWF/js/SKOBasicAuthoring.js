@@ -126,9 +126,9 @@
         flashvars.SampleSTBGUID = qs("SSTBguid","");
         flashvars.SampleASATGUID = qs("SASATguid","03758088-682c-49a6-9135-de7380b1a43d");
 		
-	    flashvars.saveP = qs("saveP","0"); // Save load profile		flashvars.html5PlayURL = qs("H5Url","http://autotutor.x-in-y.com/AT/index.html?bkg=");
+	    flashvars.saveP = qs("saveP","0"); // Save load profile		flashvars.html5PlayURL = qs("H5Url","http://autotutor.x-in-y.com/AT/index.html?SIHD=1");
 		flashvars.SeverCTrY = qs("H5SC","USA");
-		flashvars.html5Start = qs("H5ST","ASAT");
+		flashvars.html5Start = qs("H5ST","ASATPageIMG");
 		
 		flashvars.TestAvtarURL= qs("TAURL","http://autotutor.x-in-y.com/AT/Test.html");
 		

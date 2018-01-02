@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem identifier="associate" title="Shakespearian Rivals" adaptive="false" timeDependent="false">
+      <responseDeclaration identifier="q1" cardinality="single">
+	      <correctResponse>
+	         <value>York</value>
+	         <mapping defaultValue="0">
+	            <mapEntry mapKey="York" mappedValue="1"/>
+	            <mapEntry mapKey="york" mappedValue="1.5"/>
+	         </mapping>
+	      </correctResponse>
+	  </responseDeclaration>
+      <responseDeclaration identifier="q2" cardinality="single">
+	      <correctResponse>
+	         <value>house</value>
+	         <mapping defaultValue="0">
+	            <mapEntry mapKey="house" mappedValue="3"/>
+	            <mapEntry mapKey="home" mappedValue="3"/>
+	         </mapping>
+	      </correctResponse>
+	  </responseDeclaration>
+      <itemBody>
+		<p>Identify the missing word in this famous quote from Shakespeare's Richard III.</p> 		 
+			<p>Now is the winter of our discontent<br/> Made glorious summer by this sun of
+					<textEntryInteraction responseIdentifier="q1" expectedLength="15"/>;<br/> 
+				And all the clouds that lour'd upon our <textEntryInteraction responseIdentifier="q2" expectedLength="15"/>
+				<br/> In the deep bosom of the ocean buried.</p>				
+				
+      </itemBody>
+</assessmentItem>
