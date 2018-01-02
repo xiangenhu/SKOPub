@@ -101,13 +101,13 @@
             attributes.id = "ATL";
             attributes.name = "ATL";
             attributes.align = "middle";
-            swfobject.embedSWF(
-                "../SWF/ATL.swf", "flashContent", 
+            SWFObject.embedswf(
+                "../swf/ATL.swf", "flashContent", 
                 "660", "500", 
                 swfVersionStr, xiSwfUrlStr, 
                 flashvars, params, attributes);
             // JavaScript enabled so display the flashContent div in case it is not replaced with a swf object.
-            swfobject.createCSS("#flashContent", "display:block;text-align:left;");
+            SWFObject.createCSS("#flashContent", "display:block;text-align:left;");
             
             //  ADD JS function Calls
             

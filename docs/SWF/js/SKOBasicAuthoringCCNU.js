@@ -139,12 +139,12 @@
             attributes.id = "authoring";
             attributes.name = "authoring";
             attributes.align = "middle";
-            swfobject.embedSWF(
-                "../SWF/authoring.SWF", "flashContent", 
+            SWFObject.embedswf(
+                "../swf/authoring.swf", "flashContent", 
                 "1024", "768", 
                 swfVersionStr, xiSwfUrlStr, 
                 flashvars, params, attributes);
-            swfobject.createCSS("#flashContent", "display:block;text-align:left;");
+            SWFObject.createCSS("#flashContent", "display:block;text-align:left;");
             
             var EditingURL;
             var PlayingURL;        
@@ -161,7 +161,7 @@
               
             function theGuid(s) 
         	{
-            	EditingURL = flashvars.serverbaseURL+"../SWF/authoring.html?guid = "+s;
-            	PlayingURL = flashvars.serverbaseURL+"../SWF/ATL.html?guid = "+s;
+            	EditingURL = flashvars.serverbaseURL+"../swf/authoring.html?guid = "+s;
+            	PlayingURL = flashvars.serverbaseURL+"../swf/ATL.html?guid = "+s;
             //	alert(EditingURL);
           	}

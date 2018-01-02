@@ -1,8 +1,8 @@
-/*!	SWFObject v2.2 <http://code.google.com/p/swfobject/> 
+/*!	SWFObject v2.2 <http://code.google.com/p/SWFObject/> 
 	is released under the MIT License <http://www.opensource.org/licenses/mit-license.php> 
 */
 
-var swfobject = function() {
+var SWFObject = function() {
 	
 	var UNDEF = "undefined",
 		OBJECT = "object",
@@ -220,7 +220,7 @@ var swfobject = function() {
 		}
 	}
 	
-	/* Perform Flash Player and SWF version matching; static publishing only
+	/* Perform Flash Player and swf version matching; static publishing only
 	*/
 	function matchVersions() {
 		var rl = regObjArr.length;
@@ -232,7 +232,7 @@ var swfobject = function() {
 				if (ua.pv[0] > 0) {
 					var obj = getElementById(id);
 					if (obj) {
-						if (hasPlayerVersion(regObjArr[i].swfVersion) && !(ua.wk && ua.wk < 312)) { // Flash Player version >= published SWF version: Houston, we have a match!
+						if (hasPlayerVersion(regObjArr[i].swfVersion) && !(ua.wk && ua.wk < 312)) { // Flash Player version >= published swf version: Houston, we have a match!
 							setVisibility(id, true);
 							if (cb) {
 								cbObj.success = true;
@@ -258,13 +258,13 @@ var swfobject = function() {
 							}
 							showExpressInstall(att, par, id, cb);
 						}
-						else { // Flash Player and SWF version mismatch or an older Webkit engine that ignores the HTML object element's nested param elements: display alternative content instead of SWF
+						else { // Flash Player and swf version mismatch or an older Webkit engine that ignores the HTML object element's nested param elements: display alternative content instead of swf
 							displayAltContent(obj);
 							if (cb) { cb(cbObj); }
 						}
 					}
 				}
-				else {	// if no Flash Player is installed or the fp version cannot be detected we let the HTML object element do its job (either show a SWF or alternative content)
+				else {	// if no Flash Player is installed or the fp version cannot be detected we let the HTML object element do its job (either show a swf or alternative content)
 					setVisibility(id, true);
 					if (cb) {
 						var o = getObjectById(id); // test whether there is an HTML object element or not
@@ -335,8 +335,8 @@ var swfobject = function() {
 			else {
 				par.flashvars = fv;
 			}
-			// IE only: when a SWF is loading (AND: not available in cache) wait for the readyState of the object element to become 4 before removing it,
-			// because you cannot properly cancel a loading SWF file without breaking browser load references, also obj.onreadystatechange doesn't work
+			// IE only: when a swf is loading (AND: not available in cache) wait for the readyState of the object element to become 4 before removing it,
+			// because you cannot properly cancel a loading swf file without breaking browser load references, also obj.onreadystatechange doesn't work
 			if (ua.ie && ua.win && obj.readyState != 4) {
 				var newObj = createElement("div");
 				replaceElemIdStr += "SWFObjectNew";
@@ -352,7 +352,7 @@ var swfobject = function() {
 					}
 				})();
 			}
-			createSWF(att, par, replaceElemIdStr);
+			createswf(att, par, replaceElemIdStr);
 		}
 	}
 	
@@ -360,8 +360,8 @@ var swfobject = function() {
 	*/
 	function displayAltContent(obj) {
 		if (ua.ie && ua.win && obj.readyState != 4) {
-			// IE only: when a SWF is loading (AND: not available in cache) wait for the readyState of the object element to become 4 before removing it,
-			// because you cannot properly cancel a loading SWF file without breaking browser load references, also obj.onreadystatechange doesn't work
+			// IE only: when a swf is loading (AND: not available in cache) wait for the readyState of the object element to become 4 before removing it,
+			// because you cannot properly cancel a loading swf file without breaking browser load references, also obj.onreadystatechange doesn't work
 			var el = createElement("div");
 			obj.parentNode.insertBefore(el, obj); // insert placeholder div that will be replaced by the alternative content
 			el.parentNode.replaceChild(abstractAltContent(obj), el);
@@ -402,9 +402,9 @@ var swfobject = function() {
 		return ac;
 	}
 	
-	/* Cross-browser dynamic SWF creation
+	/* Cross-browser dynamic swf creation
 	*/
-	function createSWF(attObj, parObj, id) {
+	function createswf(attObj, parObj, id) {
 		var r, el = getElementById(id);
 		if (ua.wk && ua.wk < 312) { return r; }
 		if (el) {
@@ -468,10 +468,10 @@ var swfobject = function() {
 		el.appendChild(p);
 	}
 	
-	/* Cross-browser SWF removal
-		- Especially needed to safely and completely remove a SWF in Internet Explorer
+	/* Cross-browser swf removal
+		- Especially needed to safely and completely remove a swf in Internet Explorer
 	*/
-	function removeSWF(id) {
+	function removeswf(id) {
 		var obj = getElementById(id);
 		if (obj && obj.nodeName == "OBJECT") {
 			if (ua.ie && ua.win) {
@@ -526,7 +526,7 @@ var swfobject = function() {
 		listenersArr[listenersArr.length] = [target, eventType, fn];
 	}
 	
-	/* Flash Player and SWF content version matching
+	/* Flash Player and swf content version matching
 	*/
 	function hasPlayerVersion(rv) {
 		var pv = ua.pv, v = rv.split(".");
@@ -604,24 +604,24 @@ var swfobject = function() {
 				// cleanup dynamically embedded objects to fix audio/video threads and force open sockets and NetConnections to disconnect
 				var il = objIdArr.length;
 				for (var j = 0; j < il; j++) {
-					removeSWF(objIdArr[j]);
+					removeswf(objIdArr[j]);
 				}
 				// cleanup library's main closures to avoid memory leaks
 				for (var k in ua) {
 					ua[k] = null;
 				}
 				ua = null;
-				for (var l in swfobject) {
-					swfobject[l] = null;
+				for (var l in SWFObject) {
+					SWFObject[l] = null;
 				}
-				swfobject = null;
+				SWFObject = null;
 			});
 		}
 	}();
 	
 	return {
 		/* Public API
-			- Reference: http://code.google.com/p/swfobject/wiki/documentation
+			- Reference: http://code.google.com/p/SWFObject/wiki/documentation
 		*/ 
 		registerObject: function(objectIdStr, swfVersionStr, xiSwfUrlStr, callbackFn) {
 			if (ua.w3 && objectIdStr && swfVersionStr) {
@@ -644,7 +644,7 @@ var swfobject = function() {
 			}
 		},
 		
-		embedSWF: function(swfUrlStr, replaceElemIdStr, widthStr, heightStr, swfVersionStr, xiSwfUrlStr, flashvarsObj, parObj, attObj, callbackFn) {
+		embedswf: function(swfUrlStr, replaceElemIdStr, widthStr, heightStr, swfVersionStr, xiSwfUrlStr, flashvarsObj, parObj, attObj, callbackFn) {
 			var callbackObj = {success:false, id:replaceElemIdStr};
 			if (ua.w3 && !(ua.wk && ua.wk < 312) && swfUrlStr && replaceElemIdStr && widthStr && heightStr && swfVersionStr) {
 				setVisibility(replaceElemIdStr, false);
@@ -653,7 +653,7 @@ var swfobject = function() {
 					heightStr += "";
 					var att = {};
 					if (attObj && typeof attObj === OBJECT) {
-						for (var i in attObj) { // copy object to avoid the use of references, because web authors often reuse attObj for multiple SWFs
+						for (var i in attObj) { // copy object to avoid the use of references, because web authors often reuse attObj for multiple swfs
 							att[i] = attObj[i];
 						}
 					}
@@ -662,12 +662,12 @@ var swfobject = function() {
 					att.height = heightStr;
 					var par = {}; 
 					if (parObj && typeof parObj === OBJECT) {
-						for (var j in parObj) { // copy object to avoid the use of references, because web authors often reuse parObj for multiple SWFs
+						for (var j in parObj) { // copy object to avoid the use of references, because web authors often reuse parObj for multiple swfs
 							par[j] = parObj[j];
 						}
 					}
 					if (flashvarsObj && typeof flashvarsObj === OBJECT) {
-						for (var k in flashvarsObj) { // copy object to avoid the use of references, because web authors often reuse flashvarsObj for multiple SWFs
+						for (var k in flashvarsObj) { // copy object to avoid the use of references, because web authors often reuse flashvarsObj for multiple swfs
 							if (typeof par.flashvars != UNDEF) {
 								par.flashvars += "&" + k + "=" + flashvarsObj[k];
 							}
@@ -676,8 +676,8 @@ var swfobject = function() {
 							}
 						}
 					}
-					if (hasPlayerVersion(swfVersionStr)) { // create SWF
-						var obj = createSWF(att, par, replaceElemIdStr);
+					if (hasPlayerVersion(swfVersionStr)) { // create swf
+						var obj = createswf(att, par, replaceElemIdStr);
 						if (att.id == replaceElemIdStr) {
 							setVisibility(replaceElemIdStr, true);
 						}
@@ -710,9 +710,9 @@ var swfobject = function() {
 		
 		hasFlashPlayerVersion: hasPlayerVersion,
 		
-		createSWF: function(attObj, parObj, replaceElemIdStr) {
+		createswf: function(attObj, parObj, replaceElemIdStr) {
 			if (ua.w3) {
-				return createSWF(attObj, parObj, replaceElemIdStr);
+				return createswf(attObj, parObj, replaceElemIdStr);
 			}
 			else {
 				return undefined;
@@ -725,9 +725,9 @@ var swfobject = function() {
 			}
 		},
 		
-		removeSWF: function(objElemIdStr) {
+		removeswf: function(objElemIdStr) {
 			if (ua.w3) {
-				removeSWF(objElemIdStr);
+				removeswf(objElemIdStr);
 			}
 		},
 		

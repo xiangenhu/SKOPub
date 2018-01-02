@@ -2,7 +2,7 @@ var SKOStateMachine = function(markupTree, studentModel){
     /** Primary States that Impact Control: 
         isRenderingActive - Can't interrupt rendering
         isRenderingRequired - No need to render if nothing left
-        isSWFLoaded - Can't set dialogs w/o talking heads
+        isswfLoaded - Can't set dialogs w/o talking heads
         isTutoringActive - Should wait until tutoring done before doing anything else
         isTutoringRequired - Can't render more until required tutoring done
         isKnowledgeRequired - Can't render more until knowledge available to check if tutoring required
@@ -22,16 +22,16 @@ var SKOStateMachine = function(markupTree, studentModel){
     // this._reqKnowledgePending = {};
     
     // Initialization
-    _tutorControl.setCurrentDialog("56079b5f-30ea-44da-8244-ef6f0b890ae1");     // Needs to happen before SWF loaded
+    _tutorControl.setCurrentDialog("56079b5f-30ea-44da-8244-ef6f0b890ae1");     // Needs to happen before swf loaded
 
-    // SWF Loading
-    this.isSWFLoaded = function(){
+    // swf Loading
+    this.isswfLoaded = function(){
         return _swfLoaded;
     };
-     this.setSWFLoaded = function(isLoaded){
+     this.setswfLoaded = function(isLoaded){
         _swfLoaded = isLoaded;
     };
-    this.onSWFLoaded = function(id){
+    this.onswfLoaded = function(id){
         if (id === _tutorControl.getCurrentDialog()){
             _swfLoaded = true;
         }
@@ -149,12 +149,12 @@ var SKOStateMachine = function(markupTree, studentModel){
             } else if (this.isTutoringActive()){
                 // console.log("Tutoring Active:" + _tutorControl.getCurrentDialog());
                 // Do nothing until tutoring complete
-            // Start pending tutoring if required and SWF available
+            // Start pending tutoring if required and swf available
             } else if (this.isTutoringPending()) {
                 //console.log("Tutoring Pending: " + _reqTutoringPending);
-                if (this.isSWFLoaded()){
-                    console.log("Tutoring Pending: SWF Loaded");
-                    this.setSWFLoaded(false);      // Loading a new SWF
+                if (this.isswfLoaded()){
+                    console.log("Tutoring Pending: swf Loaded");
+                    this.setswfLoaded(false);      // Loading a new swf
                     this.startTutoring(this.nextRequiredTutoring());
                 }
             // Need to render and we can render if required tutoring done

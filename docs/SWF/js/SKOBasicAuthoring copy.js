@@ -129,13 +129,13 @@
             attributes.id = "authoring";
             attributes.name = "authoring";
             attributes.align = "middle";
-            swfobject.embedSWF(
-                "../SWF/authoring.swf", "flashContent", 
+            SWFObject.embedswf(
+                "../swf/authoring.swf", "flashContent", 
                 "660", "500", 
                 swfVersionStr, xiSwfUrlStr, 
                 flashvars, params, attributes);
             // JavaScript enabled so display the flashContent div in case it is not replaced with a swf object.
-            swfobject.createCSS("#flashContent", "display:block;text-align:left;");
+            SWFObject.createCSS("#flashContent", "display:block;text-align:left;");
             
             //  Export GUID after saving
             
@@ -156,7 +156,7 @@
               
             function theGuid(s) 
         	{
-            	EditingURL = flashvars.serverbaseURL+"../SWF/authoring.html?guid = "+s;
-            	PlayingURL = flashvars.serverbaseURL+"../SWF/ATL.html?guid = "+s;
+            	EditingURL = flashvars.serverbaseURL+"../swf/authoring.html?guid = "+s;
+            	PlayingURL = flashvars.serverbaseURL+"../swf/ATL.html?guid = "+s;
             //	alert(EditingURL);
           	}

@@ -1,6 +1,6 @@
 // Constants
 // -------------------------------------
-var AUTO_TUTOR_LITE_SWF_NAME = 'ATL';
+var AUTO_TUTOR_LITE_swf_NAME = 'ATL';
 var TUTOR_NAME = 'Tutor',
 	STUDENT1_NAME = 'Student1',
 	STUDENT2_NAME = 'Student2',
@@ -12,7 +12,7 @@ var GUID_KEY = 'guid';
 
 // JS Message Types
 var DIALOG_DONE_MSG = 'Done';
-var SWF_LOAD_DONE_MSG = 'Done Loading';
+var swf_LOAD_DONE_MSG = 'Done Loading';
 
 // Flash Message Data Keys
 var FLASH_MSG_KEY = "msg";
@@ -25,7 +25,7 @@ var FLASH_CURRENT_DATE_KEY = "date";
 var FLASH_ID_DIALOG_DONE_MSG = "End of Scenes";
 var FLASH_TUTOR_DIALOG_DONE_MSG = "Tutoring done";
 var FLASH_TUTOR_LCC_DONE_MSG = "LCC Done";
-var FLASH_SWF_LOAD_DONE_MSG = SWF_LOAD_DONE_MSG;
+var FLASH_swf_LOAD_DONE_MSG = swf_LOAD_DONE_MSG;
 
 // MESSAGING!
 //-------------------------------   
@@ -86,9 +86,9 @@ var DialogComplete = function (guid) {
     console.log("ATL Msg: Dialog Done");
     parent.postMessage(makeJSMessage(DIALOG_DONE_MSG, guid), POST_PARENT_URL_RESTRICTION);
 };
-var SWFLoadComplete = function (guid) {
-    console.log("ATL Msg: SWF Load Done");
-	parent.postMessage(makeJSMessage(SWF_LOAD_DONE_MSG, guid), POST_PARENT_URL_RESTRICTION);
+var swfLoadComplete = function (guid) {
+    console.log("ATL Msg: swf Load Done");
+	parent.postMessage(makeJSMessage(swf_LOAD_DONE_MSG, guid), POST_PARENT_URL_RESTRICTION);
 };
 
 //  General JS Utilities
@@ -114,26 +114,26 @@ var javascriptListener = function (str) {
     try {
 		data = JSON.parse(str);
 	} catch (err){
-        console.log("Invalid JSON data from: Flash SWF");
+        console.log("Invalid JSON data from: Flash swf");
         console.log("Data was: " + data);
 		return;
 	}
     flashMsgType = trimString(data[FLASH_MSG_KEY]);
     console.log(data[FLASH_MSG_KEY] + ": Done Dialog=" + 
                 (isDialogDoneFlashMSG(flashMsgType)) + ", DoneLoad=" +
-                (flashMsgType  === FLASH_SWF_LOAD_DONE_MSG));
+                (flashMsgType  === FLASH_swf_LOAD_DONE_MSG));
 	if (isDialogDoneFlashMSG(flashMsgType)){
         guid = data[FLASH_CURRENT_GUID_KEY];
 		DialogComplete(guid);
-	} else if (flashMsgType  === FLASH_SWF_LOAD_DONE_MSG){
+	} else if (flashMsgType  === FLASH_swf_LOAD_DONE_MSG){
         guid = data[FLASH_CURRENT_GUID_KEY];
-		SWFLoadComplete(guid);
+		swfLoadComplete(guid);
 	}
      return "successful";
 };
  
 var getATLInstance = function (){
-    return document.getElementById(AUTO_TUTOR_LITE_SWF_NAME);
+    return document.getElementById(AUTO_TUTOR_LITE_swf_NAME);
 };
 
 //  Dialog and Scene Control
