@@ -46,8 +46,8 @@
 			}
               // For version detection, set to min. required Flash Player version, or 0 (or 0.0.0), for no version detection. 
             var .swfVersionStr = "11.1.0";
-            // To use express install, set to playerProductInstall..swf, otherwise the empty string. 
-            var xiSwfUrlStr = "playerProductInstall..swf";
+            // To use express install, set to playerProductInstall.swf, otherwise the empty string. 
+            var xiSwfUrlStr = "playerProductInstall.swf";
             var flashvars = {};
 
             
@@ -138,7 +138,7 @@
             attributes.name = "authoring";
             attributes.align = "middle";
             .swfobject.embedSWF(
-                "../.swf/authoring.SWF", "flashContent", 
+                "../swfauthoring.SWF", "flashContent", 
                 "660", "500", 
                 .swfVersionStr, xiSwfUrlStr, 
                 flashvars, params, attributes);
@@ -164,7 +164,7 @@
               
             function theGuid(s) 
         	{
-            	EditingURL = flashvars.serverbaseURL+"/../.swf/authoring.html?guid = "+s;
+            	EditingURL = flashvars.serverbaseURL+"/../swfauthoring.html?guid = "+s;
             	PlayingURL = flashvars.serverbaseURL+"/ATL.html?guid = "+s;
             //	alert(EditingURL);
           	}

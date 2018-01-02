@@ -11,8 +11,8 @@
 		    }
             // For version detection, set to min. required Flash Player version, or 0 (or 0.0.0), for no version detection. 
             var .swfVersionStr = "11.1.0";
-            // To use express install, set to playerProductInstall..swf, otherwise the empty string. 
-            var xiSwfUrlStr = "playerProductInstall..swf";
+            // To use express install, set to playerProductInstall.swf, otherwise the empty string. 
+            var xiSwfUrlStr = "playerProductInstall.swf";
             var flashvars = {};
             
             var baseurl = window.location.href;
@@ -125,7 +125,7 @@
             attributes.name = "ATL";
             attributes.align = "middle";
             .swfobject.embedSWF(
-                "../.swf/ATL..swf", "flashContent", 
+                "../swfATL.swf", "flashContent", 
                 "1024", "768", 
                 .swfVersionStr, xiSwfUrlStr, 
                 flashvars, params, attributes);

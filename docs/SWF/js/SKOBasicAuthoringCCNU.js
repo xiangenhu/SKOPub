@@ -33,7 +33,7 @@
 				}
 				return defaultstr;			}
             var .swfVersionStr = "11.1.0";
-            var xiSwfUrlStr = "playerProductInstall..swf";
+            var xiSwfUrlStr = "playerProductInstall.swf";
             var flashvars = {};
 		// Decide what to turn on at starting
 		
@@ -139,7 +139,7 @@
             attributes.name = "authoring";
             attributes.align = "middle";
             .swfobject.embedSWF(
-                "../.swf/authoring.SWF", "flashContent", 
+                "../swfauthoring.SWF", "flashContent", 
                 "1024", "768", 
                 .swfVersionStr, xiSwfUrlStr, 
                 flashvars, params, attributes);
@@ -160,7 +160,7 @@
               
             function theGuid(s) 
         	{
-            	EditingURL = flashvars.serverbaseURL+"../.swf/authoring.html?guid = "+s;
-            	PlayingURL = flashvars.serverbaseURL+"../.swf/ATL.html?guid = "+s;
+            	EditingURL = flashvars.serverbaseURL+"../swfauthoring.html?guid = "+s;
+            	PlayingURL = flashvars.serverbaseURL+"../swfATL.html?guid = "+s;
             //	alert(EditingURL);
           	}

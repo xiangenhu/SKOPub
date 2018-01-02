@@ -1,4 +1,4 @@
-/*!	SWFObject v2.2 <http://code.google.com/p/.swfobject/> 
+/*!	SWFObject v2.2 <http://code.google.com/p/swfobject/> 
 	is released under the MIT License <http://www.opensource.org/licenses/mit-license.php> 
 */
 
@@ -232,7 +232,7 @@ var .swfobject = function() {
 				if (ua.pv[0] > 0) {
 					var obj = getElementById(id);
 					if (obj) {
-						if (hasPlayerVersion(regObjArr[i]..swfVersion) && !(ua.wk && ua.wk < 312)) { // Flash Player version >= published SWF version: Houston, we have a match!
+						if (hasPlayerVersion(regObjArr[i].swfVersion) && !(ua.wk && ua.wk < 312)) { // Flash Player version >= published SWF version: Houston, we have a match!
 							setVisibility(id, true);
 							if (cb) {
 								cbObj.success = true;
@@ -341,7 +341,7 @@ var .swfobject = function() {
 				var newObj = createElement("div");
 				replaceElemIdStr += "SWFObjectNew";
 				newObj.setAttribute("id", replaceElemIdStr);
-				obj.parentNode.insertBefore(newObj, obj); // insert placeholder div that will be replaced by the object element that loads expressinstall..swf
+				obj.parentNode.insertBefore(newObj, obj); // insert placeholder div that will be replaced by the object element that loads expressinstall.swf
 				obj.style.display = "none";
 				(function(){
 					if (obj.readyState == 4) {
@@ -621,13 +621,13 @@ var .swfobject = function() {
 	
 	return {
 		/* Public API
-			- Reference: http://code.google.com/p/.swfobject/wiki/documentation
+			- Reference: http://code.google.com/p/swfobject/wiki/documentation
 		*/ 
 		registerObject: function(objectIdStr, .swfVersionStr, xiSwfUrlStr, callbackFn) {
 			if (ua.w3 && objectIdStr && .swfVersionStr) {
 				var regObj = {};
 				regObj.id = objectIdStr;
-				regObj..swfVersion = .swfVersionStr;
+				regObj.swfVersion = .swfVersionStr;
 				regObj.expressInstall = xiSwfUrlStr;
 				regObj.callbackFn = callbackFn;
 				regObjArr[regObjArr.length] = regObj;
