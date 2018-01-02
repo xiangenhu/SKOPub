@@ -1,7 +1,7 @@
 
 <html>
 	<head>
-        <script src="../swf/js/jquery.min.js"></script>
+        <script src="../.swf/js/jquery.min.js"></script>
     </head>
 	<body>
 		<center>
@@ -14,8 +14,8 @@
 		{  
     		var loc = window.location.toString();  
     		params = loc.split('?')[1];  
-    		specialSet="&ASAT=1&ID=1&MC=1&TU=0&FIB=0&MA=1&ll=1&"+
-            "asatAT=1&asatRL=1&asatRP=1&asatSA=1&ll=1&Advanced=1&saveas=1&";
+    		specialSet="&ll=1&"+
+            "Advanced=1&saveas=1&";
     		
     		iframe = document.getElementById("ChildPanel");  
 			iframe.src =iframe.src+specialSet+params; 

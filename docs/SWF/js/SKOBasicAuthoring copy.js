@@ -46,9 +46,9 @@
 			return defaultstr;
 			}
               // For version detection, set to min. required Flash Player version, or 0 (or 0.0.0), for no version detection. 
-            var swfVersionStr = "11.1.0";
-            // To use express install, set to playerProductInstall.swf, otherwise the empty string. 
-            var xiSwfUrlStr = "playerProductInstall.swf";
+            var .swfVersionStr = "11.1.0";
+            // To use express install, set to playerProductInstall..swf, otherwise the empty string. 
+            var xiSwfUrlStr = "playerProductInstall..swf";
             var flashvars = {};
 
             
@@ -129,13 +129,13 @@
             attributes.id = "authoring";
             attributes.name = "authoring";
             attributes.align = "middle";
-            SWFObject.embedswf(
-                "../swf/authoring.swf", "flashContent", 
+            .swfobject.embedSWF(
+                "../.swf/authoring.SWF", "flashContent", 
                 "660", "500", 
-                swfVersionStr, xiSwfUrlStr, 
+                .swfVersionStr, xiSwfUrlStr, 
                 flashvars, params, attributes);
-            // JavaScript enabled so display the flashContent div in case it is not replaced with a swf object.
-            SWFObject.createCSS("#flashContent", "display:block;text-align:left;");
+            // JavaScript enabled so display the flashContent div in case it is not replaced with a .swf object.
+            .swfobject.createCSS("#flashContent", "display:block;text-align:left;");
             
             //  Export GUID after saving
             
@@ -156,7 +156,7 @@
               
             function theGuid(s) 
         	{
-            	EditingURL = flashvars.serverbaseURL+"../swf/authoring.html?guid = "+s;
-            	PlayingURL = flashvars.serverbaseURL+"../swf/ATL.html?guid = "+s;
+            	EditingURL = flashvars.serverbaseURL+"../.swf/authoring.html?guid = "+s;
+            	PlayingURL = flashvars.serverbaseURL+"../.swf/ATL.html?guid = "+s;
             //	alert(EditingURL);
           	}

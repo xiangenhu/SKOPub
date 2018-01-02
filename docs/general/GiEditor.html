@@ -34,7 +34,7 @@
         <script type="text/javascript" src="history/history.js"></script>
         <!-- END Browser History required section -->  
             
-        <script type="text/javascript" src="swfobject.js"></script>
+        <script type="text/javascript" src=".swfobject.js"></script>
          <script type="text/javascript">
          
          function qs(search_for,defaultstr) {		
@@ -51,9 +51,9 @@
            
 	   	    
             // For version detection, set to min. required Flash Player version, or 0 (or 0.0.0), for no version detection. 
-            var swfVersionStr = "11.1.0";
-            // To use express install, set to playerProductInstall.swf, otherwise the empty string. 
-            var xiSwfUrlStr = "playerProductInstall.swf";
+            var .swfVersionStr = "11.1.0";
+            // To use express install, set to playerProductInstall..swf, otherwise the empty string. 
+            var xiSwfUrlStr = "playerProductInstall..swf";
             var flashvars = {};
             var params = {};
             
@@ -89,13 +89,13 @@
             attributes.id = "GiEditor";
             attributes.name = "GiEditor";
             attributes.align = "middle";
-            swfobject.embedSWF(
-                "../SWF/GiEditor.swf", "flashContent", 
+            .swfobject.embedSWF(
+                "../.swf/GiEditor..swf", "flashContent", 
                 "1024", "768", 
-                swfVersionStr, xiSwfUrlStr, 
+                .swfVersionStr, xiSwfUrlStr, 
                 flashvars, params, attributes);
-            // JavaScript enabled so display the flashContent div in case it is not replaced with a swf object.
-            swfobject.createCSS("#flashContent", "display:block;text-align:left;");
+            // JavaScript enabled so display the flashContent div in case it is not replaced with a .swf object.
+            .swfobject.createCSS("#flashContent", "display:block;text-align:left;");
         </script>
     </head>
     <body>
@@ -117,13 +117,13 @@
         
         <noscript>
             <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="1024" height="768" id="GiEditor">
-                <param name="movie" value="../SWF/GiEditor.swf" />
+                <param name="movie" value="../.swf/GiEditor..swf" />
                 <param name="quality" value="high" />
                 <param name="bgcolor" value="#ffffff" />
                 <param name="allowScriptAccess" value="sameDomain" />
                 <param name="allowFullScreen" value="true" />
                 <!--[if !IE]>-->
-                <object type="application/x-shockwave-flash" data="../SWF/GiEditor.swf" width="1024" height="768">
+                <object type="application/x-shockwave-flash" data="../.swf/GiEditor..swf" width="1024" height="768">
                     <param name="quality" value="high" />
                     <param name="bgcolor" value="#ffffff" />
                     <param name="allowScriptAccess" value="sameDomain" />

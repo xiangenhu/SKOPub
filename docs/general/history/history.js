@@ -26,10 +26,10 @@ BrowserHistory = (function() {
     };
 
     // if setDefaultURL has been called, our first clue
-    // that the swf is ready and listening
-    //var swfReady = false;
+    // that the SWF is ready and listening
+    //var .swfReady = false;
 
-    // the URL we'll send to the swf once it is ready
+    // the URL we'll send to the SWF once it is ready
     //var pendingURL = '';
 
     // Default app state URL to use when no fragment ID present

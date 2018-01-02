@@ -36,7 +36,7 @@
         
       
             
-        <script type = "text/javascript" src = "swfobject.js"></script>
+        <script type = "text/javascript" src = ".swfobject.js"></script>
         <script type = "text/javascript">
         
         function javascriptxAPIListener(s) 
@@ -61,9 +61,9 @@
 			return defaultstr;
 			}
             // For version detection, set to min. required Flash Player version, or 0 (or 0.0.0), for no version detection. 
-            var swfVersionStr = "11.1.0";
-            // To use express install, set to playerProductInstall.swf, otherwise the empty string. 
-            var xiSwfUrlStr = "playerProductInstall.swf";
+            var .swfVersionStr = "11.1.0";
+            // To use express install, set to playerProductInstall..swf, otherwise the empty string. 
+            var xiSwfUrlStr = "playerProductInstall..swf";
             var flashvars = {};
             
  			var baseurl = window.location.href;
@@ -240,13 +240,13 @@
             attributes.id = "authoring";
             attributes.name = "authoring";
             attributes.align = "middle";
-            swfobject.embedSWF(
-                "authoring.swf", "flashContent", 
+            .swfobject.embedSWF(
+                "authoring..swf", "flashContent", 
                 "1024", "768", 
-                swfVersionStr, xiSwfUrlStr, 
+                .swfVersionStr, xiSwfUrlStr, 
                 flashvars, params, attributes);
-            // JavaScript enabled so display the flashContent div in case it is not replaced with a swf object.
-            swfobject.createCSS("#flashContent", "display:block;text-align:left;");
+            // JavaScript enabled so display the flashContent div in case it is not replaced with a .swf object.
+            .swfobject.createCSS("#flashContent", "display:block;text-align:left;");
             
             //  Export GUID after saving
             
@@ -292,13 +292,13 @@
         
         <noscript>
             <object classid = "clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width = "1024" height = "768" id = "authoring">
-                <param name = "movie" value = "authoring.swf" />
+                <param name = "movie" value = "authoring..swf" />
                 <param name = "quality" value = "high" />
                 <param name = "bgcolor" value = "#fdf0f0" />
                 <param name = "allowScriptAccess" value = "sameDomain" />
                 <param name = "allowFullScreen" value = "true" />
                 <!--[if !IE]>-->
-                <object type = "application/x-shockwave-flash" data = "authoring.swf" width = "1024" height = "768">
+                <object type = "application/x-shockwave-flash" data = "authoring..swf" width = "1024" height = "768">
                     <param name = "quality" value = "high" />
                     <param name = "bgcolor" value = "#fdf0f0" />
                     <param name = "allowScriptAccess" value = "sameDomain" />

@@ -25,7 +25,7 @@ eventer(messageEvent,function(e) {
         if (data.type === "Done") {
             onDialogDone(data.guid);
         } else if (data.type === "Done Loading"){
-			onswfLoadDone(data.guid);
+			onSWFLoadDone(data.guid);
 		}
     }
 },false);
@@ -36,10 +36,10 @@ var onDialogDone = function(guid){
     STATE_MACHINE.onDialogDone(guid);
 };
 
-var onswfLoadDone = function(guid){
-    console.log("Done with swf loading:" + guid);
-    // Signals swf agents active
-    setTimeout(function(){STATE_MACHINE.onswfLoaded(guid);}, 200);
+var onSWFLoadDone = function(guid){
+    console.log("Done with SWF loading:" + guid);
+    // Signals SWF agents active
+    setTimeout(function(){STATE_MACHINE.onSWFLoaded(guid);}, 200);
 };
 
 var logMessageReceived = function(data){

@@ -24,7 +24,7 @@
       <CompLocation X="0" Y="0" play="" UID=""/>
       <AVATAR Teacher="" Student1="" Student2="" Student3="" useStudent1="false" useStudent2="false" useStudent3="false" showStudent1="true" showStudent2="true" showStudent3="true" showTeacher="true" TX="0" S1X="0" S2X="0" S3X="0" TY="0" S1Y="0" S2Y="0" S3Y="0" useTeacher="true" TeacherPub="" Student1Pub="" Student2Pub="" Student3Pub="" play="" UID=""/>
       <MediaURLXML play="" UID=""></MediaURLXML>
-      <mediaTypeXML play="" UID="">MovieOnly</mediaTypeXML>
+      <MediaTypeXML play="" UID="">MovieOnly</MediaTypeXML>
       <SKOMsg play="" UID=""/>
       <POPChoice Title="" Message="" enabled="false" play="" UID=""/>
       <UseAIML play="" UID="">0</UseAIML>

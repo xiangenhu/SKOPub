@@ -2,7 +2,7 @@ var SKOStateMachine = function(markupTree, studentModel){
     /** Primary States that Impact Control: 
         isRenderingActive - Can't interrupt rendering
         isRenderingRequired - No need to render if nothing left
-        isswfLoaded - Can't set dialogs w/o talking heads
+        isSWFLoaded - Can't set dialogs w/o talking heads
         isTutoringActive - Should wait until tutoring done before doing anything else
         isTutoringRequired - Can't render more until required tutoring done
         isKnowledgeRequired - Can't render more until knowledge available to check if tutoring required
@@ -10,7 +10,7 @@ var SKOStateMachine = function(markupTree, studentModel){
     TUTORING_REQ_THRESHOLD = 1.0;
     
     // State Objects and Flags
-    var _swfLoaded = false;
+    var _.swfLoaded = false;
     var _tutoringPage = new TutoringPage(markupTree);
     var _renderControl = new sko_render_controller.RenderingController(_tutoringPage);
     var _tutorControl = new TutoringController();  // Modify this
@@ -22,18 +22,18 @@ var SKOStateMachine = function(markupTree, studentModel){
     // this._reqKnowledgePending = {};
     
     // Initialization
-    _tutorControl.setCurrentDialog("56079b5f-30ea-44da-8244-ef6f0b890ae1");     // Needs to happen before swf loaded
+    _tutorControl.setCurrentDialog("56079b5f-30ea-44da-8244-ef6f0b890ae1");     // Needs to happen before SWF loaded
 
-    // swf Loading
-    this.isswfLoaded = function(){
-        return _swfLoaded;
+    // SWF Loading
+    this.isSWFLoaded = function(){
+        return _.swfLoaded;
     };
-     this.setswfLoaded = function(isLoaded){
-        _swfLoaded = isLoaded;
+     this.setSWFLoaded = function(isLoaded){
+        _.swfLoaded = isLoaded;
     };
-    this.onswfLoaded = function(id){
+    this.onSWFLoaded = function(id){
         if (id === _tutorControl.getCurrentDialog()){
-            _swfLoaded = true;
+            _.swfLoaded = true;
         }
     };
     
@@ -149,12 +149,12 @@ var SKOStateMachine = function(markupTree, studentModel){
             } else if (this.isTutoringActive()){
                 // console.log("Tutoring Active:" + _tutorControl.getCurrentDialog());
                 // Do nothing until tutoring complete
-            // Start pending tutoring if required and swf available
+            // Start pending tutoring if required and SWF available
             } else if (this.isTutoringPending()) {
                 //console.log("Tutoring Pending: " + _reqTutoringPending);
-                if (this.isswfLoaded()){
-                    console.log("Tutoring Pending: swf Loaded");
-                    this.setswfLoaded(false);      // Loading a new swf
+                if (this.isSWFLoaded()){
+                    console.log("Tutoring Pending: SWF Loaded");
+                    this.setSWFLoaded(false);      // Loading a new SWF
                     this.startTutoring(this.nextRequiredTutoring());
                 }
             // Need to render and we can render if required tutoring done

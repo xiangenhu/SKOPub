@@ -32,8 +32,8 @@
 					}
 				}
 				return defaultstr;			}
-            var swfVersionStr = "11.1.0";
-            var xiSwfUrlStr = "playerProductInstall.swf";
+            var .swfVersionStr = "11.1.0";
+            var xiSwfUrlStr = "playerProductInstall..swf";
             var flashvars = {};
 		// Decide what to turn on at starting
 		
@@ -141,12 +141,12 @@
             attributes.id = "authoring";
             attributes.name = "authoring";
             attributes.align = "middle";
-            SWFObject.embedswf(
-                "../swf/authoring.swf", "flashContent", 
+            .swfobject.embedSWF(
+                "../.swf/authoring..swf", "flashContent", 
                 "1024", "768", 
-                swfVersionStr, xiSwfUrlStr, 
+                .swfVersionStr, xiSwfUrlStr, 
                 flashvars, params, attributes);
-            SWFObject.createCSS("#flashContent", "display:block;text-align:left;");
+            .swfobject.createCSS("#flashContent", "display:block;text-align:left;");
             
             var EditingURL;
             var PlayingURL;        
@@ -163,7 +163,7 @@
               
             function theGuid(s) 
         	{
-            	EditingURL = flashvars.serverbaseURL+"../swf/authoring.html?guid = "+s;
-            	PlayingURL = flashvars.serverbaseURL+"../swf/ATL.html?guid = "+s;
+            	EditingURL = flashvars.serverbaseURL+"../.swf/authoring.html?guid = "+s;
+            	PlayingURL = flashvars.serverbaseURL+"../.swf/ATL.html?guid = "+s;
             //	alert(EditingURL);
           	}
