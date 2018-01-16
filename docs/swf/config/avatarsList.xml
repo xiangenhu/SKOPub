@@ -1,0 +1,61 @@
+<AvatarList>
+<characters>
+	<option value="Steve">Steve</option>
+	<option value="Susan">Susan</option>
+	<option value="Robert">Robert</option>
+	<option value="Anna">Anna</option>
+	<option value="Ben">Ben</option>
+	<option value="Kate">Kate</option>
+	<option value="Gene">Gene</option>
+	<option value="Lily">Lily</option>
+	<option value="Lee">Lee</option>
+	<option value="Carl">Carl</option>
+	<option value="Carla">Carla</option>
+	<option value="Santa">Santa</option>
+	<option value="Brad">Brad</option>
+	<option value="Kim">Kim</option>
+</characters>
+<format>
+	<option value="Head">Head</option>
+	<option value="Bust">Bust</option>
+	<option value="Body">Body</option>
+	<option value="Cartoon">Cartoon</option>
+</format>
+<voices>
+	<option value="Matthew" lang="US" gender="male">Matthew</option>
+	<option value="Justin" lang="US" gender="male">Justin</option>
+	<option value="Joey" lang="US" gender="male">Joey</option>
+	<option value="Joanna" lang="US" gender="female">Joanna</option>
+	<option value="Salli" lang="US" gender="female">Salli</option>
+	<option value="Kimberly" lang="US" gender="female">Kimberly</option>
+	<option value="Kendra" lang="US" gender="female">Kendra</option>
+	<option value="Ivy" lang="US" gender="female">Ivy</option>	
+	<option value="Dave" lang="US" gender="male">Dave</option>
+	<option value="Simon" lang="US" gender="male">Simon</option>
+	<option value="Steven" lang="US" gender="male">Steven</option>	
+	<option value="Alan" lang="Australian" gender="male">Alan</option>
+	<option value="Simon" lang="UK" gender="male">Simon</option>
+	<option value="Veena" lang="Indian" gender="male">Veena</option>	
+	<option value="Elizabeth" lang="UK" gender="female">Elizabeth</option>
+	<option value="Catherine" lang="UK" gender="female">Catherine</option>
+	<option value="Allison" lang="US" gender="female">Allison</option>
+	<option value="Grace" lang="Australian" gender="female">Grace</option>	
+	<option value="Paul" lang="US" gender="male">Paul</option>
+	<option value="Ashley" lang="US" gender="female">Ashley</option>
+	<option value="Hugh" lang="UK" gender="male">Hugh</option>	
+	<option value="Kate" lang="US" gender="female">Kate</option>
+	<option value="Julie" lang="US" gender="female">Julie</option>
+	<option value="Bridget" lang="UK" gender="female">Bridget</option>
+	<option value="James" lang="US" gender="male">James</option>
+	<option value="Beth" lang="US" gender="male">Beth</option>	
+	<option value="Linlin" lang="Chinese" gender="female">Linlin</option>
+	<option value="Lisheng" lang="Chinese" gender="male">Lisheng</option>
+	<option value="Lily" lang="Chinese" gender="female">Lily</option>
+	<option value="Hui" lang="Chinese" gender="female">Hui</option>
+	<option value="Liang" lang="Chinese" gender="male">Liang</option>
+	<option value="Qiang" lang="Chinese" gender="male">Qiang</option>
+	<option value="Kaho" lang="Cantonese" gender="male">>Kaho</option>
+	<option value="Kayan" lang="Cantonese" gender="female">>Kayan</option>
+	<option value="Yafrang" lang="Taiwanese" gender="female">>Yafrang</option>
+</voices>
+</AvatarList>

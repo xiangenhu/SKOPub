@@ -1,0 +1,18 @@
+<itemType label="Question Classification 6">
+<item value="Verification" name="Verification"/> 
+<item value="Concept completion" name="Concept completion"/> 
+<item value="Example" name="Disjunctive"/> 
+<item value="Concept completion" name="Concept completion"/> 
+<item value="Feature specification" name="Feature specification"/> 
+<item value="Quantification" name="Quantification"/> 
+<item value="Definition questions" name="Definition questions"/> 
+<item value="Comparison" name="Comparison"/> 
+<item value="Interpretation" name="Interpretation"/> 
+<item value="Causal antecedent" name="Causal antecedent"/> 
+<item value="Causal consequence" name="Causal consequence"/> 
+<item value="Goal orientation" name="Goal orientation"/> 
+<item value="Instrumental/procedural" name="Instrumental/procedural"/> 
+<item value="Enablement" name="Enablement"/> 
+<item value="Expectation" name="Expectation"/> 
+<item value="Judgmental" name="Judgmental"/> 
+</itemType>
