@@ -1,8 +1,8 @@
-/*!	SWFObject v2.2 <http://code.google.com/p/swfobject/> 
+/*!	SWFObject v2.2 <http://code.google.com/p/SWFObject/> 
 	is released under the MIT License <http://www.opensource.org/licenses/mit-license.php> 
 */
 
-var .swfobject = function() {
+var SWFObject = function() {
 	
 	var UNDEF = "undefined",
 		OBJECT = "object",
@@ -611,23 +611,23 @@ var .swfobject = function() {
 					ua[k] = null;
 				}
 				ua = null;
-				for (var l in .swfobject) {
-					.swfobject[l] = null;
+				for (var l in SWFObject) {
+					SWFObject[l] = null;
 				}
-				.swfobject = null;
+				SWFObject = null;
 			});
 		}
 	}();
 	
 	return {
 		/* Public API
-			- Reference: http://code.google.com/p/swfobject/wiki/documentation
+			- Reference: http://code.google.com/p/SWFObject/wiki/documentation
 		*/ 
-		registerObject: function(objectIdStr, .swfVersionStr, xiSwfUrlStr, callbackFn) {
-			if (ua.w3 && objectIdStr && .swfVersionStr) {
+		registerObject: function(objectIdStr, SWFVersionStr, xiSwfUrlStr, callbackFn) {
+			if (ua.w3 && objectIdStr && SWFVersionStr) {
 				var regObj = {};
 				regObj.id = objectIdStr;
-				regObj.swfVersion = .swfVersionStr;
+				regObj.swfVersion = SWFVersionStr;
 				regObj.expressInstall = xiSwfUrlStr;
 				regObj.callbackFn = callbackFn;
 				regObjArr[regObjArr.length] = regObj;
@@ -644,9 +644,9 @@ var .swfobject = function() {
 			}
 		},
 		
-		embedSWF: function(.swfUrlStr, replaceElemIdStr, widthStr, heightStr, .swfVersionStr, xiSwfUrlStr, flashvarsObj, parObj, attObj, callbackFn) {
+		embedSWF: function(SWFUrlStr, replaceElemIdStr, widthStr, heightStr, SWFVersionStr, xiSwfUrlStr, flashvarsObj, parObj, attObj, callbackFn) {
 			var callbackObj = {success:false, id:replaceElemIdStr};
-			if (ua.w3 && !(ua.wk && ua.wk < 312) && .swfUrlStr && replaceElemIdStr && widthStr && heightStr && .swfVersionStr) {
+			if (ua.w3 && !(ua.wk && ua.wk < 312) && SWFUrlStr && replaceElemIdStr && widthStr && heightStr && SWFVersionStr) {
 				setVisibility(replaceElemIdStr, false);
 				addDomLoadEvent(function() {
 					widthStr += ""; // auto-convert to string
@@ -657,7 +657,7 @@ var .swfobject = function() {
 							att[i] = attObj[i];
 						}
 					}
-					att.data = .swfUrlStr;
+					att.data = SWFUrlStr;
 					att.width = widthStr;
 					att.height = heightStr;
 					var par = {}; 
@@ -676,7 +676,7 @@ var .swfobject = function() {
 							}
 						}
 					}
-					if (hasPlayerVersion(.swfVersionStr)) { // create SWF
+					if (hasPlayerVersion(SWFVersionStr)) { // create SWF
 						var obj = createSWF(att, par, replaceElemIdStr);
 						if (att.id == replaceElemIdStr) {
 							setVisibility(replaceElemIdStr, true);

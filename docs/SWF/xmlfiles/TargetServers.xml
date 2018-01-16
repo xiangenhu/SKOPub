@@ -1,5 +1,5 @@
 <ServerList>
-<item name="Amazon CCNU" value="http://ccnu.x-in-y.com:8889" note="" AT="NonGAE"/> 
-<item name="ARL" value="http://dsspp.gifttutoring.org" note="" AT="NonGAE"/> 
-<item name="GAEBackup" value="http://backup.skoonline.org" note="" AT="GAE"/> 
+<item name="Select Server" value="Select Server" note=""/> 
+<item name="Amazon Tokyo" value="http://54.238.157.164:8889" note=""/> 
+<item name="Gifttutoring.org" value="http://dsspp.gifttutoring.org" note=""/> 
 </ServerList>

@@ -10,7 +10,7 @@
 			return defaultstr;
 		    }
             // For version detection, set to min. required Flash Player version, or 0 (or 0.0.0), for no version detection. 
-            var .swfVersionStr = "11.1.0";
+            var SWFVersionStr = "11.1.0";
             // To use express install, set to playerProductInstall.swf, otherwise the empty string. 
             var xiSwfUrlStr = "playerProductInstall.swf";
             var flashvars = {};
@@ -125,13 +125,13 @@
             attributes.name = "ATL";
             attributes.align = "middle";
 			attributes.wmode ="transparent";
-            .swfobject.embedSWF(
+            SWFObject.embedSWF(
                 "../swfATL.swf", "flashContent", 
                 "1024", "768", 
-                .swfVersionStr, xiSwfUrlStr, 
+                SWFVersionStr, xiSwfUrlStr, 
                 flashvars, params, attributes);
             // JavaScript enabled so display the flashContent div in case it is not replaced with a .swf object.
-            .swfobject.createCSS("#flashContent", "display:block;text-align:left;");
+            SWFObject.createCSS("#flashContent", "display:block;text-align:left;");
             
             //  ADD JS function Calls
             

@@ -27,7 +27,7 @@ BrowserHistory = (function() {
 
     // if setDefaultURL has been called, our first clue
     // that the SWF is ready and listening
-    //var .swfReady = false;
+    //var swfReady = false;
 
     // the URL we'll send to the SWF once it is ready
     //var pendingURL = '';

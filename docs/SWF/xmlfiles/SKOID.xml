@@ -1,133 +1,133 @@
-<ID>
-  <item>
-    <presentation>
-      <material>
-        <ITEM type="scene">
-          <TITLE>Intoduction</TITLE>
-          <NOTES><![CDATA[Author's notes here]]></NOTES>
-          <mattextS><![CDATA[Let's discuss something that is highly relevant to Conterinsurgency. Click on the arrow to start.]]></mattextS>
-          <mattextR><![CDATA[]]></mattextR>
-          <mattextD><![CDATA[]]></mattextD>
-          <PageConfig>
-            <BKIMG><![CDATA[]]></BKIMG>
-            <AVATAR Teacher="cb/skodefault.swf" Student1="cb/SKOChar4/Output/SKOChar4.swf" Student2="cb/SKOChar7/Output/SKOChar7.swf" useStudent1="false" useStudent2="false" showStudent1="true" showStudent2="true" showTeacher="true" useTeacher="true"/>
-            <MediaURLXML/>
-            <MediaTypeXML/>
-            <eM/>
-            <UseAIML>1</UseAIML>
-            <PlayStyle>manual</PlayStyle>
-            <EnableBigImage>0</EnableBigImage>
-          </PageConfig>
-        </ITEM>
-        <ITEM type="scene">
-          <TITLE><![CDATA[First]]></TITLE>
-          <NOTES><![CDATA[First Exp]]></NOTES>
-          <mattextS><![CDATA[The United States currently faces and is likely to continue to face terrorist opposition for many years to come. These terrorist adversaries are continuously and consciously evaluating our strengths and weaknesses, with an aim to avoid our strong suits and attack our vulnerabilities.]]></mattextS>
-          <mattextR><![CDATA[]]></mattextR>
-          <mattextD><![CDATA[]]></mattextD>
-          <QCs>
-            <itemType label="Tab 1" HelpURL="null"/>
-            <itemType label="Tab2" HelpURL="null"/>
-            <itemType label="Tab3" HelpURL="null"/>
-            <itemType label="Tab 1" HelpURL="null"/>
-            <itemType label="Tab 2" HelpURL="null"/>
-            <itemType label="Tab 3" HelpURL="null"/>
-            <itemType label="" HelpURL="null"/>
-          </QCs>
-          <PageConfig UseDefault="false">
-            <groupID/>
-            <MediaURLXML><![CDATA[http://lh5.ggpht.com/_aJgwQlDL730/TKSMxzjBVHI/AAAAAAAAAIM/fVhVdZugyGo/counterinsurgency.jpg]]></MediaURLXML>
-            <MediaTypeXML>ImageOnly</MediaTypeXML>
-            <ShowAvatarHere>1</ShowAvatarHere>
-            <UseAIML>0</UseAIML>
-            <PlayStyle>auto</PlayStyle>
-            <BKIMG/>
-            <EnableBigImage/>
-            <AVATAR useStudent1="false" useStudent2="false" showStudent1="true" showStudent2="true" showTeacher="true" useTeacher="true" Teacher="cb/skodefault.swf" Student1="cb/SKOChar4/Output/SKOChar4.swf" Student2="cb/SKOChar7/Output/SKOChar7.swf"/>
-          </PageConfig>
-        </ITEM>
-        <ITEM type="scene">
-          <TITLE><![CDATA[Second]]></TITLE>
-          <NOTES><![CDATA[]]></NOTES>
-          <mattextS><![CDATA[Therefore, the United States Government should be constantly assessing the effectiveness of its national power (diplomatic, informational, military, and economic), and strive to learn and adapt more quickly and effectively than our adversaries.]]></mattextS>
-          <mattextR><![CDATA[]]></mattextR>
-          <mattextD><![CDATA[]]></mattextD>
-          <QCs>
-            <itemType label="Tab 1" HelpURL="null"/>
-            <itemType label="Tab2" HelpURL="null"/>
-            <itemType label="Tab3" HelpURL="null"/>
-            <itemType label="Tab 1" HelpURL="null"/>
-            <itemType label="Tab 2" HelpURL="null"/>
-            <itemType label="Tab 3" HelpURL="null"/>
-            <itemType label="" HelpURL="null"/>
-          </QCs>
-          <PageConfig UseDefault="false">
-            <groupID/>
-            <MediaURLXML><![CDATA[http://lh4.ggpht.com/_aJgwQlDL730/TKSNTH9jqhI/AAAAAAAAAIY/_e7lAv6MltI/51%20Squadron%20Mount%20Airborne%20Counter%20Insurgency%20sgtxqcWug0al.jpg]]></MediaURLXML>
-            <MediaTypeXML>ImageOnly</MediaTypeXML>
-            <ShowAvatarHere>1</ShowAvatarHere>
-            <UseAIML>0</UseAIML>
-            <PlayStyle>auto</PlayStyle>
-            <BKIMG/>
-            <EnableBigImage/>
-            <AVATAR useStudent1="true" useStudent2="false" showStudent1="true" showStudent2="true" showTeacher="true" useTeacher="false" Teacher="cb/skodefault.swf" Student1="cb/SKOChar4/Output/SKOChar4.swf" Student2="cb/SKOChar7/Output/SKOChar7.swf"/>
-          </PageConfig>
-        </ITEM>
-        <ITEM type="scene">
-          <TITLE><![CDATA[Third]]></TITLE>
-          <NOTES><![CDATA[]]></NOTES>
-          <mattextS><![CDATA[Learning organizations may defeat insurgencies, while armies that fail to learn and adapt will have a difficult time opposing rebellion.]]></mattextS>
-          <mattextR><![CDATA[]]></mattextR>
-          <mattextD><![CDATA[]]></mattextD>
-          <QCs>
-            <itemType label="Tab 1" HelpURL="null"/>
-            <itemType label="Tab2" HelpURL="null"/>
-            <itemType label="Tab3" HelpURL="null"/>
-            <itemType label="Tab 1" HelpURL="null"/>
-            <itemType label="Tab 2" HelpURL="null"/>
-            <itemType label="Tab 3" HelpURL="null"/>
-            <itemType label="" HelpURL="null"/>
-          </QCs>
-          <PageConfig UseDefault="false">
-            <groupID/>
-            <MediaURLXML><![CDATA[http://lh4.ggpht.com/_aJgwQlDL730/TKSN4pE9fNI/AAAAAAAAAIo/K9d8SL2rttI/Marines%20Continue%20Counterinsurgency%20Operations%20CnEMxBPpYKYl.jpg]]></MediaURLXML>
-            <MediaTypeXML>ImageOnly</MediaTypeXML>
-            <ShowAvatarHere>1</ShowAvatarHere>
-            <UseAIML>0</UseAIML>
-            <PlayStyle>auto</PlayStyle>
-            <BKIMG/>
-            <EnableBigImage/>
-            <AVATAR useStudent1="false" useStudent2="true" showStudent1="true" showStudent2="true" showTeacher="true" useTeacher="false" Teacher="cb/skodefault.swf" Student1="cb/SKOChar4/Output/SKOChar4.swf" Student2="cb/SKOChar7/Output/SKOChar7.swf"/>
-          </PageConfig>
-        </ITEM>
-        <ITEM type="scene">
-          <TITLE><![CDATA[Fourth]]></TITLE>
-          <NOTES><![CDATA[Fouth Paragraph]]></NOTES>
-          <mattextS><![CDATA[Effective learning organizations encourage individuals to pay attention to the rapidly changing situations that characterize COIN campaigns and rapid enemy innovation that could lead to a shift in attitudes of local populations and to local civilian leadership turmoil.]]></mattextS>
-          <mattextR><![CDATA[]]></mattextR>
-          <mattextD><![CDATA[]]></mattextD>
-          <QCs>
-            <itemType label="Tab 1" HelpURL="null"/>
-            <itemType label="Tab2" HelpURL="null"/>
-            <itemType label="Tab3" HelpURL="null"/>
-            <itemType label="Tab 1" HelpURL="null"/>
-            <itemType label="Tab 2" HelpURL="null"/>
-            <itemType label="Tab 3" HelpURL="null"/>
-            <itemType label="" HelpURL="null"/>
-          </QCs>
-          <PageConfig UseDefault="false">
-            <groupID/>
-            <MediaURLXML><![CDATA[http://lh3.ggpht.com/_aJgwQlDL730/TKSOSKK-60I/AAAAAAAAAJA/nVzMHtFhYo0/171109top2.jpg]]></MediaURLXML>
-            <MediaTypeXML>ImageOnly</MediaTypeXML>
-            <ShowAvatarHere>1</ShowAvatarHere>
-            <UseAIML>0</UseAIML>
-            <PlayStyle>auto</PlayStyle>
-            <BKIMG/>
-            <EnableBigImage/>
-            <AVATAR useStudent1="false" useStudent2="false" showStudent1="true" showStudent2="true" showTeacher="true" useTeacher="true" Teacher="cb/skodefault.swf" Student1="cb/SKOChar4/Output/SKOChar4.swf" Student2="cb/SKOChar7/Output/SKOChar7.swf"/>
-          </PageConfig>
-        </ITEM>
-      </material>
-    </presentation>
-  </item>
-</ID>
+  <ID>
+    <item>
+      <presentation>
+        <material>
+          <ITEM type="scene" UID="_SKOSCRIPTS_ID_ITEM1">
+            <TITLE UID="_SKOSCRIPTS_ID_ITEM1_TITLE">Intoduction</TITLE>
+            <NOTES UID="_SKOSCRIPTS_ID_ITEM1_NOTES"><![CDATA[Author's notes here]]></NOTES>
+            <mattextS UID="_SKOSCRIPTS_ID_ITEM1_MATTEXTS"><![CDATA[Let's discuss something that is highly relevant to Conterinsurgency. Click on the arrow to start.]]></mattextS>
+            <mattextR UID="_SKOSCRIPTS_ID_ITEM1_MATTEXTR"><![CDATA[]]></mattextR>
+            <mattextD UID="_SKOSCRIPTS_ID_ITEM1_MATTEXTD"><![CDATA[]]></mattextD>
+            <PageConfig UID="_SKOSCRIPTS_ID_ITEM1_PAGECONFIG">
+              <BKIMG UID="_SKOSCRIPTS_ID_ITEM1_PAGECONFIG_BKIMG"><![CDATA[]]></BKIMG>
+              <AVATAR Teacher="cb/skodefault.swf" Student1="cb/SKOChar4/Output/SKOChar4.swf" Student2="cb/SKOChar7/Output/SKOChar7.swf" useStudent1="false" useStudent2="false" showStudent1="true" showStudent2="true" showTeacher="true" useTeacher="true" UID="_SKOSCRIPTS_ID_ITEM1_PAGECONFIG_AVATAR"/>
+              <MediaURLXML UID="_SKOSCRIPTS_ID_ITEM1_PAGECONFIG_MEDIAURLXML"/>
+              <mediaTypeXML UID="_SKOSCRIPTS_ID_ITEM1_PAGECONFIG_MEDIATYPEXML"/>
+              <eM UID="_SKOSCRIPTS_ID_ITEM1_PAGECONFIG_EM"/>
+              <UseAIML UID="_SKOSCRIPTS_ID_ITEM1_PAGECONFIG_USEAIML">1</UseAIML>
+              <PlayStyle UID="_SKOSCRIPTS_ID_ITEM1_PAGECONFIG_PLAYSTYLE">manual</PlayStyle>
+              <EnableBigImage UID="_SKOSCRIPTS_ID_ITEM1_PAGECONFIG_ENABLEBIGIMAGE">0</EnableBigImage>
+            </PageConfig>
+          </ITEM>
+          <ITEM type="scene" UID="_SKOSCRIPTS_ID_ITEM2">
+            <TITLE UID="_SKOSCRIPTS_ID_ITEM2_TITLE"><![CDATA[First]]></TITLE>
+            <NOTES UID="_SKOSCRIPTS_ID_ITEM2_NOTES"><![CDATA[First Exp]]></NOTES>
+            <mattextS UID="_SKOSCRIPTS_ID_ITEM2_MATTEXTS"><![CDATA[The United States currently faces and is likely to continue to face terrorist opposition for many years to come. These terrorist adversaries are continuously and consciously evaluating our strengths and weaknesses, with an aim to avoid our strong suits and attack our vulnerabilities.]]></mattextS>
+            <mattextR UID="_SKOSCRIPTS_ID_ITEM2_MATTEXTR"><![CDATA[]]></mattextR>
+            <mattextD UID="_SKOSCRIPTS_ID_ITEM2_MATTEXTD"><![CDATA[]]></mattextD>
+            <QCs UID="_SKOSCRIPTS_ID_ITEM2_QCS">
+              <itemType label="Tab 1" HelpURL="null" UID="_SKOSCRIPTS_ID_ITEM2_QCS_ITEMTYPE1"/>
+              <itemType label="Tab2" HelpURL="null" UID="_SKOSCRIPTS_ID_ITEM2_QCS_ITEMTYPE2"/>
+              <itemType label="Tab3" HelpURL="null" UID="_SKOSCRIPTS_ID_ITEM2_QCS_ITEMTYPE3"/>
+              <itemType label="Tab 1" HelpURL="null" UID="_SKOSCRIPTS_ID_ITEM2_QCS_ITEMTYPE4"/>
+              <itemType label="Tab 2" HelpURL="null" UID="_SKOSCRIPTS_ID_ITEM2_QCS_ITEMTYPE5"/>
+              <itemType label="Tab 3" HelpURL="null" UID="_SKOSCRIPTS_ID_ITEM2_QCS_ITEMTYPE6"/>
+              <itemType label="" HelpURL="null" UID="_SKOSCRIPTS_ID_ITEM2_QCS_ITEMTYPE7"/>
+            </QCs>
+            <PageConfig UseDefault="false" UID="_SKOSCRIPTS_ID_ITEM2_PAGECONFIG">
+              <groupID UID="_SKOSCRIPTS_ID_ITEM2_PAGECONFIG_GROUPID"/>
+              <MediaURLXML UID="_SKOSCRIPTS_ID_ITEM2_PAGECONFIG_MEDIAURLXML"><![CDATA[http://lh5.ggpht.com/_aJgwQlDL730/TKSMxzjBVHI/AAAAAAAAAIM/fVhVdZugyGo/counterinsurgency.jpg]]></MediaURLXML>
+              <mediaTypeXML UID="_SKOSCRIPTS_ID_ITEM2_PAGECONFIG_MEDIATYPEXML">ImageOnly</mediaTypeXML>
+              <ShowAvatarHere UID="_SKOSCRIPTS_ID_ITEM2_PAGECONFIG_SHOWAVATARHERE">1</ShowAvatarHere>
+              <UseAIML UID="_SKOSCRIPTS_ID_ITEM2_PAGECONFIG_USEAIML">0</UseAIML>
+              <PlayStyle UID="_SKOSCRIPTS_ID_ITEM2_PAGECONFIG_PLAYSTYLE">auto</PlayStyle>
+              <BKIMG UID="_SKOSCRIPTS_ID_ITEM2_PAGECONFIG_BKIMG"/>
+              <EnableBigImage UID="_SKOSCRIPTS_ID_ITEM2_PAGECONFIG_ENABLEBIGIMAGE"/>
+              <AVATAR useStudent1="false" useStudent2="false" showStudent1="true" showStudent2="true" showTeacher="true" useTeacher="true" Teacher="cb/skodefault.swf" Student1="cb/SKOChar4/Output/SKOChar4.swf" Student2="cb/SKOChar7/Output/SKOChar7.swf" UID="_SKOSCRIPTS_ID_ITEM2_PAGECONFIG_AVATAR"/>
+            </PageConfig>
+          </ITEM>
+          <ITEM type="scene" UID="_SKOSCRIPTS_ID_ITEM3">
+            <TITLE UID="_SKOSCRIPTS_ID_ITEM3_TITLE"><![CDATA[Second]]></TITLE>
+            <NOTES UID="_SKOSCRIPTS_ID_ITEM3_NOTES"><![CDATA[]]></NOTES>
+            <mattextS UID="_SKOSCRIPTS_ID_ITEM3_MATTEXTS"><![CDATA[Therefore, the United States Government should be constantly assessing the effectiveness of its national power (diplomatic, informational, military, and economic), and strive to learn and adapt more quickly and effectively than our adversaries.]]></mattextS>
+            <mattextR UID="_SKOSCRIPTS_ID_ITEM3_MATTEXTR"><![CDATA[]]></mattextR>
+            <mattextD UID="_SKOSCRIPTS_ID_ITEM3_MATTEXTD"><![CDATA[]]></mattextD>
+            <QCs UID="_SKOSCRIPTS_ID_ITEM3_QCS">
+              <itemType label="Tab 1" HelpURL="null" UID="_SKOSCRIPTS_ID_ITEM3_QCS_ITEMTYPE1"/>
+              <itemType label="Tab2" HelpURL="null" UID="_SKOSCRIPTS_ID_ITEM3_QCS_ITEMTYPE2"/>
+              <itemType label="Tab3" HelpURL="null" UID="_SKOSCRIPTS_ID_ITEM3_QCS_ITEMTYPE3"/>
+              <itemType label="Tab 1" HelpURL="null" UID="_SKOSCRIPTS_ID_ITEM3_QCS_ITEMTYPE4"/>
+              <itemType label="Tab 2" HelpURL="null" UID="_SKOSCRIPTS_ID_ITEM3_QCS_ITEMTYPE5"/>
+              <itemType label="Tab 3" HelpURL="null" UID="_SKOSCRIPTS_ID_ITEM3_QCS_ITEMTYPE6"/>
+              <itemType label="" HelpURL="null" UID="_SKOSCRIPTS_ID_ITEM3_QCS_ITEMTYPE7"/>
+            </QCs>
+            <PageConfig UseDefault="false" UID="_SKOSCRIPTS_ID_ITEM3_PAGECONFIG">
+              <groupID UID="_SKOSCRIPTS_ID_ITEM3_PAGECONFIG_GROUPID"/>
+              <MediaURLXML UID="_SKOSCRIPTS_ID_ITEM3_PAGECONFIG_MEDIAURLXML"><![CDATA[http://lh4.ggpht.com/_aJgwQlDL730/TKSNTH9jqhI/AAAAAAAAAIY/_e7lAv6MltI/51%20Squadron%20Mount%20Airborne%20Counter%20Insurgency%20sgtxqcWug0al.jpg]]></MediaURLXML>
+              <mediaTypeXML UID="_SKOSCRIPTS_ID_ITEM3_PAGECONFIG_MEDIATYPEXML">ImageOnly</mediaTypeXML>
+              <ShowAvatarHere UID="_SKOSCRIPTS_ID_ITEM3_PAGECONFIG_SHOWAVATARHERE">1</ShowAvatarHere>
+              <UseAIML UID="_SKOSCRIPTS_ID_ITEM3_PAGECONFIG_USEAIML">0</UseAIML>
+              <PlayStyle UID="_SKOSCRIPTS_ID_ITEM3_PAGECONFIG_PLAYSTYLE">auto</PlayStyle>
+              <BKIMG UID="_SKOSCRIPTS_ID_ITEM3_PAGECONFIG_BKIMG"/>
+              <EnableBigImage UID="_SKOSCRIPTS_ID_ITEM3_PAGECONFIG_ENABLEBIGIMAGE"/>
+              <AVATAR useStudent1="true" useStudent2="false" showStudent1="true" showStudent2="true" showTeacher="true" useTeacher="false" Teacher="cb/skodefault.swf" Student1="cb/SKOChar4/Output/SKOChar4.swf" Student2="cb/SKOChar7/Output/SKOChar7.swf" UID="_SKOSCRIPTS_ID_ITEM3_PAGECONFIG_AVATAR"/>
+            </PageConfig>
+          </ITEM>
+          <ITEM type="scene" UID="_SKOSCRIPTS_ID_ITEM4">
+            <TITLE UID="_SKOSCRIPTS_ID_ITEM4_TITLE"><![CDATA[Third]]></TITLE>
+            <NOTES UID="_SKOSCRIPTS_ID_ITEM4_NOTES"><![CDATA[]]></NOTES>
+            <mattextS UID="_SKOSCRIPTS_ID_ITEM4_MATTEXTS"><![CDATA[Learning organizations may defeat insurgencies, while armies that fail to learn and adapt will have a difficult time opposing rebellion.]]></mattextS>
+            <mattextR UID="_SKOSCRIPTS_ID_ITEM4_MATTEXTR"><![CDATA[]]></mattextR>
+            <mattextD UID="_SKOSCRIPTS_ID_ITEM4_MATTEXTD"><![CDATA[]]></mattextD>
+            <QCs UID="_SKOSCRIPTS_ID_ITEM4_QCS">
+              <itemType label="Tab 1" HelpURL="null" UID="_SKOSCRIPTS_ID_ITEM4_QCS_ITEMTYPE1"/>
+              <itemType label="Tab2" HelpURL="null" UID="_SKOSCRIPTS_ID_ITEM4_QCS_ITEMTYPE2"/>
+              <itemType label="Tab3" HelpURL="null" UID="_SKOSCRIPTS_ID_ITEM4_QCS_ITEMTYPE3"/>
+              <itemType label="Tab 1" HelpURL="null" UID="_SKOSCRIPTS_ID_ITEM4_QCS_ITEMTYPE4"/>
+              <itemType label="Tab 2" HelpURL="null" UID="_SKOSCRIPTS_ID_ITEM4_QCS_ITEMTYPE5"/>
+              <itemType label="Tab 3" HelpURL="null" UID="_SKOSCRIPTS_ID_ITEM4_QCS_ITEMTYPE6"/>
+              <itemType label="" HelpURL="null" UID="_SKOSCRIPTS_ID_ITEM4_QCS_ITEMTYPE7"/>
+            </QCs>
+            <PageConfig UseDefault="false" UID="_SKOSCRIPTS_ID_ITEM4_PAGECONFIG">
+              <groupID UID="_SKOSCRIPTS_ID_ITEM4_PAGECONFIG_GROUPID"/>
+              <MediaURLXML UID="_SKOSCRIPTS_ID_ITEM4_PAGECONFIG_MEDIAURLXML"><![CDATA[http://lh4.ggpht.com/_aJgwQlDL730/TKSN4pE9fNI/AAAAAAAAAIo/K9d8SL2rttI/Marines%20Continue%20Counterinsurgency%20Operations%20CnEMxBPpYKYl.jpg]]></MediaURLXML>
+              <mediaTypeXML UID="_SKOSCRIPTS_ID_ITEM4_PAGECONFIG_MEDIATYPEXML">ImageOnly</mediaTypeXML>
+              <ShowAvatarHere UID="_SKOSCRIPTS_ID_ITEM4_PAGECONFIG_SHOWAVATARHERE">1</ShowAvatarHere>
+              <UseAIML UID="_SKOSCRIPTS_ID_ITEM4_PAGECONFIG_USEAIML">0</UseAIML>
+              <PlayStyle UID="_SKOSCRIPTS_ID_ITEM4_PAGECONFIG_PLAYSTYLE">auto</PlayStyle>
+              <BKIMG UID="_SKOSCRIPTS_ID_ITEM4_PAGECONFIG_BKIMG"/>
+              <EnableBigImage UID="_SKOSCRIPTS_ID_ITEM4_PAGECONFIG_ENABLEBIGIMAGE"/>
+              <AVATAR useStudent1="false" useStudent2="true" showStudent1="true" showStudent2="true" showTeacher="true" useTeacher="false" Teacher="cb/skodefault.swf" Student1="cb/SKOChar4/Output/SKOChar4.swf" Student2="cb/SKOChar7/Output/SKOChar7.swf" UID="_SKOSCRIPTS_ID_ITEM4_PAGECONFIG_AVATAR"/>
+            </PageConfig>
+          </ITEM>
+          <ITEM type="scene" UID="_SKOSCRIPTS_ID_ITEM5">
+            <TITLE UID="_SKOSCRIPTS_ID_ITEM5_TITLE"><![CDATA[Fourth]]></TITLE>
+            <NOTES UID="_SKOSCRIPTS_ID_ITEM5_NOTES"><![CDATA[Fouth Paragraph]]></NOTES>
+            <mattextS UID="_SKOSCRIPTS_ID_ITEM5_MATTEXTS"><![CDATA[Effective learning organizations encourage individuals to pay attention to the rapidly changing situations that characterize COIN campaigns and rapid enemy innovation that could lead to a shift in attitudes of local populations and to local civilian leadership turmoil.]]></mattextS>
+            <mattextR UID="_SKOSCRIPTS_ID_ITEM5_MATTEXTR"><![CDATA[]]></mattextR>
+            <mattextD UID="_SKOSCRIPTS_ID_ITEM5_MATTEXTD"><![CDATA[]]></mattextD>
+            <QCs UID="_SKOSCRIPTS_ID_ITEM5_QCS">
+              <itemType label="Tab 1" HelpURL="null" UID="_SKOSCRIPTS_ID_ITEM5_QCS_ITEMTYPE1"/>
+              <itemType label="Tab2" HelpURL="null" UID="_SKOSCRIPTS_ID_ITEM5_QCS_ITEMTYPE2"/>
+              <itemType label="Tab3" HelpURL="null" UID="_SKOSCRIPTS_ID_ITEM5_QCS_ITEMTYPE3"/>
+              <itemType label="Tab 1" HelpURL="null" UID="_SKOSCRIPTS_ID_ITEM5_QCS_ITEMTYPE4"/>
+              <itemType label="Tab 2" HelpURL="null" UID="_SKOSCRIPTS_ID_ITEM5_QCS_ITEMTYPE5"/>
+              <itemType label="Tab 3" HelpURL="null" UID="_SKOSCRIPTS_ID_ITEM5_QCS_ITEMTYPE6"/>
+              <itemType label="" HelpURL="null" UID="_SKOSCRIPTS_ID_ITEM5_QCS_ITEMTYPE7"/>
+            </QCs>
+            <PageConfig UseDefault="false" UID="_SKOSCRIPTS_ID_ITEM5_PAGECONFIG">
+              <groupID UID="_SKOSCRIPTS_ID_ITEM5_PAGECONFIG_GROUPID"/>
+              <MediaURLXML UID="_SKOSCRIPTS_ID_ITEM5_PAGECONFIG_MEDIAURLXML"><![CDATA[http://lh3.ggpht.com/_aJgwQlDL730/TKSOSKK-60I/AAAAAAAAAJA/nVzMHtFhYo0/171109top2.jpg]]></MediaURLXML>
+              <mediaTypeXML UID="_SKOSCRIPTS_ID_ITEM5_PAGECONFIG_MEDIATYPEXML">ImageOnly</mediaTypeXML>
+              <ShowAvatarHere UID="_SKOSCRIPTS_ID_ITEM5_PAGECONFIG_SHOWAVATARHERE">1</ShowAvatarHere>
+              <UseAIML UID="_SKOSCRIPTS_ID_ITEM5_PAGECONFIG_USEAIML">0</UseAIML>
+              <PlayStyle UID="_SKOSCRIPTS_ID_ITEM5_PAGECONFIG_PLAYSTYLE">auto</PlayStyle>
+              <BKIMG UID="_SKOSCRIPTS_ID_ITEM5_PAGECONFIG_BKIMG"/>
+              <EnableBigImage UID="_SKOSCRIPTS_ID_ITEM5_PAGECONFIG_ENABLEBIGIMAGE"/>
+              <AVATAR useStudent1="false" useStudent2="false" showStudent1="true" showStudent2="true" showTeacher="true" useTeacher="true" Teacher="cb/skodefault.swf" Student1="cb/SKOChar4/Output/SKOChar4.swf" Student2="cb/SKOChar7/Output/SKOChar7.swf" UID="_SKOSCRIPTS_ID_ITEM5_PAGECONFIG_AVATAR"/>
+            </PageConfig>
+          </ITEM>
+        </material>
+      </presentation>
+    </item>
+  </ID>
