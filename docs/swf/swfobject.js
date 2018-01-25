@@ -623,11 +623,11 @@ var SWFObject = function() {
 		/* Public API
 			- Reference: http://code.google.com/p/SWFObject/wiki/documentation
 		*/ 
-		registerObject: function(objectIdStr, SWFVersionStr, xiSwfUrlStr, callbackFn) {
-			if (ua.w3 && objectIdStr && SWFVersionStr) {
+		registerObject: function(objectIdStr, swfVersionStr, xiSwfUrlStr, callbackFn) {
+			if (ua.w3 && objectIdStr && swfVersionStr) {
 				var regObj = {};
 				regObj.id = objectIdStr;
-				regObj.swfVersion = SWFVersionStr;
+				regObj.swfVersion = swfVersionStr;
 				regObj.expressInstall = xiSwfUrlStr;
 				regObj.callbackFn = callbackFn;
 				regObjArr[regObjArr.length] = regObj;
@@ -644,9 +644,9 @@ var SWFObject = function() {
 			}
 		},
 		
-		embedSWF: function(SWFUrlStr, replaceElemIdStr, widthStr, heightStr, SWFVersionStr, xiSwfUrlStr, flashvarsObj, parObj, attObj, callbackFn) {
+		embedSWF: function(swfUrlStr, replaceElemIdStr, widthStr, heightStr, swfVersionStr, xiSwfUrlStr, flashvarsObj, parObj, attObj, callbackFn) {
 			var callbackObj = {success:false, id:replaceElemIdStr};
-			if (ua.w3 && !(ua.wk && ua.wk < 312) && SWFUrlStr && replaceElemIdStr && widthStr && heightStr && SWFVersionStr) {
+			if (ua.w3 && !(ua.wk && ua.wk < 312) && swfUrlStr && replaceElemIdStr && widthStr && heightStr && swfVersionStr) {
 				setVisibility(replaceElemIdStr, false);
 				addDomLoadEvent(function() {
 					widthStr += ""; // auto-convert to string
@@ -657,7 +657,7 @@ var SWFObject = function() {
 							att[i] = attObj[i];
 						}
 					}
-					att.data = SWFUrlStr;
+					att.data = swfUrlStr;
 					att.width = widthStr;
 					att.height = heightStr;
 					var par = {}; 
@@ -676,7 +676,7 @@ var SWFObject = function() {
 							}
 						}
 					}
-					if (hasPlayerVersion(SWFVersionStr)) { // create SWF
+					if (hasPlayerVersion(swfVersionStr)) { // create SWF
 						var obj = createSWF(att, par, replaceElemIdStr);
 						if (att.id == replaceElemIdStr) {
 							setVisibility(replaceElemIdStr, true);
