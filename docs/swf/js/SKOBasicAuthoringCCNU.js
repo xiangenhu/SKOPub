@@ -124,11 +124,11 @@
 		flashvars.SampleASATGUID = qs("SASATguid","61e7bd6e-36b8-420b-ab0a-bee6d6904aab");
 		
 	    flashvars.saveP = qs("saveP","0"); // Save load profile
-				flashvars.html5PlayURL = qs("H5Url","http://www.auto-tutor.com/AT/index.html?");
+				flashvars.html5PlayURL = qs("H5Url","/skoplayer/index.html?");
 		flashvars.SeverCTrY = qs("H5SC","China");
 		flashvars.html5Start = qs("H5ST","ASAT");
 		
-		flashvars.TestAvtarURL= qs("TAURL","http://autotutor.x-in-y.com/AT/Test.html");
+		flashvars.TestAvtarURL= qs("TAURL","/skoplayer/Test.html");
             var params = {};
             params.quality = "high";
             params.bgcolor = "#fdf0f0";
