@@ -80,7 +80,7 @@
 	    flashvars.regexp = qs("regexp","0");
 	    flashvars.exportscripts = qs("es","0");
 	    flashvars.OGUID = qs("oguid","1");
-	    flashvars.RetrieveOld = qs("rourl","http://ccnu.x-in-y.com:8889/retrieve");
+	    flashvars.RetrieveOld = qs("rourl","https://ccnu.x-in-y.com:8889/retrieve");
 	    flashvars.localFile = qs("LF","ASAT");  
 		flashvars.LoadLocal = qs("ll","0");
 		
