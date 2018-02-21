@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<questestinterop xsi:noNamespaceSchemaLocation="ims_qtilitev1p2.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <item title="Standard Multiple Choice Item" ident="IMS_V01_I_QTILiteExample007">
+    <presentation label="QTILiteExample007">
+      <material>
+        <mattext>Where is the capital of China?</mattext>
+      </material>
+      <response_lid ident="MCb_01" rcardinality="Single" rtiming="No">
+        <render_choice shuffle="true">
+          <response_label ident="A">
+            <material>
+              <mattext>Beijing</mattext>
+              <Hints>
+              </Hints>
+              <Feedbacks>
+              </Feedbacks>
+            </material>
+          </response_label> 
+          <response_label ident="B">
+            <material>
+              <mattext>Paris</mattext>
+              <Hints>
+              	<H>Where is China, in Asia or Europe?</H>
+              	<H>Is Paris in Asia?</H>
+              	<H>Did Paris host the 2008 Olympic?</H>
+              	<H>Is the Great Wall in Paris?</H>
+              </Hints>
+              <Feedbacks>
+              	<F>Try again! You need to borrow a map, then check it.</F>
+              	<F>Inncorrect! Try to think about the location in the map.</F>
+              	<F>It's not right! Go google and check it.</F>
+              	<F>Your are wrong! Paris is far from China.</F>
+              </Feedbacks>
+            </material>
+            <material>
+              <mattext>London</mattext>
+              <Hints>
+              	<H>Where is China, in Asia or Europe?</H>
+              	<H>Is Londonin Asia?</H>
+              	<H>Did London host the 2008 Olympic?</H>
+              </Hints>
+              <Feedbacks>
+              	<F>Try it again!! London is not in Asia.</F>
+              	<F>Sorry,it's not right! You need to review something about chinese histroy. </F>
+              </Feedbacks>
+            </material>
+          </response_label>
+          <response_label ident="C">
+            <material>
+              <mattext>Washington</mattext>
+              <Hints>
+              	<H>Where is China, in Asia or North America?</H>
+              	<H>Is Washington in Asia?</H>
+              	<H>Did Washington host the 2008 Olympic?</H>
+              	<H>Is the Great Wall in Washington?</H>
+              </Hints>
+              <Feedbacks>
+              	<F>Try again! Washington is in USA.</F>
+              	<F>It's not right! Washington is far from China.</F>
+              	<F>Think it again. China is in Asia</F>
+              </Feedbacks>
+            </material>
+            <material>
+              <mattext>Vancover</mattext>
+              <Hints>
+              	<H>Is Vancover in Asia?</H>
+              	<H>Did Vancover host the 2008 Olympic?</H>
+              </Hints>
+              <Feedbacks>
+              	<F>Try it again!! Vancover is in Canada.</F>
+              	<F>Inncorrect answer!! Vancover is far from China.</F>
+              	<F>Sorry,it's not right! You need to read somethin about China.</F>
+              	<F>Woops,your are wrong!! Vancover is in North America.</F>
+              </Feedbacks>
+            </material>
+            <material>
+              <mattext>New York</mattext>
+              <Hints>
+              	<H>Is New York in China or North America?</H>
+              	<H>Is New York in Asia?</H>
+              	<H>Did New York host the 2008 Olympic?</H>
+              	<H>Is the Great Wall in New York?</H>
+              </Hints>
+              <Feedbacks>
+              	<F>Please try again! New York is not in China.</F>
+              	<F>Wrong answer! New York is in North America.</F>
+              	<F>Sorry, your answer is not right! New York is in USA.</F>
+              	<F>Nice try, rethink about it! New York is far from China.</F>
+              </Feedbacks>
+            </material>
+          </response_label>
+          <response_label ident="D">
+            <material>
+              <mattext>Tokyo</mattext>
+              <Hints>
+              	<H>Where is China, in Asia or Europe?</H>
+              	<H>Is Tokyo in Asia?</H>
+              	<H>Did Tokyo host the 2008 Olympic?</H>
+              	<H>Is the Great Wall in Tokyo?</H>
+              </Hints>
+              <Feedbacks>
+              	<F>Try again! Tokyo is not in China.</F>
+              	<F>Nice try, rethink about it! Tokyo is also in Asia.</F>
+              	<F>It's not right! Tokyo is in Japan.</F>
+              	<F>Your are wrong! Tokyo is capital of Japan.</F>
+              </Feedbacks>
+            </material>
+            <material>
+              <mattext>Shanghai</mattext>
+              <Hints>
+              	<H>Where is China, in Asia or North America?</H>
+              	<H>Did Shanghai host the 2008 Olympic?</H>
+              	<H>Is the Great Wall in Shanghai?</H>
+              </Hints>
+              <Feedbacks>
+              	<F>Inncorrect answer!! You answer is close. Think about other cities in China.</F>
+              	<F>Sorry,it's not right! Shanghai is the commercial center of China.</F>
+              	<F>Woops,your are wrong!! Shanghai is in China but not the capital of China.</F>
+              </Feedbacks>
+            </material>
+            <material>
+              <mattext>Soul</mattext>
+              <Hints>
+              	<H>Is Soul in China or Korea?</H>
+              	<H>Is Soul in Asia?</H>
+              	<H>Did Soul host the 2008 Olympic?</H>
+              	<H>Is the Great Wall in Soul?</H>
+              </Hints>
+              <Feedbacks>
+              	<F>Please try again!Soul is not in China.</F>
+              	<F>Sorry, your answer is not right! Soul is capital of Korea.</F>
+              	<F>Nice try, rethink about it! Soul is also in Asia.</F>
+              	<F>It's not right! Soul is in Korea.</F>
+              </Feedbacks>
+            </material>
+            <material>
+              <mattext>Hongkong</mattext>
+              <Hints>
+              	<H>Did Hongkong host the 2008 Olympic?</H>
+              	<H>Is the Great Wall in Hongkong?</H>
+              </Hints>
+            </material>
+          </response_label>      
+        </render_choice>
+      </response_lid>
+    </presentation>
+    <resprocessing>
+      <outcomes>
+        <decvar vartype="Integer" defaultval="0" />
+      </outcomes>
+      <respcondition title="Correct">
+        <conditionvar>
+          <varequal respident="MCb_01">A</varequal>
+        </conditionvar>
+        <setvar action="Set">1</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="Correct" />
+      </respcondition>
+      <respcondition title="Incorrect">
+        <conditionvar>
+          <not>
+            <varequal respident="MCb_01">A</varequal>
+          </not>
+        </conditionvar>
+        <setvar action="Set">0</setvar>
+        <displayfeedback feedbacktype="Response" linkrefid="Incorrect" />
+      </respcondition>
+    </resprocessing>
+    <itemfeedback ident="">
+			<material>
+				<mattext></mattext>
+        <Feedbacks>
+        	<PF>Great job!</PF>
+        	<PF>Correct!</PF>
+    			<PF>Nice work!</PF>
+    			<PF>Your are right!</PF>
+    		</Feedbacks>
+    		<Feedbacks>    			
+    			<NF>Please try again!</NF>
+    			<NF>Wrong answer!</NF>
+    			<NF>Sorry, your answer is not right!</NF>
+    			<NF>Nice try, rethink about it!</NF>
+    			<NF>Woops, your answer is not right.</NF>
+   				<NF>Inncorrect answer!!</NF>
+ 				</Feedbacks>
+			</material>
+	</itemfeedback>
+  </item>
+</questestinterop>
+  

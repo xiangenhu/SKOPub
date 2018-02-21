@@ -1,0 +1,15 @@
+<itemType label="Intermediate" HelpURL="skoscripttype12">
+<item value="Feature specification" name="Feature specification" selected="false" note="type note here" hint="What qualitative properties does entity X have?
+e.g. What does the graph of X look like?"/> 
+<item value="Quantification" name="Quantification" selected="false" note="type note here" hint="What is the value of a quantitative variable? How much?
+e.g. What is the solution of the following equation?
+e.g. How many solutions does a linear equation have? 
+e.g. How many solutions can a quadratic equation have? 
+e.g. What is the discriminant of this quadratic polynomial?
+e.g. What is the maximum number of turning points that a polynomial of degree X can have?"/> 
+<item value="Definition questions" name="Definition questions" selected="false" note="type note here" hint="What does X mean? 
+e.g. Define what it means for an equation to be linear.
+e.g. Give the standard form of a parabola.
+e.g. Define what it means for an equation to be exponential."/> 
+<item value="Comparison" name="Comparison" selected="false" note="type note here" hint="How is X similar to Y? How is X different from Y?"/> 
+</itemType>

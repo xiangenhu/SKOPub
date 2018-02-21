@@ -1,0 +1,20 @@
+<html>
+	<head>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js"></script>
+    </head>
+	<body>
+		<center>
+			<iframe id="ChildPanel" src="/skoplayer/index.html?ServerType=NONGAE&school=https://ccnu.x-in-y.com:8889"
+				width="1024" height="768" seamless frameboard="0"></iframe>
+		</center>  
+	</body>
+	<script>
+		$(document).ready(function()  
+		{  
+    		var loc = window.location.toString(),  
+    		params = loc.split('?')[1],  
+    		iframe = document.getElementById("ChildPanel");  
+			iframe.src = iframe.src + '&xAPI=1&bkg=&ST=ID&' + params;  
+		});
+	</script>
+</html>

@@ -1,0 +1,43 @@
+<xAPIItems label="List of xAPITypes">
+<item code="Speak&Listen" verb="listen" activity="lesson"/>
+<item code="Click_next" verb="Click" activity="lesson"/>
+<item code="watch" verb="watch" activity="movie"/>
+<item code="click_link" verb="Click" activity="link"/>
+<item code="browse" verb="browse" activity="link"/>
+
+
+
+
+<item code="TUChoice" verb="Choice" activity="assessment"/>
+<item code="asked" verb="asked" activity="question"/>
+<item code="answer" verb="answer" activity="question"/>
+<item code="submit" verb="submit" activity="answer"/>
+<item code="progressed" verb="progressed" activity="assessment"/>
+
+
+
+
+<item code="Speak&Listen" verb="listen" activity="lesson"/>
+<item code="clicknext" verb="click" activity="lesson"/>
+<item code="MCChoice" verb="Choice" activity="assessment"/>
+<item code="asked" verb="asked" activity="question"/>
+<item code="click_hint" verb="asked" activity="hint"/>
+<item code="choice" verb="choice" activity="answer"/>
+<item code="submit" verb="submit" activity="answer"/>
+
+
+
+
+
+<item code="Speak&Listen" verb="listen" activity="lesson"/>
+<item code="Click_next" verb="Click" activity="lesson"/>
+<item code="drag&drop" verb="drag&drop" activity="matching"/>
+<item code="submit" verb="submit" activity="answer"/>
+
+
+
+<item code="Speak&Listen" verb="listen" activity="lesson"/>
+<item code="FIB" verb="fill" activity="question"/>
+
+
+</xAPIItems>

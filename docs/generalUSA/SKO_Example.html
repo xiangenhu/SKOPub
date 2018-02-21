@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+		<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="../swf/js/purl.js"></script>
+		<script type="text/javascript" src="../swf/js/utilities.js"></script>
+		<script type="text/javascript" src="../swf/js/SKO_Messaging.js"></script>
+	</head>
+	<body>
+        <script type="text/javascript">
+        STATE_MACHINE = {};
+        STATE_MACHINE.onDialogDone = function (x) {};
+        STATE_MACHINE.onSWFLoaded = function (x) {};
+        console.log("LOADED");
+        </script>
+		<div id='tutoring_box' align=center style="overflow-y:hidden;"> <!-- Removed "hidden" flag for demo.-->
+			<iframe id="Avatar"	width="660" Height="500"
+				src="atl.html?guid=79705342-00f7-42cb-9c81-a6667cbb2fa6"
+				frameborder=0 style="overflow-y:hidden;">
+			</iframe>
+		</div>
+        <div id="TextInputPanel" align="center">
+            <textarea id="TutoringInput" rows="1" style="width:660px" name="TutoringInput">Input text and press enter to send.</textarea><br>
+	    <a href="javascript:SendStudentDialog(document.getElementById('TutoringInput').value)">Student Input</a><br>
+        </div>
+        <hr>
+		<center><table><tr><td><button type="button" onClick="SetDialogGUID(document.getElementById('aguid').value)">Set Dialog GUID</button>
+			<br/><textarea style="width:300px" name="aguid" id="aguid">82f9fad9-4e28-4673-847a-bd80a7a43d8e</textarea>
+			<br/>
+			<button type="button" onClick="OutputDialog(document.getElementById('tutorSay').value,document.getElementById('tutorSay').value,'Tutor')">Tutor Say</button> <br/>
+			<textarea style="width:300px" name="tutorSay" id="tutorSay">Tutor say this: How are you?</textarea><br/>
+			
+			<button type="button" onClick="OutputDialog(document.getElementById('student1Say').value,document.getElementById('student1Say').value,'Student1')">Student1 Say</button> <br/>
+			<textarea style="width:300px" name="student1Say" id="student1Say">student 1 say this: I am fine?</textarea>
+			<br/>
+			<button type="button" onClick="OutputDialog(document.getElementById('student2Say').value,document.getElementById('student2Say').value,'Student2')">Student2 Say</button> <br/>
+			<textarea style="width:300px" name="student2Say" id="student2Say">student 2 say this: I am fine?</textarea>
+			<hr></td>
+		<td>Logs: <br/><textarea id="logs" name="logs" style="height:230px;width: 300px" ></textarea></td></tr></table>
+		</center>
+		
+	</body>
+</html>
+

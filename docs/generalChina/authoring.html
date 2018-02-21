@@ -1,0 +1,46 @@
+
+<html>
+	<head>
+        <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js"></script>
+    </head>
+	<body>
+		<center>
+			<iframe id="ChildPanel" src="authorOriginal.html?ServerType=NONGAE"
+				width="1024" height="768" seamless frameboard="0"></iframe>
+		</center>  
+	</body>
+	<script>
+		$(document).ready(function()  
+		{  
+		
+    		
+			var loc = window.location.toString();  
+    		params = loc.split('?')[1];  
+    		specialSet="&ll=1&"+
+            "Advanced=1&saveas=1&";
+    		
+    		iframe = document.getElementById("ChildPanel");  
+			iframe.src =iframe.src+specialSet+params; 
+			
+		});
+		
+		
+		
+		
+		function listener(event){
+//  			var jsonObj = JSON.parse(event.data);
+//  			var msgObj = JSON.parse(jsonObj.msg);
+//  			var result = msgObj.Message.result;
+//  			console.log(result);
+
+
+
+		}
+
+		if (window.addEventListener){
+  			addEventListener("message", listener, false)
+		} else {
+  			attachEvent("onmessage", listener)
+		}
+	</script>
+</html>

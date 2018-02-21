@@ -1,0 +1,29 @@
+
+<FIB>
+  <TITLE><![CDATA[Title of FIB]]></TITLE>
+  <NOTES><![CDATA[]]></NOTES>
+  <responseDeclaration identifier="Q1" cardinality="single">
+    <correctResponse>
+      <value>world</value>
+      <mapping defaultValue="0">
+        <mapEntry mapKey="world" mappedValue="1"/>
+      </mapping>
+    </correctResponse>
+  </responseDeclaration>
+  <responseDeclaration identifier="Q2" cardinality="single">
+    <correctResponse>
+      <value>you</value>
+      <mapping defaultValue="0">
+        <mapEntry mapKey="you" mappedValue="1"/>
+      </mapping>
+    </correctResponse>
+  </responseDeclaration>
+  <mattextD>
+    hello
+    <textEntryInteraction responseIdentifier="Q1" expectedLength="10"/>
+    how are
+    <textEntryInteraction responseIdentifier="Q2" expectedLength="10"/>
+    folks
+  </mattextD>
+  <mattextS><![CDATA[What is the content]]></mattextS>
+</FIB>

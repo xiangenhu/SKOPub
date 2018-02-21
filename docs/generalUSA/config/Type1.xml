@@ -1,0 +1,40 @@
+<itemType label="Graesser and Person (1994) question taxonomy" HelpURL="skoscripttype1">
+<item value="Verification" name="Verification" selected="false" note="type note here" hint="Is X true or false? Did an event occur?
+e.g. Is this equation linear? 
+e.g. Is this a system of equations?
+e.g. X thinks the next step should be Y. Is X right?"/>  
+<item value="Disjunctive" name="Disjunctive" selected="false" note="type note here" hint="Is X, Y, or Z the case? 
+e.g. Is this a linear, quadratic, or exponential function or graph?
+e.g. Does this system of equations have no solutions, a unique solution, or infinitely many solutions?"/> 
+<item value="Concept completion" name="Concept completion" selected="false" note="type note here" hint="Who? What? When? Where?"/>
+<item value="Example" name="Example" selected="false" note="type note here" hint="What is an example or instance of a category? 
+e.g. Provide an example of a system of equations with no solutions. 
+e.g. Draw a graph of a quadratic polynomial with one real root.
+e.g. Give an example of a quadratic polynomial with integer coefficients with no real roots.
+e.g. Give an example of a quadratic polynomial with integer coefficients that has 2 real roots but no integer roots."/> 
+<item value="Feature specification" name="Feature specification" selected="false" note="type note here" hint="What qualitative properties does entity X have?
+e.g. What does the graph of X look like?"/> 
+<item value="Quantification" name="Quantification" selected="false" note="type note here" hint="What is the value of a quantitative variable? How much?
+e.g. What is the solution of the following equation?
+e.g. How many solutions does a linear equation have? 
+e.g. How many solutions can a quadratic equation have? 
+e.g. What is the discriminant of this quadratic polynomial?
+e.g. What is the maximum number of turning points that a polynomial of degree X can have?"/> 
+<item value="Definition questions" name="Definition questions" selected="false" note="type note here" hint="What does X mean? 
+e.g. Define what it means for an equation to be linear.
+e.g. Give the standard form of a parabola.
+e.g. Define what it means for an equation to be exponential."/> 
+<item value="Comparison" name="Comparison" selected="false" note="type note here" hint="How is X similar to Y? How is X different from Y?"/> 
+<item value="Interpretation" name="Interpretation" selected="false" note="type note here" hint="What concept/claim can be inferred from a pattern of data? 
+e.g. What type of function looks like it would best fit the given data?"/> 
+<item value="Causal antecedent" name="Causal antecedent" selected="false" note="type note here" hint="Why did an event occur? 
+e.g. Why was the substitution/elimination method chosen?"/> 
+<item value="Causal consequence" name="Causal consequence" selected="false" note="type note here" hint="What are the consequences of an event or state? 
+e.g. What would the next step be?"/> 
+<item value="Goal orientation" name="Goal orientation" selected="false" note="type note here" hint="What are the motives or goals behind an agent X action?"/> 
+<item value="Instrumental/procedural" name="Instrumental/procedural" selected="false" note="type note here" hint="What plan or instrument allows an agent to accomplish a goal? 
+e.g. What is the method you will employ to solve this problem?"/> 
+<item value="Enablement" name="Enablement" selected="false" note="type note here" hint="What object or resource allows an agent to accomplish a goal?"/> 
+<item value="Expectation" name="Expectation" selected="false" note="type note here" hint="Why did some expected event not occur?"/> 
+<item value="Judgmental" name="Judgmental" selected="false" note="type note here" hint="What value does the answerer place on an idea or advice?"/> 
+</itemType>

@@ -1,0 +1,12 @@
+<itemType label="Applying" HelpURL="skoscripttype3"> 
+<item value="Select" name="Select" note="add note here" selected="false"
+      hint="Select an efficient/appropriate operation, method, or strategy for solving problems where there is aknown procedure, algorithm, or method of solution."/> 
+<item value="Represent" name="Represent" note="add note here" selected="false"
+      hint="Display mathematical information and data in diagrams, tables, charts, or graphs, and generate equivalent representations for a given mathematical entity or relationship."/> 
+<item value="Model" name="Model" note="add note here" selected="false"
+      hint="Generate an appropriate model, such as an equation, geometric figure, or diagram for solving a routine problem."/> 
+<item value="Implement" name="Implement" note="add note here" selected="false"
+      hint="Implement a set of mathematical instructions (e.g., draw shapes and diagrams to given specifications)."/> 
+<item value="Solve Routine Problems" name="Solve Routine Problems" note="add note here" selected="false"
+      hint="Solve standard problems similar to those encountered in class. The problems can be in familiar contexts or purely mathematical."/> 
+</itemType>

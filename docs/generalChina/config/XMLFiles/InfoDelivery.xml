@@ -1,0 +1,25 @@
+<?xml version = "1.0" encoding = "UTF-8" standalone = "no"?>
+
+<questestinterop>
+	<item title = "The Escalating Need for Contracted Support" ident = "IMS_V01_I_QTILiteExample007">
+		<presentation label = "QTILiteExample007">
+			<material>
+				<mattext><p>Planning and managing contracted support and its associated contractor personnel integration actions involves numerous command and staff elements.</p>
+				         <p>Understanding the roles and responsibilities of these organizations is critically important to all commands and staffs that may be involved with planning and managing contracted support and contractor management.</p>
+				         <p>The six command and staff elements that play a crucial role in shaping OCS policy and implementation include:
+  				         <ul>
+  				         	<li>Office of the Secretary of Defense</li>
+      						  <li>Chairman of the Joint Chiefs of Staff</li>
+      						  <li>Military Departments</li>
+      						  <li>Combatant Commanders and Subordinate Joint Force Commanders</li>
+      						  <li>Service Component Commands</li>
+      						  <li>Department of Defense <font color='blue'>(DoD)</font> Agencies</li>
+      						  <li>Joint Contingency Acquisition Support Office <font color='blue'>(JCASO)</font></li>
+      						 </ul>
+      					 </p>
+      		       <img src="Media/InfoDelivery.jpg" alt="InfoDelivery" align = "bottom" height = "250" width = "350"/>
+				</mattext>
+			</material>
+		</presentation>
+	</item>
+</questestinterop>
