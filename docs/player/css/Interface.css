@@ -222,3 +222,14 @@ textarea{
 	margin-left:-40px;  
 	margin-top:-30x;  
 }
+#frame-loader{
+	display: block;
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:1280px;  /* adjust as per your needs */
+	height:1024px;   /* adjust as per your needs */
+	margin-left:-640px;   /* negative half of width above */
+	margin-top:-512px;   /* negative half of height above */
+	z-index: 2;
+}

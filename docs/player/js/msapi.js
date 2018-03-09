@@ -378,13 +378,18 @@ function onLoad() {
 	$("#Start").fadeOut();
 	loadLRS(lrsL);
 	$('#audio').trigger("play");
-	
+	 $(document).ready(function(){
+		if (qs("url","")==""){
+		$('#innerframe').hide()
+		}else{
+		$('#innerframe').attr('src', qs("url",""));
+		}
+	  })
 	if (qs("SR","0")!="0"){
 			$("#RecordBtn").css("display", "block");
 		}else{
 			$("#RecordBtn").css("display", "none");
 		}
-	
 	ConnectAndGetScriptsFromSKOServer();
 	
 }
