@@ -90,7 +90,7 @@ var S4=false;;
 var language=qs("lang","english");
 var LSASpaceName=qs("LSAS","English_TASA");
 var ProjectName=qs("ProjN","ET");
-var UseDB=qs("UserDB","true");
+var UseDB=qs("UseDB","true");
 	
 var Auser="mailto:"+decodeURIComponent(qs("user","xhu@memphis.edu"));
 var MoodleID=qs("MID","4");
