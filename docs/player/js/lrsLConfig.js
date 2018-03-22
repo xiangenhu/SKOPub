@@ -70,7 +70,6 @@ function loadLRS(alrsL){
 		LRSLogin=qs("lrslogin","82b9bf9fb9c86d55f01ae25509dfc22afe4a4429");
 		LRSPassword=qs("lrspassword","dfd1f821f63530f4d4066b2a34312912e56d29f1");
 		return;
-	}
 	}else if  (EXPID=="EXP_XSD"){
 		LRSURL=qs("lrs","https://ccnu.x-in-y.com/data/xAPI/");
 		LRSLogin=qs("lrslogin","46d883a358aa523df1338156d1ae0d5d7b66748e");
