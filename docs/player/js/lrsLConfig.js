@@ -75,7 +75,11 @@ function loadLRS(alrsL){
 		LRSLogin=qs("lrslogin","46d883a358aa523df1338156d1ae0d5d7b66748e");
 		LRSPassword=qs("lrspassword","48e16284d58139a034e8d719bf5c1e8ab80c3a2e");
 		return;
-	}
+	}else if  (EXPID=="EXP_CW"){
+		LRSURL=qs("lrs","https://ccnu.x-in-y.com/data/xAPI/");
+		LRSLogin=qs("lrslogin","4583ed8e32acca0a8003815c922f3d777b992610");
+		LRSPassword=qs("lrspassword","93ce03160479936d6447d4c0a98be047bcfa6bf5");
+		return;
 	if (SKOSchool.indexOf("ccnu")>0){
 		alrsL="alttaiCCNU";
 	}
