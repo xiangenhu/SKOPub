@@ -80,6 +80,7 @@ function loadLRS(alrsL){
 		LRSLogin=qs("lrslogin","4583ed8e32acca0a8003815c922f3d777b992610");
 		LRSPassword=qs("lrspassword","93ce03160479936d6447d4c0a98be047bcfa6bf5");
 		return;
+	}
 	if (SKOSchool.indexOf("ccnu")>0){
 		alrsL="alttaiCCNU";
 	}
