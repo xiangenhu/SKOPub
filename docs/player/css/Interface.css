@@ -80,7 +80,8 @@
 textarea{
     border-radius: 10px;
     border: 1px solid #000;
-	padding:2px
+	padding:2px;
+	z-index: 100
 }
 
 #WorkingArea{
@@ -180,7 +181,7 @@ textarea{
 	border-radius: 10px 10px 10px 10px;
 	padding:5px;
     display: none;
-    z-index: 1;
+    z-index: 100;
 	overflow:auto;
 }
 
@@ -221,6 +222,7 @@ textarea{
 	height:60px;  
 	margin-left:-40px;  
 	margin-top:-30x;  
+	z-index: 100
 }
 #frame-loader{
 	display: block;
@@ -231,5 +233,5 @@ textarea{
 	height:1024px;   /* adjust as per your needs */
 	margin-left:-640px;   /* negative half of width above */
 	margin-top:-512px;   /* negative half of height above */
-	z-index: 2;
+	z-index: -1
 }
