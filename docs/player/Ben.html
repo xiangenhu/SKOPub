@@ -1,0 +1,51 @@
+<html>
+<head>
+	<script src="js/varDefNew.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-1.12.4.js"></script>
+	<script src="js/jquery-ui.js"></script>		
+	<script src="js/msapi.js"></script>		
+	<script src="js/pixi.min.js"></script>
+	<script src="js/Interface.js"></script>
+</head>
+<body onload="onLoad()">
+<audio id="audio"></audio> 
+<div id="Test" style="position:relative; width:250px; height:200px;"> 
+<div id="TestRenderer" style="position:absolute; top:0px; right:0px; width:250px; height:200px;"></div>
+</div>	
+
+<script>
+function onLoad() {
+	onSelectChange();
+}
+
+function TestSpeech(Words){
+	msSpeakQueued("Test",Words,"");
+}
+
+function onSelectChange() {
+	var id="Test";
+	var o = {};
+		var character = qs("C","Ben");
+		var format = qs("F","Head");
+		var voice = qs("V","Paul");
+
+		if (format == "Head") {width = 250; height = 200;}
+		else if (format == "Bust") {width = 375; height = 300;}
+		else if (format == "Body") {width = 500; height = 400;}
+		else if (format == "Cartoon") {width = 307; height = 397;}
+		
+		document.getElementById(id).style.width = width+"px";
+		document.getElementById(id).style.height = height+"px";
+		document.getElementById(id+"Renderer").style.width = width+"px";
+		document.getElementById(id+"Renderer").style.height = height+"px";
+		o[id] = {character:character, format:format, width:width, height:height, voice:voice};
+	msInit(o);
+	TestSpeech(decodeURIComponent(qs("Greetings","hello! How are you!")));
+}
+
+</script>
+<p align="center">
+<button onclick="TestSpeech('I am not ready.... I am working very hard to get ready for the ITS 2018 tutorial!<bigsmile/>')">Click here to Ask Me</button> </p>
+</body>
+</html>
