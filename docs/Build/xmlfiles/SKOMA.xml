@@ -1,0 +1,29 @@
+ <MA type="MA">
+    <mattextS><![CDATA[Avatar Say before the question]]></mattextS>
+    <mattextR><![CDATA[Displayed Text 2]]></mattextR>
+    <mattextD><![CDATA[Displayed Text]]></mattextD>
+    <TITLE><![CDATA[Matching Question3]]></TITLE>
+    <NOTES><![CDATA[MA Notes]]></NOTES>
+    <responseDeclaration identifier="RESPONSE" baseType="pair">
+      <correctResponse>
+        <value>DefaultA0~DefaultB0</value>
+        <value>DefaultA1~DefaultB1</value>
+        <value>DefaultA2~DefaultB2</value>
+      </correctResponse>
+      <mapping>
+        <mapEntry mapKey="DefaultA0~DefaultB0" mappedValue="2"/>
+        <mapEntry mapKey="DefaultA1~DefaultB1" mappedValue="2"/>
+        <mapEntry mapKey="DefaultA2~DefaultB2" mappedValue="2"/>
+      </mapping>
+    </responseDeclaration>
+    <itemBody>
+      <associateInteraction responseIdentifier="RESPONSE" shuffle="true" maxAssociations="3">
+        <simpleAssociableChoice identifier="DefaultA0" matchMax="1"><![CDATA[DefaultA0]]></simpleAssociableChoice>
+        <simpleAssociableChoice identifier="DefaultB0" matchMax="1"><![CDATA[DefaultB0]]></simpleAssociableChoice>
+        <simpleAssociableChoice identifier="DefaultA1" matchMax="1"><![CDATA[DefaultA1]]></simpleAssociableChoice>
+        <simpleAssociableChoice identifier="DefaultB1" matchMax="1"><![CDATA[DefaultB1]]></simpleAssociableChoice>
+        <simpleAssociableChoice identifier="DefaultA2" matchMax="1"><![CDATA[DefaultA2]]></simpleAssociableChoice>
+        <simpleAssociableChoice identifier="DefaultB2" matchMax="1"><![CDATA[DefaultB2]]></simpleAssociableChoice>
+      </associateInteraction>
+    </itemBody>
+  </MA>

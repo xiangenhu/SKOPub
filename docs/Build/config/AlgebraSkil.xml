@@ -1,0 +1,88 @@
+<itemType label="List of Algebra Skills" HelpURL="skoscripttype5">
+<item value="Add and su......olynomials" name="Add and subtract polynomials" note="add note here" selected="FALSE" hint=""/>
+<item value="Assigning ......quantities" name="Assigning variables to represent unknown numerical quantities" note="add note here" selected="FALSE" hint=""/>
+<item value="Assigning ......quantities" name="Assigning variables to represent unknown numerical quantities" note="add note here" selected="FALSE" hint=""/>
+<item value="Change the......ero number" name="Change the coefficient of a variable to 1 by multiplying or dividing both sides of the equation by a non-zero number" note="add note here" selected="FALSE" hint=""/>
+<item value="Complete t...... (x+p)^2+q" name="Complete the square to write ax^2+bx+c in the form a (x+p)^2+q" note="add note here" selected="FALSE" hint=""/>
+<item value="Compute po......f integers" name="Compute powers of integers" note="add note here" selected="FALSE" hint=""/>
+<item value="Describe a......d inverses" name="Describe and identify the additive and multiplicative identities and inverses" note="add note here" selected="FALSE" hint=""/>
+<item value="Describe a......lication. " name="Describe and identify the commutative and associative properties of addition and multiplication. " note="add note here" selected="FALSE" hint=""/>
+<item value="Describe a...... property)" name="Describe and identify the properties of equality (reflexive, symmetric, transitive, substitution property)" note="add note here" selected="FALSE" hint=""/>
+<item value="Describe t......ve inverse" name="Describe the use of the additive inverse" note="add note here" selected="FALSE" hint=""/>
+<item value="Describe t......xpressions" name="Describe the use of the additive inverse for expressions" note="add note here" selected="FALSE" hint=""/>
+<item value="Describe t......ve inverse" name="Describe the use of the multiplicative inverse" note="add note here" selected="FALSE" hint=""/>
+<item value="Determine ......ations has" name="Determine the number of solutions that a system of linear equations has" note="add note here" selected="FALSE" hint=""/>
+<item value="Eliminate ......e equation" name="Eliminate a number by adding a positive number to, or subtracting a positive number from, both sides of the equation" note="add note here" selected="FALSE" hint=""/>
+<item value="Eliminate ......e equation" name="Eliminate an expression by adding an expression to, or subtracting an expression from, both sides of the equation" note="add note here" selected="FALSE" hint=""/>
+<item value="Evaluate a......operations" name="Evaluate algebraic expressions using the order of operations" note="add note here" selected="FALSE" hint=""/>
+<item value="Evaluate e......ute values" name="Evaluate expressions involving absolute values" note="add note here" selected="FALSE" hint=""/>
+<item value="Evaluate n......operations" name="Evaluate numerical expressions using the order of operations" note="add note here" selected="FALSE" hint=""/>
+<item value="Explain th......solutions)" name="Explain that adding a number to, or subtracting a number from, both sides of an equation results in an equivalent equation (and equation with the same set of solutions)" note="add note here" selected="FALSE" hint=""/>
+<item value="Explain th......solutions)" name="Explain that adding an expression to, or subtracting an expression from, both sides of an equation results in an equivalent equation (and equation with the same set of solutions)" note="add note here" selected="FALSE" hint=""/>
+<item value="Explain th......solutions)" name="Explain that multiplying or dividing both sides of an equation by a non-zero number results in an equivalent equation (and equation with the same set of solutions)" note="add note here" selected="FALSE" hint=""/>
+<item value="Express nu......c notation" name="Express numbers in scientific notation" note="add note here" selected="FALSE" hint=""/>
+<item value="Factor exp......ct squares" name="Factor expressions involving perfect squares" note="add note here" selected="FALSE" hint=""/>
+<item value="Factor exp......  + bx + c" name="Factor expressions of the form ax^2  + bx + c" note="add note here" selected="FALSE" hint=""/>
+<item value="Factor exp......  + bx + c" name="Factor expressions of the form x^2  + bx + c" note="add note here" selected="FALSE" hint=""/>
+<item value="Factor qua......ic formula" name="Factor quadratic polynomials using the quadratic formula" note="add note here" selected="FALSE" hint=""/>
+<item value="Find produ......c notation" name="Find products and quotients of numbers expressed in scientific notation" note="add note here" selected="FALSE" hint=""/>
+<item value="Find the d......polynomial" name="Find the degree of a polynomial" note="add note here" selected="FALSE" hint=""/>
+<item value="Find the q...... monomials" name="Find the quotient of two monomials" note="add note here" selected="FALSE" hint=""/>
+<item value="Find the v......c function" name="Find the vertex, axis of symmetry, and x- and y-intercepts of the graph of a quadratic function" note="add note here" selected="FALSE" hint=""/>
+<item value="Graph expo...... functions" name="Graph exponential functions" note="add note here" selected="FALSE" hint=""/>
+<item value="Graph ineq......nate plane" name="Graph inequalities involving two variables in the coordinate plane" note="add note here" selected="FALSE" hint=""/>
+<item value="Graph quad...... functions" name="Graph quadratic functions" note="add note here" selected="FALSE" hint=""/>
+<item value="Graph syst......equalities" name="Graph systems of linear inequalities" note="add note here" selected="FALSE" hint=""/>
+<item value="Multiply a......a monomial" name="Multiply a polynomial by a monomial" note="add note here" selected="FALSE" hint=""/>
+<item value="Multiply m...... monomials" name="Multiply monomials" note="add note here" selected="FALSE" hint=""/>
+<item value="Multiply p......e property" name="Multiply polynomials by using the distributive property" note="add note here" selected="FALSE" hint=""/>
+<item value="Recognize ......operations" name="Recognize verbal phrases identifying the four operations" note="add note here" selected="FALSE" hint=""/>
+<item value="Recognize ......operations" name="Recognize verbal phrases identifying the four operations" note="add note here" selected="FALSE" hint=""/>
+<item value="Represent ......umber line" name="Represent the compound inequalities on a number line" note="add note here" selected="FALSE" hint=""/>
+<item value="Represent ......umber line" name="Represent the inequalities x &#60; a, x &#60;= a, x &#62; a, and x &#62;=a on a number line" note="add note here" selected="FALSE" hint=""/>
+<item value="Simplify e...... exponents" name="Simplify expressions contain negative and 0 exponents" note="add note here" selected="FALSE" hint=""/>
+<item value="Simplify e...... monomials" name="Simplify expressions involving monomials" note="add note here" selected="FALSE" hint=""/>
+<item value="Solve comp......ing and or" name="Solve compound linear inequalities involving and or" note="add note here" selected="FALSE" hint=""/>
+<item value="Solve equa......ute values" name="Solve equations involving absolute values" note="add note here" selected="FALSE" hint=""/>
+<item value="Solve equa......ct squares" name="Solve equations involving perfect squares" note="add note here" selected="FALSE" hint=""/>
+<item value="Solve equa......olynomials" name="Solve equations involving the products of monomials and polynomials" note="add note here" selected="FALSE" hint=""/>
+<item value="Solve equa......x^2+bx+c=0" name="Solve equations of the form ax^2+bx+c=0" note="add note here" selected="FALSE" hint=""/>
+<item value="Solve equa......x^2+bx+c=0" name="Solve equations of the form x^2+bx+c=0" note="add note here" selected="FALSE" hint=""/>
+<item value="Solve equa......e variable" name="Solve equations with one variable" note="add note here" selected="FALSE" hint=""/>
+<item value="Solve equa...... variables" name="Solve equations with two variables" note="add note here" selected="FALSE" hint=""/>
+<item value="Solve ineq......ute values" name="Solve inequalities involving absolute values" note="add note here" selected="FALSE" hint=""/>
+<item value="Solve line......g brackets" name="Solve linear equations involving brackets" note="add note here" selected="FALSE" hint=""/>
+<item value="Solve line......e equation" name="Solve linear equations with variables on both sides of the equation" note="add note here" selected="FALSE" hint=""/>
+<item value="Solve line......ubtraction" name="Solve linear inequalities by using addition and subtraction" note="add note here" selected="FALSE" hint=""/>
+<item value="Solve line......d division" name="Solve linear inequalities by using multiplication and division" note="add note here" selected="FALSE" hint=""/>
+<item value="Solve mult...... operation" name="Solve multi-step linear equations involving more than one operation" note="add note here" selected="FALSE" hint=""/>
+<item value="Solve mult...... operation" name="Solve multi-step linear inequalities involving more than one operation" note="add note here" selected="FALSE" hint=""/>
+<item value="Solve one-......g addition" name="Solve one-step linear equations with the variable on only one side using addition" note="add note here" selected="FALSE" hint=""/>
+<item value="Solve one-......iplication" name="Solve one-step linear equations with the variable on only one side using multiplication" note="add note here" selected="FALSE" hint=""/>
+<item value="Solve prob......tial decay" name="Solve problems involving exponential decay" note="add note here" selected="FALSE" hint=""/>
+<item value="Solve prob......ial growth" name="Solve problems involving exponential growth" note="add note here" selected="FALSE" hint=""/>
+<item value="Solve quad......he square " name="Solve quadratic equations by completing the square " note="add note here" selected="FALSE" hint=""/>
+<item value="Solve quad......y graphing" name="Solve quadratic equations by graphing" note="add note here" selected="FALSE" hint=""/>
+<item value="Solve quad......ic formula" name="Solve quadratic equations using the quadratic formula" note="add note here" selected="FALSE" hint=""/>
+<item value="Solve syst......s required" name="Solve systems of linear equation by using elimination where multiplication or division is required" note="add note here" selected="FALSE" hint=""/>
+<item value="Solve syst......y graphing" name="Solve systems of linear equations by graphing" note="add note here" selected="FALSE" hint=""/>
+<item value="Solve syst......bstituting" name="Solve systems of linear equations by substituting" note="add note here" selected="FALSE" hint=""/>
+<item value="Solve syst......tion alone" name="Solve systems of linear equations by using elimination with addition or subtraction alone" note="add note here" selected="FALSE" hint=""/>
+<item value="Solve syst......y graphing" name="Solve systems of linear inequalities by graphing" note="add note here" selected="FALSE" hint=""/>
+<item value="Translate ...... sentences" name="Translate equations into sentences" note="add note here" selected="FALSE" hint=""/>
+<item value="Translate ...... equations" name="Translate real world problems into systems of equations" note="add note here" selected="FALSE" hint=""/>
+<item value="Translate ...... equations" name="Translate sentences into equations" note="add note here" selected="FALSE" hint=""/>
+<item value="Understand......xpression." name="Understand how to substitute a value for a variable in an algebraic expression." note="add note here" selected="FALSE" hint=""/>
+<item value="Use cases ......xpression " name="Use cases to eliminate the absolute value of an expression " note="add note here" selected="FALSE" hint=""/>
+<item value="Use the di......c equation" name="Use the discriminant to determine the number of solutions of a quadratic equation" note="add note here" selected="FALSE" hint=""/>
+<item value="Use the di......xpressions" name="Use the distributive property to evaluate expressions" note="add note here" selected="FALSE" hint=""/>
+<item value="Use the di......d brackets" name="Use the distributive property to expand brackets" note="add note here" selected="FALSE" hint=""/>
+<item value="Use the di......d brackets" name="Use the distributive property to expand brackets" note="add note here" selected="FALSE" hint=""/>
+<item value="Use the di......ike terms]" name="Use the distributive property to simplify expressions [Collect like terms]" note="add note here" selected="FALSE" hint=""/>
+<item value="Use verbal......operations" name="Use verbal phrases identifying the four operations" note="add note here" selected="FALSE" hint=""/>
+<item value="Use verbal......operations" name="Use verbal phrases identifying the four operations" note="add note here" selected="FALSE" hint=""/>
+<item value="Verify a g......bstitution" name="Verify a given number is a solution to an equation by substitution" note="add note here" selected="FALSE" hint=""/>
+<item value="Write alge......xpressions" name="Write algebraic expressions for verbal expressions" note="add note here" selected="FALSE" hint=""/>
+<item value="Write poly......ndard form" name="Write polynomials in standard form" note="add note here" selected="FALSE" hint=""/>
+<item value="Write verb......xpressions" name="Write verbal expressions for algebraic expressions" note="add note here" selected="FALSE" hint=""/>
+</itemType>

@@ -1,0 +1,169 @@
+package com.dsspp
+{
+	import com.dsspp.SppReturnEvent;
+	
+	import flash.events.Event;
+	import flash.events.EventDispatcher;
+	import flash.events.IOErrorEvent;
+	import flash.events.SecurityErrorEvent;
+	import flash.net.*;
+	
+	import mx.collections.ArrayCollection;
+	import mx.collections.ArrayList;
+	import mx.controls.Alert;
+	import mx.core.FlexGlobals;
+	import mx.rpc.events.FaultEvent;
+	import mx.rpc.events.ResultEvent;
+	import mx.rpc.http.HTTPService;
+
+	public class SppProcessor extends EventDispatcher
+	{
+
+		
+		public var j_text:String = "table";
+		public var j_format:String = "xml";
+		public var j_miniWeight:Number = 0.0;
+		public var j_miniStrength:Number  = 0.0;
+		public var j_wc:Number  = 0.0;
+		public var j_minRankby:Number  = 0.0;
+		public var j_etop:int = 15;
+		public var j_ttop:int = 15;
+		public var j_domain:String = "combineall";
+		public var j_SS:String = "tasalsa";
+		public var j_guid:String="0430e16a-be4a-4af9-b34a-6cd494748488";
+		private var _unit:String;
+		
+		//handle the global vars
+		[Bindable]
+		public var experimentsXml:XML;
+		
+		[Bindable]
+		public var experiment_array:ArrayCollection;
+		
+		public var GridXML:XML=XML("<items/>");
+		[Bindable]
+		private var dgTermsArrList:ArrayList = new ArrayList();
+		private var  jsonText:String;
+		
+		public function SppProcessor()
+		{
+			j_SS = FlexGlobals.topLevelApplication.space;
+			j_domain = FlexGlobals.topLevelApplication.domain;
+
+			j_miniWeight = FlexGlobals.topLevelApplication.miniWeight;
+//			j_wc = FlexGlobals.topLevelApplication.WC;
+			j_miniStrength = FlexGlobals.topLevelApplication.miniStrength;
+		}
+		
+		public function do_one_Unit(_unit:String):void
+		{	
+			var jsonObject:Object = new Object();
+			jsonObject.text = _unit.toLowerCase();
+			jsonObject.format = j_format;
+			jsonObject.minWeight = j_miniWeight;
+			jsonObject.wc = j_wc;
+			jsonObject.minRankby = j_minRankby;
+			jsonObject.minStrength =j_miniStrength;
+		/*	jsonObject.etop = j_etop;
+			jsonObject.ttop = j_ttop;*/
+			jsonObject.domain = j_domain;
+			jsonObject.SS = j_SS;
+			
+			if (FlexGlobals.topLevelApplication.parameters.hasOwnProperty("userGuid"))
+			{
+				jsonObject.guid=FlexGlobals.topLevelApplication.parameters.userGuid;
+				jsonObject.userGuid=FlexGlobals.topLevelApplication.parameters.userGuid;
+			}
+			else
+			{
+				jsonObject.guid="ba40ff5a-3442-4b62-99ae-b895630af21e";  // build guid for GAE
+				jsonObject.userGuid="ba40ff5a-3442-4b62-99ae-b895630af21e";
+			}
+		//	jsonObject.guid="ba40ff5a-3442-4b62-99ae-b895630af21e";  // build guid for GAE
+		//	jsonObject.userGuid="ba40ff5a-3442-4b62-99ae-b895630af21e";
+			
+			trace(jsonObject.guid+"=====");
+			trace(jsonObject.userGuid+"=====");
+			jsonText = JSON.stringify(jsonObject);
+			
+			var dataObject:Object = new Object();
+			dataObject.json = jsonText;
+		//	var url:String = "http://www.dsspp.com/base";
+			var url:String = FlexGlobals.topLevelApplication.parameters.DSSPP+"/base"; // 
+			var request:URLRequest = new URLRequest(url);
+			var requestVars:URLVariables = new URLVariables();
+			requestVars.json = jsonText;
+			trace(jsonText);
+			request.data = requestVars;
+			request.method = URLRequestMethod.POST;
+			
+			var urlLoader:URLLoader = new URLLoader();
+			urlLoader.dataFormat = URLLoaderDataFormat.TEXT;
+			urlLoader.addEventListener(Event.COMPLETE, loaderCompleteHandler, false, 0, true);
+			urlLoader.addEventListener(IOErrorEvent.IO_ERROR, urlloaderErrHandler);
+			urlLoader.addEventListener(SecurityErrorEvent.SECURITY_ERROR, securityErrHandler);
+			this._unit = _unit;
+			urlLoader.load(request);
+			//this.NoteforRequest.text=this.NoteforRequest.text+jsonText+'\n';
+			var time:Date = new Date();
+			
+		}
+		
+		private function loaderCompleteHandler(e:Event):void {
+			var responseVars:String = e.target.data;
+			var xml:XML = new XML(responseVars);
+			var termList:XMLList = xml.TERM;
+			trace(xml.toString());
+			/*if (termList.length()<=1){
+			termList = XML(xml.list).children();
+			}*/
+			var anItem:XML=new XML();
+			
+			GridXML = XML("<list/>");
+			
+			var time:Date = new Date();
+			dgTermsArrList.removeAll(); 
+			for each (var term:XML in termList)
+			{
+				if (!GridXML.children().contains(term.@STR))
+				{
+					GridXML.appendChild(term);
+				}else
+				{
+					var anOldItem:XML=XML(GridXML.descendants().(attribute("STR")==term.@STR));
+					var newWeight:Number=Number(anOldItem.@WEIGHT)+Number(term.@WEIGHT);
+					var newAT:Number=Number(anOldItem.@AT)+Number(term.@AT);
+					
+					anOldItem.@WEIGHT=newAT.toString();
+					anOldItem.@AT=newWeight.toString();
+					anOldItem.@RANK=Number(newWeight*newAT);
+				}
+				
+			}
+
+
+			
+			var time:Date = new Date();
+			
+			this.dispatchEvent(new SppReturnEvent(SppReturnEvent.SPP_RETURN, dgTermsArrList, GridXML));
+			
+		}
+		
+		private function urlloaderErrHandler(evt:Event):void{
+			this.dispatchEvent(new SppReturnEvent(SppReturnEvent.SPP_Error, null, null, _unit));
+		}
+		
+		private function securityErrHandler(evt:Event):void{
+			Alert.show("Connection Error: Security Error");
+		}
+		
+		private function itemExists(term:String):Object {
+			for (var i:int = 0; i < dgTermsArrList.length; i++) {
+				var o:Object = dgTermsArrList.getItemAt(i);
+				if (o.term == term)
+					return o; 
+			}
+			return null;
+		}
+	}
+}

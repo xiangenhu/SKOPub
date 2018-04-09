@@ -1,0 +1,14 @@
+<itemType label="Deep Reasoning" HelpURL="skoscripttype13">
+<item value="Interpretation" name="Interpretation" selected="false" note="type note here" hint="What concept/claim can be inferred from a pattern of data? 
+e.g. What type of function looks like it would best fit the given data?"/> 
+<item value="Causal antecedent" name="Causal antecedent" selected="false" note="type note here" hint="Why did an event occur? 
+e.g. Why was the substitution/elimination method chosen?"/> 
+<item value="Causal consequence" name="Causal consequence" selected="false" note="type note here" hint="What are the consequences of an event or state? 
+e.g. What would the next step be?"/> 
+<item value="Goal orientation" name="Goal orientation" selected="false" note="type note here" hint="What are the motives or goals behind an agent X action?"/> 
+<item value="Instrumental/procedural" name="Instrumental/procedural" selected="false" note="type note here" hint="What plan or instrument allows an agent to accomplish a goal? 
+e.g. What is the method you will employ to solve this problem?"/> 
+<item value="Enablement" name="Enablement" selected="false" note="type note here" hint="What object or resource allows an agent to accomplish a goal?"/> 
+<item value="Expectation" name="Expectation" selected="false" note="type note here" hint="Why did some expected event not occur?"/> 
+<item value="Judgmental" name="Judgmental" selected="false" note="type note here" hint="What value does the answerer place on an idea or advice?"/> 
+</itemType>
