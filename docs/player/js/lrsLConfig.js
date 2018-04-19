@@ -47,8 +47,8 @@ function loadLRS(alrsL){
 		return;
 	}else if  (EXPID=="EXP_ATT"){
 		LRSURL=qs("lrs","https://ccnu.x-in-y.com/data/xAPI/");
-		LRSLogin=qs("lrslogin","fa410e6b8f62fdfe595c9fc70bb3a1f45fbf7e36");
-		LRSPassword=qs("lrspassword","08aa82f31b906b39faa1b4b3cbda54109279ea7d");
+		LRSLogin=qs("lrslogin","47c79d59b972d91ce41c807e6354a623c64f0e6d");
+		LRSPassword=qs("lrspassword","386aa49bcc32c0a7c917a9226c41617e4fb47b6f");
 		return;
 	}else if  (EXPID=="EXP_XK"){
 		LRSURL=qs("lrs","https://ccnu.x-in-y.com/data/xAPI/");
