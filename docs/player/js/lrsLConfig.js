@@ -50,6 +50,11 @@ function loadLRS(alrsL){
 		LRSLogin=qs("lrslogin","47c79d59b972d91ce41c807e6354a623c64f0e6d");
 		LRSPassword=qs("lrspassword","386aa49bcc32c0a7c917a9226c41617e4fb47b6f");
 		return;
+	}else if  (EXPID=="EXP_ZL"){
+		LRSURL=qs("lrs","https://ccnu.x-in-y.com/data/xAPI/");
+		LRSLogin=qs("lrslogin","6f7039609dd69338d9df0ce494cb12668dfe66e8");
+		LRSPassword=qs("lrspassword","0da21ab99d6d209db6bd5bceb8c2d5de9da52ef5");
+		return;
 	}else if  (EXPID=="EXP_XK"){
 		LRSURL=qs("lrs","https://ccnu.x-in-y.com/data/xAPI/");
 		LRSLogin=qs("lrslogin","0d069667018b5a5babba26b181152603afedd0b5");
