@@ -117,6 +117,8 @@ var avatarBKColor=qs("abkclr","cccccc");
 var IDtoACE=Auser;
 var IntitalText = qs("iniText","No idea");
 var aceurl=qs("aceurl","https://ace.x-in-y.com/aceapi2017/api/aceaction");
+
+
 var startingIndex=parseInt(qs("STI","0"));
 
 var STARTNow=qs("SNow","1");
