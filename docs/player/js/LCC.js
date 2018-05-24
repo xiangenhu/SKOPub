@@ -4,7 +4,7 @@ var inputBaseObj={
 			guid:"ee0e00c7-367e-4476-bf69-d7f6cd874a4b",
 			type:2,
 			include_ttop:true,
-			text:"people",
+			text:"酒",
 			minRankby:0,
 			etop:10,
 			category:"news",
@@ -13,13 +13,13 @@ var inputBaseObj={
 			ttop:50,
 			domain:"nodomain",
 			include_etop:true,
-			SS:"fa",
-			current:"boy",
+			SS:"ch002",
+			current:"酒",
 			notes:"",
 			userGuid:"ee0e00c7-367e-4476-bf69-d7f6cd874a4b",
 			minWeight:0,
 			LCCSessionKey:"",
-			target:"My life is great"};
+			target:"学"};
 			
 
 function POSTtoBase(Method,lccurl,Target,Current){
