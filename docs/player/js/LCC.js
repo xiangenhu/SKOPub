@@ -25,6 +25,8 @@ var inputBaseObj={
 function POSTtoBase(Method,lccurl,Target,Current){
 	inputBaseObj.text=Current;
 	inputBaseObj.target=Target;
+	$("#DebuggingArea").show();
+	displayInformation("#DebuggingArea",JSON.stringify(inputBaseObj));
 	var getUrl = $.ajax({
 		type: Method,
 		url: lccurl,
@@ -38,5 +40,6 @@ function POSTtoBase(Method,lccurl,Target,Current){
 
 
 function processingBase(data){
+	$("#DebuggingArea").show();
 	displayInformation("#DebuggingArea",JSON.stringify(data));
 }
