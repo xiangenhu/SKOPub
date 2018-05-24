@@ -1,7 +1,7 @@
 
 var inputBaseObj={
 			minStrength:0,
-			guid:"7956527b-c315-44e4-87c7-03fd35c65c48",
+			guid:"ee0e00c7-367e-4476-bf69-d7f6cd874a4b",
 			type:2,
 			include_ttop:true,
 			text:"people",
@@ -16,7 +16,7 @@ var inputBaseObj={
 			SS:"fa",
 			current:"boy",
 			notes:"",
-			userGuid:"ba40ff5a-3442-4b62-99ae-b895630af21e",
+			userGuid:"ee0e00c7-367e-4476-bf69-d7f6cd874a4b",
 			minWeight:0,
 			LCCSessionKey:"",
 			target:"My life is great"};
