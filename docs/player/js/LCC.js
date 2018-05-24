@@ -1,7 +1,7 @@
 
 var inputBaseObj={
 			minStrength:0,
-			guid:"ee0e00c7-367e-4476-bf69-d7f6cd874a4b",
+			guid:"ea8308d1-f93c-457d-84c8-1fa4457c7148",
 			type:2,
 			include_ttop:true,
 			text:"酒",
@@ -20,7 +20,6 @@ var inputBaseObj={
 			minWeight:0,
 			LCCSessionKey:"",
 			target:"学"};
-			
 
 function POSTtoBase(Method,lccurl,Target,Current){
 	inputBaseObj.text=Current;
@@ -30,7 +29,7 @@ function POSTtoBase(Method,lccurl,Target,Current){
 	var getUrl = $.ajax({
 		type: Method,
 		url: lccurl,
-		data: iputObj,
+		data: "json="+JSON.stringify(inputBaseObj),
 			success: function() {
 				var userData=data;
 				processingBase(userData);
