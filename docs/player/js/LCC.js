@@ -21,9 +21,10 @@ var inputBaseObj={
 			sessionKey:"",
 			target:"学"};
 
-function POSTtoBase(Method,lccurl,Target,Current){
-	inputBaseObj.current="我要学一些东西车";
-	inputBaseObj.target="学校";
+function GetLCC(Method,lccurl,Target,Current){
+	inputBaseObj.current=Current;
+	inputBaseObj.target=Target;
+	var LCC={IN:0.0,IO:0.0,RN:0.0,RO:0.0,CC:0.0,CT:0.0,sessionKey:""}
 	var getUrl = $.ajax({
 		type: Method,
 		url: lccurl,
@@ -31,8 +32,6 @@ function POSTtoBase(Method,lccurl,Target,Current){
 			success: function(data) {
 				var obj = JSON.parse(data);
 				inputBaseObj.sessionKey=obj.sessionKey;
-				$("#DebuggingArea").show();
-				var LCC={IN:0.0,IO:0.0,RN:0.0,RO:0.0,CC:0.0,CT:0.0,sessionKey:""}
 				LCC.IN=obj.IN;
 				LCC.IO=obj.IO;
 				LCC.RN=obj.RN;
@@ -40,13 +39,12 @@ function POSTtoBase(Method,lccurl,Target,Current){
 				LCC.CC=obj.CC;
 				LCC.CT=obj.CT;
 				LCC.sessionKey=obj.sessionKey;
-				displayInformation("#DebuggingArea",JSON.stringify(LCC));
+				processing(LCC);
 			}
 		})
 }
 
-
-function processingBase(data){
-	$("#DebuggingArea").show();
-	displayInformation("#DebuggingArea",JSON.stringify(data));
+function processing(LCC){
+		$("#DebuggingArea").show();
+		displayInformation("#DebuggingArea",JSON.stringify(LCC));
 }
