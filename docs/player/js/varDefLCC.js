@@ -1,5 +1,5 @@
 
 // LCC added
-var lccurl=qs("lccurl","https://ccnusko.x-in-y.com/base");
+var lccurl=qs("lccurl","https://dsspp.x-in-y.com/lcc");
 var LCCSessionKey = "";
 // LCC added
