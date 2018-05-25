@@ -36,6 +36,64 @@
 }
 
 
+#LCCtargetText{
+	height:150px;
+	position: absolute;
+	opacity:0.95;
+	background:lightGrey; 
+	border-radius: 10px 10px 10px 10px;
+	padding:5px;
+    display: block;
+    z-index: 1;
+	overflow:auto;
+	left: 0px;
+	width: 800px;
+    top: 0px;
+}
+
+
+#LCCInputBtn{
+    top: 160px;
+	position: absolute;
+	opacity:0.95;
+	border-radius: 10px 10px 10px 10px;
+	padding:5px;
+    display: block;
+    z-index: 1;
+	overflow:auto;
+	left: 750px;
+}
+
+#LCCInput{
+    top: 160px;
+	height:30px;
+	position: absolute;
+	opacity:0.95;
+	border-radius: 10px 10px 10px 10px;
+	padding:5px;
+    display: block;
+    z-index: 1;
+	overflow:auto;
+	left: 0px;
+	width: 700px;
+}
+
+#LCCFeedback{
+    top: 200px;
+	height:300px;
+	position: absolute;
+	opacity:0.95;
+	background:lightGrey; 
+	border-radius: 10px 10px 10px 10px;
+	padding:5px;
+    display: none;
+    z-index: 1;
+	overflow:auto;
+	left: 0px;
+	width: 800px;
+}
+
+
 #DebuggingArea{
 	left: 200px;
 	right: 200px;
@@ -50,6 +108,7 @@
     z-index: 1;
 	overflow:auto;
 }
+
 
 
 #MediaContainer{

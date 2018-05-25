@@ -20,11 +20,42 @@ var inputBaseObj={
 			minWeight:0,
 			sessionKey:"",
 			target:"学"};
+			
+var LCC={IN:0.0,IO:0.0,RN:0.0,RO:0.0,CC:0.0,CT:0.0,sessionKey:"",Current:"",Target:""}
+			
+function SubmitLCC(){
+	 GetLCC("GET",lccurl,$("#LCCtargetText").val(),$("#LCCInput").val());
+}
 
+
+function DrawChart(LCC) {
+
+var chart = new CanvasJS.Chart("LCCFeedback", {
+	theme: "light1", // "light2", "dark1", "dark2"
+	animationEnabled: false, // change to true		
+	title:{
+		text: "LCC"
+	},
+	data: [
+	{
+		// Change type to "bar", "area", "spline", "pie",etc.
+		type: "column",
+		dataPoints: [
+			{ label: "Irrelevant New",  y: LCC.IN  },
+			{ label: "Relevant New", y: LCC.RN  },
+			{ label: "Irrelevant Old", y: LCC.IO  },
+			{ label: "Relevant Old",  y: LCC.RO  },
+		]
+	}
+	]
+});
+chart.render();
+
+}
+			
 function GetLCC(Method,lccurl,Target,Current){
 	inputBaseObj.current=Current;
 	inputBaseObj.target=Target;
-	var LCC={IN:0.0,IO:0.0,RN:0.0,RO:0.0,CC:0.0,CT:0.0,sessionKey:""}
 	var getUrl = $.ajax({
 		type: Method,
 		url: lccurl,
@@ -38,13 +69,28 @@ function GetLCC(Method,lccurl,Target,Current){
 				LCC.RO=obj.RO;
 				LCC.CC=obj.CC;
 				LCC.CT=obj.CT;
+				LCC.Current=Current;
+				LCC.Target=Target;
+				
 				LCC.sessionKey=obj.sessionKey;
-				processing(LCC);
+				$("#LCCFeedback").show();
+				DrawChart(LCC);
+//				processing(LCC);
 			}
 		})
 }
 
 function processing(LCC){
-		$("#DebuggingArea").show();
-		displayInformation("#DebuggingArea",JSON.stringify(LCC));
+		$("#LCCInput").val("")
+		$("#LCCFeedback").show();
+		var html="<ul>";
+		    html=html+"<li> Irrelevant New:"+LCC.IN.toString()+"</il>";
+		    html=html+"<li> Relevant New:"+LCC.RN.toString()+"</il>";
+		    html=html+"<li> Irrelevant Old:"+LCC.IO.toString()+"</il>";
+		    html=html+"<li> Relevant Old:"+LCC.RO.toString()+"</il>";
+		    html=html+"<li> Current Score:"+LCC.CC.toString()+"</il>";
+		    html=html+"<li> Total Coverage:"+LCC.CT.toString()+"</il>";
+			html=html+"</ul>"
+		
+		displayInformation("#LCCFeedback",html);
 }

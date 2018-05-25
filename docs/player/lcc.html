@@ -1,5 +1,6 @@
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link href="css/popupmenu.css" rel="stylesheet" type="text/css" >
 	<link href="css/talkinghead.css" rel="stylesheet" type="text/css" >
 	<link href="css/Interface.css" rel="stylesheet" type="text/css" >
@@ -17,13 +18,15 @@
 	<script src="js/SKOConnection.js"></script>	
 	<script src="js/LCC.js"></script>	
 	<script src="js/myxAPIWrapper.js"></script>	
+	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
 </head>
 <style>
 </style>
 <body>
+<textarea id="LCCtargetText" readonly="true">根据国家发改委消息，新一轮成品油调价窗口将于今天多花费约。</textarea>
+<input id="LCCInput"></input>
+<button type="button" onclick="SubmitLCC()" id="LCCInputBtn">回答</button>
 
-<button type="button" onclick="GetLCC('GET',lccurl,'科','学')">Click Me!</button>
-
-<div id="DebuggingArea"></div>
+<div id="LCCFeedback" style="height: 370px; width: 100%;"></div>
 </body>
 </html>
