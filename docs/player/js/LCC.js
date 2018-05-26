@@ -24,7 +24,7 @@ var inputBaseObj={
 var LCC={IN:0.0,IO:0.0,RN:0.0,RO:0.0,CC:0.0,CT:0.0,sessionKey:"",Current:0.0,Target:0.0};
 			
 function SubmitLCC(){
-	 GetLCC("GET",lccurl,$("#LCCtargetText").val(),$("#LCCInput").val());
+	 GetLCC("GET",lccurl,$("#thisTarget").val(),$("#LCCInput").val());
 }
 
 var TurnCount =1;	
@@ -71,6 +71,7 @@ function GetLCC(Method,lccurl,Target,Current){
 		url: lccurl,
 		data: "json="+JSON.stringify(inputBaseObj),
 			success: function(data) {
+				displayInformation("#LCCFeedback",JSON.stringify(data));
 				var obj = JSON.parse(data);
 				inputBaseObj.sessionKey=obj.sessionKey;
 				LCC.IN=obj.IN;
@@ -112,7 +113,7 @@ function GetLCC(Method,lccurl,Target,Current){
 				DrawChart(DataCC,"LCCFeedbackCC","Current Contribution (Maximum 1.00)");
 				DrawChart(DataCT,"LCCFeedbackCT","Total Coverage (Maximum 1.00)");
 				TurnCount++;
-//				processing(LCC)
+				processing(LCC)
 			}
 		})
 }
@@ -127,7 +128,7 @@ function processing(LCC){
 		    html=html+"<li> Relevant Old:"+LCC.RO.toString()+"</il>";
 		    html=html+"<li> Current Score:"+LCC.CC.toString()+"</il>";
 		    html=html+"<li> Total Coverage:"+LCC.CT.toString()+"</il>";
-		    html=html+"<li> SessionKey:"+LCC.sessionKey+"</il>";
+		    html=html+"<li> sessionKey:"+LCC.sessionKey+"</il>";
 			html=html+"</ul>"
 		
 		displayInformation("#LCCFeedback",html);
