@@ -6,7 +6,7 @@ var inputBaseObj={
 			include_ttop:true,
 			text:"习",
 			minRankby:0,
-			etop:50,
+			etop:100,
 			category:"news",
 			format:"json",
 			wc:0,

@@ -37,7 +37,7 @@
 
 
 #LCCtargetText{
-	height: 70px;
+	height: 90px;
 	position: absolute;
 	opacity:0.95;
 	background:lightGrey; 
@@ -46,14 +46,14 @@
     display: block;
     z-index: 1;
 	overflow:auto;
-	left: 0px;
+	left: 10px;
 	width: 800px;
     top: 0px;
 }
 
 
 #LCCInputBtn{
-    top: 160px;
+    top: 105px;
 	position: absolute;
 	opacity:0.95;
 	border-radius: 10px 10px 10px 10px;
@@ -61,11 +61,11 @@
     display: block;
     z-index: 1;
 	overflow:auto;
-	left: 750px;
+	left: 720px;
 }
 
 #LCCInput{
-    top: 160px;
+    top: 105px;
 	height:30px;
 	position: absolute;
 	opacity:0.95;
@@ -74,13 +74,13 @@
     display: block;
     z-index: 1;
 	overflow:auto;
-	left: 0px;
+	left: 10px;
 	width: 700px;
 }
 
 #LCCFeedback{
     top: 200px;
-	height:600px;
+	height:470px;
 	position: absolute;
 	opacity:0.95;
 	background:lightGrey; 
@@ -89,7 +89,7 @@
     display: none;
     z-index: 1;
 	overflow:auto;
-	left: 0px;
+	left: 10px;
 	width: 800px;
 }
 
