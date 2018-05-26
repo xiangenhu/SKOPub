@@ -25,6 +25,7 @@ var LCC={IN:0.0,IO:0.0,RN:0.0,RO:0.0,CC:0.0,CT:0.0,sessionKey:"",Current:0.0,Tar
 			
 function SubmitLCC(){
 	 GetLCC("GET",lccurl,$("#thisTarget").val(),$("#LCCInput").val());
+	 
 }
 
 var TurnCount =1;	
@@ -71,7 +72,6 @@ function GetLCC(Method,lccurl,Target,Current){
 		url: lccurl,
 		data: "json="+JSON.stringify(inputBaseObj),
 			success: function(data) {
-				displayInformation("#LCCFeedback",JSON.stringify(data));
 				var obj = JSON.parse(data);
 				inputBaseObj.sessionKey=obj.sessionKey;
 				LCC.IN=obj.IN;
@@ -112,8 +112,8 @@ function GetLCC(Method,lccurl,Target,Current){
 				DrawChart(DataIO,"LCCFeedbackIO","Irrelevent Old %");
 				DrawChart(DataCC,"LCCFeedbackCC","Current Contribution (Maximum 1.00)");
 				DrawChart(DataCT,"LCCFeedbackCT","Total Coverage (Maximum 1.00)");
+				$("#LCCInput").val("");
 				TurnCount++;
-//				processing(LCC)
 			}
 		})
 }
