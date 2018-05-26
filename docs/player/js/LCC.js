@@ -6,7 +6,7 @@ var inputBaseObj={
 			include_ttop:true,
 			text:"习",
 			minRankby:0,
-			etop:500,
+			etop:50,
 			category:"news",
 			format:"json",
 			wc:0,
@@ -21,31 +21,41 @@ var inputBaseObj={
 			sessionKey:"",
 			target:"学"};
 			
-var LCC={IN:0.0,IO:0.0,RN:0.0,RO:0.0,CC:0.0,CT:0.0,sessionKey:"",Current:"",Target:""}
+var LCC={IN:0.0,IO:0.0,RN:0.0,RO:0.0,CC:0.0,CT:0.0,sessionKey:"",Current:0.0,Target:0.0};
 			
 function SubmitLCC(){
 	 GetLCC("GET",lccurl,$("#LCCtargetText").val(),$("#LCCInput").val());
 }
 
+var TurnCount =1;	
 
-function DrawChart(LCC) {
+var DataIN= [];
+		
+var DataRN= [];
+		
+		
+var DataIO= [];
 
-var chart = new CanvasJS.Chart("LCCFeedback", {
+var DataRO= [];
+		
+var DataCC= [];
+		
+var DataCT= [];
+		
+// var TotalLCC={DataIN:DataIN,DataRN:DataRN,DataIO:DataIO,DataRO:DataRO};
+
+function DrawChart(Data,ChartName,ChartLabel) {
+var chart = new CanvasJS.Chart(ChartName, {
 	theme: "light1", // "light2", "dark1", "dark2"
-	animationEnabled: false, // change to true		
+	animationEnabled: true, // change to true		
 	title:{
-		text: "LCC"
+		text: ChartLabel
 	},
 	data: [
 	{
 		// Change type to "bar", "area", "spline", "pie",etc.
 		type: "column",
-		dataPoints: [
-			{ label: "Irrelevant New",  y: LCC.IN  },
-			{ label: "Relevant New", y: LCC.RN  },
-			{ label: "Irrelevant Old", y: LCC.IO  },
-			{ label: "Relevant Old",  y: LCC.RO  },
-		]
+		dataPoints: Data
 	}
 	]
 });
@@ -69,13 +79,40 @@ function GetLCC(Method,lccurl,Target,Current){
 				LCC.RO=obj.RO;
 				LCC.CC=obj.CC;
 				LCC.CT=obj.CT;
+				LCC.sessionKey=obj.sessionKey;
 				LCC.Current=Current;
 				LCC.Target=Target;
 				
 				LCC.sessionKey=obj.sessionKey;
 				$("#LCCFeedback").show();
-				DrawChart(LCC);
-//				processing(LCC);
+				
+				var newIN={ label: TurnCount.toString(),  y: obj.IN*100 };
+				DataIN.push(newIN);
+				
+				var newRN={ label: TurnCount.toString(),  y: obj.RN*100 };
+				DataRN.push(newRN);
+				
+				var newIO={ label: TurnCount.toString(),  y: obj.IO*100 };
+				DataIO.push(newIO);
+				
+				var newRO={ label: TurnCount.toString(),  y: obj.RO*100 };
+				DataRO.push(newRO);
+				
+				var newCC={ label: TurnCount.toString(),  y: obj.CC };
+				DataCC.push(newCC);
+				
+				var newCT={ label: TurnCount.toString(),  y: obj.CT };
+				DataCT.push(newCT);
+				
+				
+				DrawChart(DataRN,"LCCFeedbackRN","Relevent New %");
+				DrawChart(DataIN,"LCCFeedbackIN","Irrelevent New %");
+				DrawChart(DataRO,"LCCFeedbackRO","Relevent Old %");
+				DrawChart(DataIO,"LCCFeedbackIO","Irrelevent Old %");
+				DrawChart(DataCC,"LCCFeedbackCC","Current Contribution (Maximum 1.00)");
+				DrawChart(DataCT,"LCCFeedbackCT","Total Coverage (Maximum 1.00)");
+				TurnCount++;
+//				processing(LCC)
 			}
 		})
 }
@@ -90,6 +127,7 @@ function processing(LCC){
 		    html=html+"<li> Relevant Old:"+LCC.RO.toString()+"</il>";
 		    html=html+"<li> Current Score:"+LCC.CC.toString()+"</il>";
 		    html=html+"<li> Total Coverage:"+LCC.CT.toString()+"</il>";
+		    html=html+"<li> SessionKey:"+LCC.sessionKey+"</il>";
 			html=html+"</ul>"
 		
 		displayInformation("#LCCFeedback",html);

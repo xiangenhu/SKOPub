@@ -23,10 +23,26 @@
 <style>
 </style>
 <body>
-<textarea id="LCCtargetText" readonly="true">根据国家发改委消息，新一轮成品油调价窗口将于今天多花费约。</textarea>
+<textarea id="LCCtargetText" readonly="true">
+样本均值又叫样本均数。即为样本的均值。均值是表示一组数据集中趋势的量数，是指在一组数据中所有数据之和再除以这组数据的个数。它是反映数据集中趋势的一项指标。
+</textarea>
 <input id="LCCInput"></input>
-<button type="button" onclick="SubmitLCC()" id="LCCInputBtn">回答</button>
-
-<div id="LCCFeedback" style="height: 370px; width: 100%;"></div>
+<button type="button" onclick="SubmitLCC()" id="LCCInputBtn">用你的话解释</button>
+<div id="LCCFeedback">
+<table>
+<tr>
+	<td><div id="LCCFeedbackRN" style="height: 150px; width: 300px;"></div></td>
+	<td><div id="LCCFeedbackIN" style="height: 150px; width: 300px;"></div></td>
+</tr>
+<tr>
+	<td><div id="LCCFeedbackRO" style="height: 150px; width: 300px;"></div></td>
+	<td><div id="LCCFeedbackIO" style="height: 150px; width: 300px;"></div></td>
+</tr>
+<tr>
+	<td><div id="LCCFeedbackCC" style="height: 150px; width: 300px;"></div></td>
+	<td><div id="LCCFeedbackCT" style="height: 150px; width: 300px;"></div></td>
+</tr>
+</table>
+</div>
 </body>
 </html>
