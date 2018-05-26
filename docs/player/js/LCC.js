@@ -113,7 +113,7 @@ function GetLCC(Method,lccurl,Target,Current){
 				DrawChart(DataCC,"LCCFeedbackCC","Current Contribution (Maximum 1.00)");
 				DrawChart(DataCT,"LCCFeedbackCT","Total Coverage (Maximum 1.00)");
 				TurnCount++;
-				processing(LCC)
+//				processing(LCC)
 			}
 		})
 }
