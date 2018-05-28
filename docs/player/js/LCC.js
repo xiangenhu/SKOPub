@@ -63,7 +63,16 @@ var chart = new CanvasJS.Chart(ChartName, {
 chart.render();
 
 }
-			
+
+function onload(){
+	if (qs("ShowAnswer","0")=="1")
+	{
+		$("#checkBox").show();
+	}else{
+		$("#checkBox").hide();
+	}
+}	
+	
 function GetLCC(Method,lccurl,Target,Current){
 	inputBaseObj.current=Current;
 	inputBaseObj.target=Target;
@@ -117,6 +126,13 @@ function GetLCC(Method,lccurl,Target,Current){
 			}
 		})
 }
+
+$(document).ready(function () {
+			$("#CheckAnswer").click(
+				function (event) {
+				$("#AnswerPanel").slideToggle();	
+			})
+		})
 
 function processing(LCC){
 		$("#LCCInput").val("")

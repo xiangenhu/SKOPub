@@ -22,12 +22,17 @@
 </head>
 <style>
 </style>
-<body>
+<body onLoad="onload()">
 <div id="LCCtargetText">
-Target Answer<br/>
+Target Question<br/>
+<textarea style="height: 30px; width: 700px;" id="thisTargetQuest">怎么理解样本均值？
+</textarea>
+<div id="checkBox"><label>看答案</label><input id="CheckAnswer" type="checkbox"/></div>
+<div id="AnswerPanel">
 <textarea style="height: 60px; width: 780px;" id="thisTarget">
 样本均值又叫样本均数。即为样本的均值。均值是表示一组数据集中趋势的量数，是指在一组数据中所有数据之和再除以这组数据的个数。它是反映数据集中趋势的一项指标。
 </textarea>
+</div>
 </div>
 <input id="LCCInput"></input>
 <button type="button" onclick="SubmitLCC()" id="LCCInputBtn">用你的话解释</button>
