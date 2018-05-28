@@ -47,7 +47,7 @@ var DataCT= [];
 
 function DrawChart(Data,ChartName,ChartLabel) {
 var chart = new CanvasJS.Chart(ChartName, {
-	theme: "light1", // "light2", "dark1", "dark2"
+	theme: "light2", // "light2", "dark1", "dark2"
 	animationEnabled: true, // change to true		
 	title:{
 		text: ChartLabel
