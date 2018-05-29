@@ -41,7 +41,7 @@ var DataRO= [];
 		
 var DataCC= [];
 		
-var DataCT= [];
+var DataCT= [{ label: "标准",  y: 0.7 }];
 		
 // var TotalLCC={DataIN:DataIN,DataRN:DataRN,DataIO:DataIO,DataRO:DataRO};
 
