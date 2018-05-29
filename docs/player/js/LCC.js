@@ -123,6 +123,7 @@ function GetLCC(Method,lccurl,Target,Current){
 				DrawChart(DataCT,"LCCFeedbackCT","Total Coverage (Maximum 1.00)");
 				$("#LCCInput").val("");
 				TurnCount++;
+//				InsertNotes(LCC);
 			}
 		})
 }
@@ -149,3 +150,13 @@ function processing(LCC){
 		
 		displayInformation("#LCCFeedback",html);
 }
+
+function InsertNotes(LCC){
+	var html="Note: <br/>";
+		    html=html+"Your current contribution is "+LCC.CC.toString()+" out of 1.<br/>";
+		    html=html+"propotrtion of your answer is relevent and new is "+(LCC.RN*100).toString()+"%";
+			$("#LCCFeedback").hide();
+			$("#LCCNotes").show();
+	displayInformation("#LCCNotes",html);
+}
+			
