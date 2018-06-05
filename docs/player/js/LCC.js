@@ -33,6 +33,9 @@ function LCCActorObject(ActorName,Actormbox){
 		actorObj.mbox=Actormbox;
 	return actorObj; 
 }
+
+
+
 function LCCActivityObject(Key,Question){
 	var ActivityObj ={
 			"definition": {
@@ -40,12 +43,11 @@ function LCCActivityObject(Key,Question){
 					"en-US": Question
 				},
 				"description": {
-					"type": "listen",
 					"en-US": "Self reflection question: "+Question+ " Key: "+Key,
 				}
 			},
 		"objectType": "Activity",
-		"id": "https://https://xiangenhu.github.io/SKOPub/player/lccE.html"
+		"id": "https://xiangenhu.github.io/SKOPub/player/lccE.html"
 	}
 	
 	return ActivityObj;
@@ -60,17 +62,52 @@ function LCCVerbObject(){
 	return varbObj;
 }
 function LCCContextObject(LCC){
-	var ContextObj =
-		{
+		var ContextObj ={
 			"contextActivities": {
-				"other":LCC,
-				"category":{},	
-				"grouping":{},
-				"parent":{}
+				"other":[{"id":"https://umiis.github.io/ITSProfile/context/other/LCC",
+						 "objectType":"Activity",
+						 "definition":{
+							 "extensions":{
+								 "https://umiis.github.io/ITSProfile/context/other/LCC":{
+									 "LCC":LCC
+								 }
+							 }
+						 }
+					 }],
+				 "grouping":[{"id":"https://umiis.github.io/ITSProfile/context/grouping",
+						 "objectType":"Activity",
+						 "definition":{
+							 "extensions":{
+								 "https://umiis.github.io/ITSProfile/context/grouping":{
+									  
+								 }
+							 }
+						 }
+					 }],
+				 "parent":[{"id":"https://umiis.github.io/ITSProfile/context/parent",
+						 "objectType":"Activity",
+						 "definition":{
+							 "extensions":{
+								 "https://umiis.github.io/ITSProfile/context/parent":{
+									 
+								 }
+							 }
+						 }
+					 }],
+				 "category":[{"id":"https://umiis.github.io/ITSProfile/context/category",
+						 "objectType":"Activity",
+						 "definition":{
+							 "extensions":{
+								 "https://umiis.github.io/ITSProfile/context/category":{
+									 
+								 }
+							 }
+						 }
+					 }]
+				}
 			}
+		return ContextObj;
 	}
-	return ContextObj;
-}
 
 function composeLCCStatement(LCC,Input,Key,Question){
 		var aLCCActorObject=LCCActorObject(fullname,Auser);
@@ -205,7 +242,7 @@ function GetLCC(Method,lccurl,Target,Current){
 						"IO":LCC.IO,
 						"RO":LCC.RO,
 						"CC":LCC.CC,
-						"CT":LCC.CT,
+						"CT":LCC.CT
 					}
 				}
 				
