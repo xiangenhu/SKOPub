@@ -553,6 +553,7 @@ function ComposeStatement(typeofStatement,actormbx,actorType,verbID,ObjectID,dat
 			text = thing+" "+EXPID;
 	}
 	displayDebugging('#DebuggingArea',text);
+	console.log(text);
 };
 
 function UpdateStatementsASAT(data,MyxAPIType){

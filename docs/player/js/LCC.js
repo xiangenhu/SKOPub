@@ -7,7 +7,6 @@ var inputBaseObj={
 			text:"习",
 			minRankby:0,
 			etop:100,
-			category:"news",
 			format:"json",
 			wc:0,
 			ttop:500,
@@ -26,6 +25,75 @@ var LCC={IN:0.0,IO:0.0,RN:0.0,RO:0.0,CC:0.0,CT:0.0,sessionKey:"",Current:0.0,Tar
 function SubmitLCC(){
 	 GetLCC("GET",lccurl,$("#thisTarget").val(),$("#LCCInput").val());
 	 
+}
+function LCCActorObject(ActorName,Actormbox){
+	var actorObj={};
+		actorObj.name=ActorName;
+		actorObj.objectType="Agent";
+		actorObj.mbox=Actormbox;
+	return actorObj; 
+}
+function LCCActivityObject(Key,Question){
+	var ActivityObj ={
+			"definition": {
+				"name": {
+					"en-US": Question
+				},
+				"description": {
+					"type": "listen",
+					"en-US": "Self reflection question: "+Question+ " Key: "+Key,
+				}
+			},
+		"objectType": "Activity",
+		"id": "https://https://xiangenhu.github.io/SKOPub/player/lccE.html"
+	}
+	
+	return ActivityObj;
+}
+
+function LCCVerbObject(){
+	var verb = "SelfReflection"
+	var varbObj = {
+			id: "http://myProfile.com/"+verb,
+			display:{"en-US":verb}
+		}
+	return varbObj;
+}
+function LCCContextObject(LCC){
+	var ContextObj =
+		{
+			"contextActivities": {
+				"other":LCC,
+				"category":{},	
+				"grouping":{},
+				"parent":{}
+			}
+	}
+	return ContextObj;
+}
+
+function composeLCCStatement(LCC,Input,Key,Question){
+		var aLCCActorObject=LCCActorObject(fullname,Auser);
+		var aLCCActivityObject = LCCActivityObject(Key,Question,Input);
+		var aLCCVerbObject = LCCVerbObject();
+		var aLCCContextObject = LCCContextObject(LCC);
+		
+		
+		
+		var statement={
+				"actor":aLCCActorObject,
+				"verb":aLCCVerbObject,
+				"object": aLCCActivityObject,
+				"context":aLCCContextObject
+			}
+	return statement;	
+	
+}
+
+function composeAndSendLCCStatement(LCC,Input,Key,Question){
+	var aStatement = composeLCCStatement(LCC,Input,Key,Question) 
+	console.log(JSON.stringify(aStatement));
+	sendStatement(aStatement);
 }
 
 var TurnCount =1;	
@@ -74,6 +142,7 @@ function onload(){
 }	
 	
 function GetLCC(Method,lccurl,Target,Current){
+	inputBaseObj.SS=qs("SS","fa");
 	inputBaseObj.current=Current;
 	inputBaseObj.target=Target;
 	var getUrl = $.ajax({
@@ -92,6 +161,8 @@ function GetLCC(Method,lccurl,Target,Current){
 				LCC.sessionKey=obj.sessionKey;
 				LCC.Current=Current;
 				LCC.Target=Target;
+				
+				
 				
 				LCC.sessionKey=obj.sessionKey;
 				$("#LCCFeedback").show();
@@ -124,6 +195,22 @@ function GetLCC(Method,lccurl,Target,Current){
 				$("#LCCInput").val("");
 				TurnCount++;
 //				InsertNotes(LCC);
+				LCCObj = {
+					"Question":$("#thisTargetQuest").val(),
+					"AnswerKey":Target,
+					"Answer":Current,
+					"LCC":{
+						"IN":LCC.IN,
+						"RN":LCC.RN,
+						"IO":LCC.IO,
+						"RO":LCC.RO,
+						"CC":LCC.CC,
+						"CT":LCC.CT,
+					}
+				}
+				
+				console.log(JSON.stringify(LCCObj));
+				composeAndSendLCCStatement(LCCObj,Current,Target,$("#thisTargetQuest").val());
 			}
 		})
 }
