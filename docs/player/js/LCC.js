@@ -36,25 +36,34 @@ function LCCActorObject(ActorName,Actormbox){
 
 
 
-function LCCActivityObject(Key,Question){
+function LCCActivityObject(Key,Question,Input){
 	var ActivityObj ={
 			"definition": {
 				"name": {
-					"en-US": Question
+					"en-US": "Self Reflection",
 				},
 				"description": {
-					"en-US": "Self reflection question: "+Question+ " Key: "+Key,
-				}
+					"en-US": "Self reflection",
+				},
+				"type": "https://umiis.github.io/ITSProfile/interaction",
+				"extensions": {
+					"https://umiis.github.io/ITSProfile/interaction/LCC":{
+						"Question":Question,
+						"AnswerKey":Key,
+						"Answer":Input
+					},
+				},
+				
 			},
 		"objectType": "Activity",
-		"id": "https://xiangenhu.github.io/SKOPub/player/lccE.html"
+		"id": "https://umiis.github.io/ITSProfile/context/other/SF"
 	}
 	
 	return ActivityObj;
 }
 
 function LCCVerbObject(){
-	var verb = "SelfReflection"
+	var verb = "Answered"
 	var varbObj = {
 			id: "http://myProfile.com/"+verb,
 			display:{"en-US":verb}
