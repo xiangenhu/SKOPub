@@ -261,11 +261,30 @@ function GetLCC(Method,lccurl,Target,Current){
 		})
 }
 
+function checkShow(contral,Thearea){
+	$(contral).click(
+		function (event) {
+		if ($(contral).prop('checked')){
+			$(Thearea).show();
+		}else{
+			$(Thearea).hide();
+		}
+	})
+}
+
 $(document).ready(function () {
 			$("#CheckAnswer").click(
 				function (event) {
-				$("#AnswerPanel").slideToggle();	
+				$("#AnswerPanel").slideToggle();
+				$("#LCCControl").slideToggle();	
 			})
+			checkShow("#ShowRN","#LCCFeedbackRN");
+			checkShow("#ShowIN","#LCCFeedbackIN");
+			checkShow("#ShowRO","#LCCFeedbackRO");
+			checkShow("#ShowIO","#LCCFeedbackIO");
+			checkShow("#ShowCC","#LCCFeedbackCC");
+			checkShow("#ShowCT","#LCCFeedbackCT");
+			
 		})
 
 function processing(LCC){
