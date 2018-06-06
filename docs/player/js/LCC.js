@@ -144,16 +144,16 @@ function composeAndSendLCCStatement(LCC,Input,Key,Question){
 
 var TurnCount =1;	
 
-var DataIN= [];
+var DataIN= [{ label: "total",  y: 99 }];
 		
-var DataRN= [];
+var DataRN= [{ label: "total",  y: 99 }];
 		
 		
-var DataIO= [];
+var DataIO= [{ label: "total",  y: 99 }];
 
-var DataRO= [];
+var DataRO= [{ label: "total",  y: 99 }];
 		
-var DataCC= [];
+var DataCC= [{ label: "total",  y: 0.99 }];
 		
 var DataCT= [{ label: "threshold",  y: 0.7 }];
 		
