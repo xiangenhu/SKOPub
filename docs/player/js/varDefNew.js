@@ -110,7 +110,7 @@ var ActiveQuestion;
 
 var type_of_SKO="ID";
 
-var avatarBKIMG=encodeURIComponent(qs("abkimg","http://autotutor.x-in-y.com/AT/img/BKG4.jpeg"));
+var avatarBKIMG=encodeURIComponent(qs("abkimg",""));
 // var avatarBKIMG=qs("abkimg","img/BackGround");
 var avatarBKColor=qs("abkclr","cccccc");
 
