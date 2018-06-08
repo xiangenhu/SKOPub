@@ -1,22 +1,22 @@
 
 var inputBaseObj={
-			minStrength:0.0,
+			minStrength:parseFloat(qs("ms","0.0")),
 			guid:"ea8308d1-f93c-457d-84c8-1fa4457c7148",
 			type:2,
 			include_ttop:true,
 			text:"习",
-			minRankby:0,
-			etop:500,
+			minRankby:parseFloat(qs("mr","0.0")),
+			etop:parseInt(qs("et","500")),
 			format:"json",
-			wc:0.1,
-			ttop:10000,
+			wc:parseFloat(qs("wc","0.1")),
+			ttop:parseInt(qs("tt","10000")),
 			domain:"nodomain",
 			include_etop:true,
-			SS:"english_tasa",
+			SS:qs("SS","english_tasa"),
 			current:"酒",
 			notes:"",
 			userGuid:"ee0e00c7-367e-4476-bf69-d7f6cd874a4b",
-			minWeight:0.0,
+			minWeight:parseFloat(qs("mw","0.0")),
 			sessionKey:"",
 			target:"学"};
 			
@@ -284,6 +284,12 @@ $(document).ready(function () {
 			checkShow("#ShowIO","#LCCFeedbackIO");
 			checkShow("#ShowCC","#LCCFeedbackCC");
 			checkShow("#ShowCT","#LCCFeedbackCT");
+			if (qs("TGT","")!=""){
+				$("#thisTarget").val(decodeURI(qs("TGT","")))
+			}
+			if (qs("QN","")!=""){
+				$("#thisTargetQuest").val(decodeURI(qs("QN","")))
+			}
 			
 		})
 
