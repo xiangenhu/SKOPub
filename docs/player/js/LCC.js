@@ -1,22 +1,22 @@
 
 var inputBaseObj={
-			minStrength:0,
+			minStrength:0.0,
 			guid:"ea8308d1-f93c-457d-84c8-1fa4457c7148",
 			type:2,
 			include_ttop:true,
 			text:"习",
 			minRankby:0,
-			etop:100,
+			etop:500,
 			format:"json",
 			wc:0,
-			ttop:500,
+			ttop:10000,
 			domain:"nodomain",
 			include_etop:true,
-			SS:"ch002",
+			SS:"english_tasa",
 			current:"酒",
 			notes:"",
 			userGuid:"ee0e00c7-367e-4476-bf69-d7f6cd874a4b",
-			minWeight:0,
+			minWeight:0.0,
 			sessionKey:"",
 			target:"学"};
 			
