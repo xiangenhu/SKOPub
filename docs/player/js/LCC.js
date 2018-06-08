@@ -251,7 +251,8 @@ function GetLCC(Method,lccurl,Target,Current){
 						"IO":LCC.IO,
 						"RO":LCC.RO,
 						"CC":LCC.CC,
-						"CT":LCC.CT
+						"CT":LCC.CT,
+						"sessionKey":LCC.sessionKey
 					}
 				}
 				
