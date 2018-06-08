@@ -70,7 +70,7 @@ function LCCVerbObject(){
 		}
 	return varbObj;
 }
-function LCCContextObject(LCC){
+function LCCContextObject(LCC,IPT){
 		var ContextObj ={
 			"contextActivities": {
 				"other":[{"id":"https://umiis.github.io/ITSProfile/context/other/LCC",
@@ -78,7 +78,7 @@ function LCCContextObject(LCC){
 						 "definition":{
 							 "extensions":{
 								 "https://umiis.github.io/ITSProfile/context/other/LCC":{
-									 "LCC":LCC
+								 "LCCConfig":IPT 
 								 }
 							 }
 						 }
@@ -103,12 +103,12 @@ function LCCContextObject(LCC){
 							 }
 						 }
 					 }],
-				 "category":[{"id":"https://umiis.github.io/ITSProfile/context/category",
+				 "category":[{"id":"https://umiis.github.io/ITSProfile/context/category/LCC",
 						 "objectType":"Activity",
 						 "definition":{
 							 "extensions":{
-								 "https://umiis.github.io/ITSProfile/context/category":{
-									 
+								 "https://umiis.github.io/ITSProfile/context/category/LCC":{
+								 "LCC":LCC	 
 								 }
 							 }
 						 }
@@ -118,11 +118,11 @@ function LCCContextObject(LCC){
 		return ContextObj;
 	}
 
-function composeLCCStatement(LCC,Input,Key,Question){
+function composeLCCStatement(LCC,Input,Key,Question,IPT){
 		var aLCCActorObject=LCCActorObject(fullname,Auser);
 		var aLCCActivityObject = LCCActivityObject(Key,Question,Input);
 		var aLCCVerbObject = LCCVerbObject();
-		var aLCCContextObject = LCCContextObject(LCC);
+		var aLCCContextObject = LCCContextObject(LCC,IPT);
 		
 		
 		
@@ -136,8 +136,8 @@ function composeLCCStatement(LCC,Input,Key,Question){
 	
 }
 
-function composeAndSendLCCStatement(LCC,Input,Key,Question){
-	var aStatement = composeLCCStatement(LCC,Input,Key,Question) 
+function composeAndSendLCCStatement(LCC,Input,Key,Question,IPT){
+	var aStatement = composeLCCStatement(LCC,Input,Key,Question,IPT) 
 	console.log(JSON.stringify(aStatement));
 	sendStatement(aStatement);
 }
@@ -256,7 +256,7 @@ function GetLCC(Method,lccurl,Target,Current){
 				}
 				
 				console.log(JSON.stringify(LCCObj));
-				composeAndSendLCCStatement(LCCObj,Current,Target,$("#thisTargetQuest").val());
+				composeAndSendLCCStatement(LCCObj,Current,Target,$("#thisTargetQuest").val(),inputBaseObj);
 			}
 		})
 }
