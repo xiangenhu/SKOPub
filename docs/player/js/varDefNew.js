@@ -36,7 +36,7 @@ var ITProfile="https://umiis.github.io/ITSProfile/";
 var LOMTag=qs("LOM","educational");
 var xAPI=qs("xAPI","1");
 var xAPIType=qs("xAPIType","1");
-var STARTING=qs("ST","");
+var STARTING=qs("ST","ID");
 
 var SpeakList = [];
 var DEBUGGING=qs("DEBUGGING","0");
@@ -110,7 +110,7 @@ var ActiveQuestion;
 
 var type_of_SKO="ID";
 
-var avatarBKIMG=encodeURIComponent(qs("abkimg","http://autotutor.x-in-y.com/AT/img/BackGround.jpg"));
+var avatarBKIMG=encodeURIComponent(qs("abkimg","http://autotutor.x-in-y.com/AT/img/BKG4.jpeg"));
 // var avatarBKIMG=qs("abkimg","img/BackGround");
 var avatarBKColor=qs("abkclr","cccccc");
 
