@@ -8,7 +8,7 @@ var inputBaseObj={
 			minRankby:0,
 			etop:500,
 			format:"json",
-			wc:0,
+			wc:0.1,
 			ttop:10000,
 			domain:"nodomain",
 			include_etop:true,
