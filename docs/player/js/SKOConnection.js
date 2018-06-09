@@ -178,16 +178,24 @@ function AddOneSpeech(aitem){
 	}
 }
 
-function GetLCC(aitem){
-		
+function GetLCCHere(aitem){
+    var x = document.createElement("IFRAME");
+    x.setAttribute("src", "lccE.html");
+    x.setAttribute("top", "200px");
+    x.setAttribute("left", "300px");
+    x.setAttribute("width", "840px");
+    x.setAttribute("height", "720px");
+	x.setAttribute("z-index", "2000000");
+	document.body.appendChild(x);
+	
 	var LCCAnswer = aitem.LCC["#cdata-section"];
 	var LCCQuest = aitem.LCCQ["#cdata-section"];
 	console.log(LCCAnswer);	
-	console.log(LCCQuest);	
-	
+	console.log(LCCQuest);
 }
 
 function IDDialog(jsonOfXml) {
+	
 	var item = jsonOfXml.SKOSCRIPTS.ID.ITEM;
 	
 	SpeechArray1=[];
@@ -205,16 +213,17 @@ function IDDialog(jsonOfXml) {
 		for(var i=0; i<item.length; i++) {
 			try{
 				var aFrame = item[i];
-				var atype = aFrame.currentAttributes 
+				var atype = aFrame.currentAttributes; 			
+				
 				if (atype.type=="scene"){
 					AddOneSpeech(aFrame);
+					console.log(atype.type);	
 				}else{
-					AddOneSpeech(aFrame);
-					GetLCC(aFrame);
-//					return null;					
+					console.log(atype.type);
+					GetLCCHere(aFrame);
+					AddOneSpeech(aFrame);		
 				}
-			}catch(err) {
-				console.log(err);	
+			}catch(err) {;	
 			}
 		}
 	}

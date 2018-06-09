@@ -38,6 +38,19 @@
 }
 
 
+#LCCFrame{
+    display: none;
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:800px;  /* adjust as per your needs */
+	height:600px;   /* adjust as per your needs */
+	margin-left:-400px;   /* negative half of width above */
+	margin-top:-300px;   /* negative half of height above */
+	z-index: 99999;
+}
+
+
 #LCCtargetText{
 	height: 190px;
 	position: absolute;
