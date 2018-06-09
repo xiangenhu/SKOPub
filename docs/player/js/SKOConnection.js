@@ -190,19 +190,17 @@ function GetLCCHere(aitem){
 		+'&user='+decodeURI(qs("user","xhu@memphis.edu"))
 		+'&fullname='+fullname		
 		+'&TGT='+LCCAnswer;
-    var x = document.createElement("DIV");
-	x.style.width = "840";
-	x.style.height = "720px";
-	x.style.top = "50%";
-	x.style.left = "50%";
-	x.style.marginTop = "-310px";
-	x.style.marginLeft = "-420px";
-	x.style.position = "absolute";
-	x.style.background = "lightGrey";
-	x.innerHTML = "<iframe src='"+LCCUrl+"' width='840' height='720' frameBorder='0'/>";
-	
-	document.body.appendChild(x);
-	
+	LCCObj = document.createElement("DIV");
+	LCCObj.style.width = "840";
+	LCCObj.style.height = "720px";
+	LCCObj.style.top = "50%";
+	LCCObj.style.left = "50%";
+	LCCObj.style.marginTop = "-310px";
+	LCCObj.style.marginLeft = "-420px";
+	LCCObj.style.position = "absolute";
+	LCCObj.style.background = "lightGrey";
+	LCCObj.innerHTML='<object width="840" height="720" type="text/html" data="'+LCCUrl+'" ></object>';
+	document.body.appendChild(LCCObj);
 }
 
 function IDDialog(jsonOfXml) {

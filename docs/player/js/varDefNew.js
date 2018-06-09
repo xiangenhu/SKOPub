@@ -144,3 +144,4 @@ var TransitionStr="transition";
 var Evaluate_Input_Of="Evaluate";
 var VERBS="verbs";
 var jsonOfXml;
+var LCCObj;
