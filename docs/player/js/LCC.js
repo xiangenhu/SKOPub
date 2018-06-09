@@ -207,6 +207,7 @@ function GetLCC(Method,lccurl,Target,Current){
 				LCC.sessionKey=obj.sessionKey;
 				LCC.Current=Current;
 				LCC.Target=Target;
+				LCC.guid=SKOGuid;
 				
 				
 				
@@ -252,7 +253,8 @@ function GetLCC(Method,lccurl,Target,Current){
 						"RO":LCC.RO,
 						"CC":LCC.CC,
 						"CT":LCC.CT,
-						"sessionKey":LCC.sessionKey
+						"sessionKey":LCC.sessionKey,
+						"guid":SKOGuid
 					}
 				}
 				

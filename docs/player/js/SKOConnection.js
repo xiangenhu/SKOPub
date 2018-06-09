@@ -179,19 +179,30 @@ function AddOneSpeech(aitem){
 }
 
 function GetLCCHere(aitem){
-    var x = document.createElement("IFRAME");
-    x.setAttribute("src", "lccE.html");
-    x.setAttribute("top", "200px");
-    x.setAttribute("left", "300px");
-    x.setAttribute("width", "840px");
-    x.setAttribute("height", "720px");
-	x.setAttribute("z-index", "2000000");
-	document.body.appendChild(x);
-	
 	var LCCAnswer = aitem.LCC["#cdata-section"];
 	var LCCQuest = aitem.LCCQ["#cdata-section"];
 	console.log(LCCAnswer);	
 	console.log(LCCQuest);
+	LCCUrl='lccE.html?'
+		+'&QN='+LCCQuest
+		+'&EXPID='+EXPID
+		+'&guid='+SKOGuid
+		+'&user='+decodeURI(qs("user","xhu@memphis.edu"))
+		+'&fullname='+fullname		
+		+'&TGT='+LCCAnswer;
+    var x = document.createElement("DIV");
+	x.style.width = "840";
+	x.style.height = "720px";
+	x.style.top = "50%";
+	x.style.left = "50%";
+	x.style.marginTop = "-310px";
+	x.style.marginLeft = "-420px";
+	x.style.position = "absolute";
+	x.style.background = "lightGrey";
+	x.innerHTML = "<iframe src='"+LCCUrl+"' width='840' height='720' frameBorder='0'/>";
+	
+	document.body.appendChild(x);
+	
 }
 
 function IDDialog(jsonOfXml) {
