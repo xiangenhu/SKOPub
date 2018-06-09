@@ -178,9 +178,18 @@ function AddOneSpeech(aitem){
 	}
 }
 
+function GetLCC(aitem){
+		
+	var LCCAnswer = aitem.LCC["#cdata-section"];
+	var LCCQuest = aitem.LCCQ["#cdata-section"];
+	console.log(LCCAnswer);	
+	console.log(LCCQuest);	
+	
+}
 
 function IDDialog(jsonOfXml) {
 	var item = jsonOfXml.SKOSCRIPTS.ID.ITEM;
+	
 	SpeechArray1=[];
 	SpeechArray2=[];
 	SpeechArray3=[];
@@ -194,7 +203,19 @@ function IDDialog(jsonOfXml) {
 	AddOneSpeech(item);
 	}else {
 		for(var i=0; i<item.length; i++) {
-			AddOneSpeech(item[i]);
+			try{
+				var aFrame = item[i];
+				var atype = aFrame.currentAttributes 
+				if (atype.type=="scene"){
+					AddOneSpeech(aFrame);
+				}else{
+					AddOneSpeech(aFrame);
+					GetLCC(aFrame);
+//					return null;					
+				}
+			}catch(err) {
+				console.log(err);	
+			}
 		}
 	}
 	for (i=0; i<SpeechArray1.length;i++){
