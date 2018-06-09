@@ -124,7 +124,7 @@ var SpeechArray1=[];
 var SpeechArray2=[];
 var SpeechArray3=[];
 
-function AddOneSpeech(aitem){
+function AddOneSpeech(aitem,type){
 	
 	var itemAgent = aitem.PageConfig.AVATAR.currentAttributes;
 	var itemAct = aitem.PageConfig;
@@ -160,7 +160,11 @@ function AddOneSpeech(aitem){
 	
 	var speakStr=aitem.mattextS["#cdata-section"];
 	if ((speakStr!="") && (Speakingobj.Agent!="")){
-		Speakingobj.Data = OtherActions+ReplaceTest(Speakingobj.Agent,speakStr);
+		if (type=="LCC") {
+		Speakingobj.Data = OtherActions+ReplaceTest(Speakingobj.Agent,speakStr)+ '<cmd action="LCC"/>';
+		}else{
+			Speakingobj.Data = OtherActions+ReplaceTest(Speakingobj.Agent,speakStr);
+		}
 	
 		var userActionAfter="<pause/>";
 		var userActionBefore="<pause/>";
@@ -178,7 +182,8 @@ function AddOneSpeech(aitem){
 	}
 }
 
-function GetLCCHere(aitem){
+function GetLCCHere(){
+	aitem=LCCFrame
 	var LCCAnswer = aitem.LCC["#cdata-section"];
 	var LCCQuest = aitem.LCCQ["#cdata-section"];
 	console.log(LCCAnswer);	
@@ -217,7 +222,7 @@ function IDDialog(jsonOfXml) {
 		transision='<cmd NEXT="END"/>';
 	}
 	if (item.length==null){
-	AddOneSpeech(item);
+	AddOneSpeech(item,'scene');
 	}else {
 		for(var i=0; i<item.length; i++) {
 			try{
@@ -225,12 +230,12 @@ function IDDialog(jsonOfXml) {
 				var atype = aFrame.currentAttributes; 			
 				
 				if (atype.type=="scene"){
-					AddOneSpeech(aFrame);
+					AddOneSpeech(aFrame,'scene');
 					console.log(atype.type);	
 				}else{
 					console.log(atype.type);
-					GetLCCHere(aFrame);
-					AddOneSpeech(aFrame);		
+					LCCFrame=aFrame;
+					AddOneSpeech(aFrame,'LCC');		
 				}
 			}catch(err) {;	
 			}

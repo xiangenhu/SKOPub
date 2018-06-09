@@ -156,6 +156,16 @@ var msg;
 		image("#MediaContainer",MediaBase+cmd.img);
 		
 	}
+	
+	
+	if (cmd.action!=null){
+		GetLCCHere();	
+		
+	}
+	
+	
+	
+	
 	if (cmd.currentHint!=null){
 		msg=ActiveQuestion;
 		var afontsize=parseInt(qs("hqfs","4"));	
