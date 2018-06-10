@@ -22,6 +22,7 @@
 	<!-- <script src="https://togetherjs.com/togetherjs-min.js"></script> -->
 	<!-- <script src="js/YouTubescript.js" type="text/javascript"></script>	
 	<script src="https://www.youtube.com/iframe_api"></script> -->
+	
 </head>
 <style>
 .btnmic{
@@ -78,7 +79,48 @@
 	</div>
 	</div>
 	</div>
-	<div id = "LCCFrame"></div>	
+	
+<div id="LCCStuff" display="none">
+<div id=LCCArea>
+<div id="LCCtargetText">
+Target Question<br/>
+<textarea style="height: 30px; width: 700px;" id="thisTargetQuest">Explain the meaning of central tendency in introductory statistics</textarea>
+<div id="checkBox"><label>Show Key</label><input id="CheckAnswer" type="checkbox"/></div>
+<div id="AnswerPanel">
+<textarea style="height: 60px; width: 780px;" id="thisTarget">value for a probability distribution. also called a center or location of the distribution. Colloquially, it is often called average.
+</textarea>
+</div>
+</div>
+<div id="LCCNotes">
+</div>
+<input id="LCCInput"></input>
+<button type="button" onclick="SubmitLCC()" id="LCCInputBtn">your answer</button>
+<div id="LCCControl"/>
+<input id="ShowRN" type="checkbox" checked/><label>Show Relevant New</label>
+<input id="ShowRO" type="checkbox" checked/><label>Show Relevant Old</label>
+<input id="ShowIN" type="checkbox" checked/><label>Show Irrelevant New</label>
+<input id="ShowIO" type="checkbox" checked/><label>Show Irrelevant Old</label><br/>
+<input id="ShowCC" type="checkbox" checked/><label>Show Current Contribution</label>
+<input id="ShowCT" type="checkbox" checked/><label>Show  Total Coverage</label>
+</div>
+<div id="LCCFeedback">
+<table>
+<tr>
+	<td><div id="LCCFeedbackRN" style="height: 150px; width: 405px;"></div></td>
+	<td><div id="LCCFeedbackIN" style="height: 150px; width: 405px;"></div></td>
+</tr>
+<tr>
+	<td><div id="LCCFeedbackRO" style="height: 150px; width: 405px;"></div></td>
+	<td><div id="LCCFeedbackIO" style="height: 150px; width: 405px;"></div></td>
+</tr>
+<tr>
+	<td><div id="LCCFeedbackCC" style="height: 150px; width: 405px;"></div></td>
+	<td><div id="LCCFeedbackCT" style="height: 150px; width: 405px;"></div></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
 	
 <script>
 function onRecognition(text) {

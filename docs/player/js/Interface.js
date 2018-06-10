@@ -11,6 +11,8 @@ $(document).bind('keypress', function(e){
 		  }
 		 })
 
+
+		 
 		 
 		 
 function displayInformation(target,text){

@@ -260,6 +260,9 @@ function GetLCC(Method,lccurl,Target,Current){
 				
 				console.log(JSON.stringify(LCCObj));
 				composeAndSendLCCStatement(LCCObj,Current,Target,$("#thisTargetQuest").val(),inputBaseObj);
+				if (parent!=null){
+					parent.msSpeakQueued(qs("C1","Ben"),"LCC record saved","");
+				}
 			}
 		})
 }

@@ -192,6 +192,10 @@ function GetLCCHere(){
 		+'&QN='+LCCQuest
 		+'&EXPID='+EXPID
 		+'&guid='+SKOGuid
+		+'&C1='+C1
+		+'&C2='+C2
+		+'&C3='+C3
+		+'&C4='+C4
 		+'&user='+decodeURI(qs("user","xhu@memphis.edu"))
 		+'&fullname='+fullname		
 		+'&TGT='+LCCAnswer;
@@ -205,6 +209,7 @@ function GetLCCHere(){
 	LCCObj.style.position = "absolute";
 	LCCObj.style.background = "lightGrey";
 	LCCObj.innerHTML='<object width="840" height="720" type="text/html" data="'+LCCUrl+'" ></object>';
+
 	document.body.appendChild(LCCObj);
 }
 
