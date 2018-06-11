@@ -488,7 +488,7 @@ function GetLoMEducational(jsonOfXml){
 }
 
 function StartTutoring(MODE,jsonOfXml){
-//		displayDebugging("#DebuggingArea","Debugging: Starting "+MODE);
+		displayDebugging("#DebuggingArea","Debugging: Starting "+MODE);
 		$('#myBar').fadeOut();
 		$('#ASATQuestion').fadeOut();
 		$('#InputArea').fadeOut();		
