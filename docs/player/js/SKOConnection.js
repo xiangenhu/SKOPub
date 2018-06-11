@@ -265,7 +265,7 @@ function GetherallSpeeches(EvaluatedLCC,Turn,LCCRuleObject){
 			msSpeakQueued(C4, ListOfLCCActions[i].speech,"");
 		}
 		if (ListOfLCCActions[i].avatar=="Done"){
-			msSpeakQueued(C1, ListOfLCCActions[i].speech,"");
+			msSpeakQueued(C1, ListOfLCCActions[i].speech+"<cmd action='LCCDone'/> ","");
 		}
 	}
 	return ListOfLCCActions;

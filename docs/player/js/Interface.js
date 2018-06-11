@@ -161,8 +161,11 @@ var msg;
 	
 	
 	if (cmd.action!=null){
-		GetLCCHere();	
-		
+		if (cmd.action=="LCCDone"){
+			LCCObj.style.display = "none";
+		}else {
+			GetLCCHere();	
+		}
 	}
 	
 	
