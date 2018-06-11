@@ -1,15 +1,15 @@
 
 var inputBaseObj={
-			minStrength:parseFloat(qs("ms","0.0")),
+			minStrength:parseFloat(qs("ms","0.4")),
 			guid:"ea8308d1-f93c-457d-84c8-1fa4457c7148",
 			type:2,
 			include_ttop:true,
 			text:"习",
 			minRankby:parseFloat(qs("mr","0.0")),
-			etop:parseInt(qs("et","500")),
+			etop:parseInt(qs("et","50")),
 			format:"json",
 			wc:parseFloat(qs("wc","0.1")),
-			ttop:parseInt(qs("tt","10000")),
+			ttop:parseInt(qs("tt","1000")),
 			domain:"nodomain",
 			include_etop:true,
 			SS:qs("SS","english_tasa"),
