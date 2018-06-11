@@ -215,6 +215,12 @@ function GetLCCHere(){
 		+'&C2='+C2
 		+'&C3='+C3
 		+'&C4='+C4
+		+'&ms='+qs("ms","0.4")
+		+'&wc='+qs("wc","0.1")
+		+'&SS='+qs("SS","english_tasa")
+		+'&mw='+qs("mw","0.0")
+		+'&tt='+qs("tt","1000")
+		+'&et='+qs("et","100")
 		+'&user='+decodeURI(qs("user","xhu@memphis.edu"))
 		+'&fullname='+fullname		
 		+'&TGT='+LCCAnswer;
