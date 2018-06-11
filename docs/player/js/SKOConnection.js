@@ -182,8 +182,27 @@ function AddOneSpeech(aitem,type){
 	}
 }
 
+function GetRuls(aitem){
+	LCCRules = [];
+	var speechArray = aitem.Rules.rule;
+	for(var i=0; i<speechArray.length; i++) {
+		var entry = speechArray[i];
+		var ruleObj = entry.currentAttributes;
+		ruleObj.speech=entry["#cdata-section"];
+		delete ruleObj.UID;
+		delete ruleObj.play;
+//		console.log(JSON.stringify(ruleObj));
+		LCCRules.push(ruleObj)
+	}
+//	console.log(JSON.stringify(LCCRules));
+}
+
+
 function GetLCCHere(){
 	aitem=LCCFrame
+	GetRuls(aitem);
+//	MatchLCCRule("RN","1",LCCRules,0.1);
+	
 	var LCCAnswer = aitem.LCC["#cdata-section"];
 	var LCCQuest = aitem.LCCQ["#cdata-section"];
 	console.log(LCCAnswer);	
@@ -211,6 +230,90 @@ function GetLCCHere(){
 	LCCObj.innerHTML='<object width="840" height="720" type="text/html" data="'+LCCUrl+'" ></object>';
 
 	document.body.appendChild(LCCObj);
+}
+
+function GetherallSpeeches(EvaluatedLCC,Turn,LCCRuleObject){
+	console.log(Turn);
+	ListOfLCCActions=[];
+	
+//	MatchLCCRule('CO',Turn,LCCRuleObject,0.3);
+	
+	
+	MatchLCCRule('CO',Turn,LCCRuleObject,parseFloat(EvaluatedLCC.CT));
+//	console.log(JSON.stringify(ListOfLCCActions));
+	MatchLCCRule('RN',Turn,LCCRuleObject,parseFloat(EvaluatedLCC.RN));
+//	console.log(JSON.stringify(ListOfLCCActions));
+	MatchLCCRule('IN',Turn,LCCRuleObject,parseFloat(EvaluatedLCC.IN))
+//	console.log(JSON.stringify(ListOfLCCActions));
+	MatchLCCRule('RO',Turn,LCCRuleObject,parseFloat(EvaluatedLCC.RO))
+//	console.log(JSON.stringify(ListOfLCCActions));
+	MatchLCCRule('IO',Turn,LCCRuleObject,parseFloat(EvaluatedLCC.IO))
+//	console.log(JSON.stringify(ListOfLCCActions));
+	MatchLCCRule('CS',Turn,LCCRuleObject,parseFloat(EvaluatedLCC.CC))
+//	console.log(JSON.stringify(ListOfLCCActions));
+    for (var i=0; i< ListOfLCCActions.length; i++) {
+		if (ListOfLCCActions[i].avatar=="Teacher"){
+			msSpeakQueued(C1, ListOfLCCActions[i].speech,"");
+		}
+		if (ListOfLCCActions[i].avatar=="Student1"){
+			msSpeakQueued(C2, ListOfLCCActions[i].speech,"");
+		}
+		if (ListOfLCCActions[i].avatar=="Student2"){
+			msSpeakQueued(C3, ListOfLCCActions[i].speech,"");
+		}
+		if (ListOfLCCActions[i].avatar=="Student3"){
+			msSpeakQueued(C4, ListOfLCCActions[i].speech,"");
+		}
+		if (ListOfLCCActions[i].avatar=="Done"){
+			msSpeakQueued(C1, ListOfLCCActions[i].speech,"");
+		}
+	}
+	return ListOfLCCActions;
+}
+
+function MatchLCCRule(LCC,Turn,LCCRuleObject,aValue){
+	if (LCCRuleObject.length == 0) {
+		return;
+	}
+	var near = false;
+	var GreaterThan = false;
+	var LessThan = false;
+	
+	for (var i=0; i< LCCRuleObject.length; i++) {
+		
+		if (LCCRuleObject[i].Turn === Turn.toString()) {
+			matchValue = parseFloat(LCCRuleObject[i].Value);
+			
+			near = (Math.abs(matchValue-aValue) < 0.05);
+			GreaterThan = (aValue-matchValue > 0);
+			LessThan = (aValue-matchValue < 0);
+			
+			var currentRelation = "";
+			
+			if (GreaterThan) {
+				currentRelation = 'greater than';
+			}	
+		
+			if (LessThan) {
+				currentRelation = 'less than';
+			}		
+			if (near) {
+				currentRelation = 'near';
+			}
+			
+//			console.log(LCCRuleObject[i].type + "-----"+LCC);
+		
+			 if (LCCRuleObject[i].type==LCC) {
+				 if (LCCRuleObject[i].Relation == currentRelation) {
+					console.log(aValue.toString() +" is " + currentRelation+" "+ LCCRuleObject[i].Value);
+					ListOfLCCActions.push(LCCRuleObject[i]) 
+				}
+			}
+		}
+	}
+	
+//	return ListOfLCCActions;
+	console.log(JSON.stringify(ListOfLCCActions));
 }
 
 function IDDialog(jsonOfXml) {

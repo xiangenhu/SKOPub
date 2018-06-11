@@ -146,3 +146,5 @@ var VERBS="verbs";
 var jsonOfXml;
 var LCCObj;
 var LCCFrame;
+var LCCRules;
+var ListOfLCCActions = []

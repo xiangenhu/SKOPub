@@ -188,7 +188,7 @@ function onload(){
 }	
 	
 function GetLCC(Method,lccurl,Target,Current){
-	inputBaseObj.SS=qs("SS","fa");
+	inputBaseObj.SS=qs("SS","english_tasa");
 	inputBaseObj.current=Current;
 	inputBaseObj.target=Target;
 	var getUrl = $.ajax({
@@ -258,11 +258,14 @@ function GetLCC(Method,lccurl,Target,Current){
 					}
 				}
 				
-				console.log(JSON.stringify(LCCObj));
-				composeAndSendLCCStatement(LCCObj,Current,Target,$("#thisTargetQuest").val(),inputBaseObj);
+//				console.log(JSON.stringify(LCCObj));
+				
 				if (parent!=null){
-					parent.msSpeakQueued(qs("C1","Ben"),"LCC record saved","");
+					ReturnedLCCObj = LCCObj.LCC;
+					var ActionforLCC = parent.GetherallSpeeches(ReturnedLCCObj,TurnCount-1,parent.LCCRules);
+					LCCObj.LCCFeedback=ActionforLCC;
 				}
+				composeAndSendLCCStatement(LCCObj,Current,Target,$("#thisTargetQuest").val(),inputBaseObj);
 			}
 		})
 }
