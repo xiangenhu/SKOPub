@@ -219,15 +219,16 @@ function GetLCCHere(){
 		+'&fullname='+fullname		
 		+'&TGT='+LCCAnswer;
 	LCCObj = document.createElement("DIV");
-	LCCObj.style.width = "840";
-	LCCObj.style.height = "720px";
+//	LCCObj.style.width = "400";
+	LCCObj.style.height = "700px";
 	LCCObj.style.top = "50%";
-	LCCObj.style.left = "50%";
-	LCCObj.style.marginTop = "-310px";
-	LCCObj.style.marginLeft = "-420px";
+	LCCObj.style.left = "250px";
+	LCCObj.style.right = "250px";
+	LCCObj.style.marginTop = "-350px";
+//	LCCObj.style.marginLeft = "-200px";
 	LCCObj.style.position = "absolute";
 	LCCObj.style.background = "lightGrey";
-	LCCObj.innerHTML='<object width="840" height="720" type="text/html" data="'+LCCUrl+'" ></object>';
+	LCCObj.innerHTML='<object width="100%" height="100% type="text/html" data="'+LCCUrl+'" ></object>';
 
 	document.body.appendChild(LCCObj);
 }
