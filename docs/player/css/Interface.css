@@ -67,7 +67,7 @@
 }
 
 #thisTargetQuest{
-	height: 30px;
+	height: 60px;
 	position: absolute;
 	opacity:0.95;
 	background:yellow; 
@@ -122,8 +122,8 @@
 }
 
 #LCCControl{
-    top: 70px;
-	height:60px;
+    top: 100px;
+	height:30px;
 	position: absolute;
 	opacity:0.95;
 	background:lightGrey; 
