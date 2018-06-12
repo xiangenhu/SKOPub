@@ -42,7 +42,7 @@ function onLoad() {
 function TestSpeech(){
 	var Words = messages[Math.floor((Math.random() * messages.length) + 1)]
 	console.log(Words);
-	msSpeakQueued("Test",Words,"");
+	msSpeakQueued("Test",Words +"<bigsmile/>","");
 }
 
 function onSelectChange() {
@@ -68,6 +68,6 @@ function onSelectChange() {
 
 </script>
 <p align="center">
-<button onclick="TestSpeech()">Click here to Ask Me</button> </p>
+<button onclick="TestSpeech()">Ask Me About AutoTutor</button> </p>
 </body>
 </html>
