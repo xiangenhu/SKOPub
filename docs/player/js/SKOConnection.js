@@ -228,8 +228,8 @@ function GetLCCHere(){
 //	LCCObj.style.width = "400";
 	LCCObj.style.height = "700px";
 	LCCObj.style.top = "50%";
-	LCCObj.style.left = "260px";
-	LCCObj.style.right = "260px";
+	LCCObj.style.left = "300px";
+	LCCObj.style.right = "300px";
 	LCCObj.style.marginTop = "-350px";
 //	LCCObj.style.marginLeft = "-200px";
 	LCCObj.style.position = "absolute";
