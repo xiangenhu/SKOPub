@@ -375,6 +375,7 @@ function LoadChara(id,character,format,voice){
 
 
 function onLoad() {
+	$("#getreadybtn").hide();
 	$("#Start").fadeOut();
 	loadLRS(lrsL);
 	$('#audio').trigger("play");

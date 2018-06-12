@@ -34,8 +34,11 @@
    vertical-align:middle;
 }
 </style>
-<body onLoad="onLoad()">
-<audio id="audio"></audio> <!-- only one audio object -->
+<body>
+	 <form id="getreadybtn" align="center" valign="middle">
+         <input type="button" value="Click here when you are ready!" onclick="onLoad();" />
+     </form>
+	<audio id="audio"></audio> <!-- only one audio object -->
 	<div id="frame-loader"><iframe src="" id="innerframe"></iframe></div>
 	<div id="TopDiv"></div>	
 	<div id="video-placeholder"></div>
