@@ -225,15 +225,15 @@ function GetLCCHere(){
 		+'&fullname='+fullname		
 		+'&TGT='+LCCAnswer;
 	LCCObj = document.createElement("DIV");
-//	LCCObj.style.width = "400";
-	LCCObj.style.height = "700px";
+	LCCObj.style.width = "620";
+	LCCObj.style.height = "690px";
 	LCCObj.style.top = "50%";
-	LCCObj.style.left = "260px";
-	LCCObj.style.right = "260px";
-	LCCObj.style.marginTop = "-350px";
-//	LCCObj.style.marginLeft = "-200px";
+	LCCObj.style.left = "50%";
+	//LCCObj.style.right = "260px";
+	LCCObj.style.marginTop = "-345px";
+	LCCObj.style.marginLeft = "-310px";
 	LCCObj.style.position = "absolute";
-	LCCObj.style.background = "lightGrey";
+	LCCObj.style.background = "";
 	LCCObj.innerHTML='<object width="100%" height="100% type="text/html" data="'+LCCUrl+'" ></object>';
 
 	document.body.appendChild(LCCObj);
