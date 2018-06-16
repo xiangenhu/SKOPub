@@ -279,6 +279,8 @@ function GetherallSpeeches(EvaluatedLCC,Turn,LCCRuleObject){
 }
 
 function MatchLCCRule(LCC,Turn,LCCRuleObject,aValue){
+	if (LCCRuleObject==null) 
+		return
 	if (LCCRuleObject.length == 0) {
 		return;
 	}
