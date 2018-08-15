@@ -13,12 +13,12 @@ var inputBaseObj={
 			domain:"nodomain",
 			include_etop:true,
 			SS:qs("SS","english_tasa"),
-			current:"酒",
+			current:"learn",
 			notes:"",
 			userGuid:"ee0e00c7-367e-4476-bf69-d7f6cd874a4b",
 			minWeight:parseFloat(qs("mw","0.0")),
 			sessionKey:"",
-			target:"学"};
+			target:"study"};
 			
 var LCC={IN:0.0,IO:0.0,RN:0.0,RO:0.0,CC:0.0,CT:0.0,sessionKey:"",Current:0.0,Target:0.0};
 			
