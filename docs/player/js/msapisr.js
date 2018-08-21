@@ -68,7 +68,7 @@ function onFail(e) {
 
 function stopRecording() {
     recorder.stop();
-
+	$("#Coversation").show();
     recorder.getBuffer(function(a) {
 
         var buf = a[0];

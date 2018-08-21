@@ -45,6 +45,7 @@
 <script>
 function onRecognition(text) {
 	document.getElementById("resultSpan").innerHTML = text;
+	$("input#SubmitAnswer").trigger('click');
 }
 </script>
 
