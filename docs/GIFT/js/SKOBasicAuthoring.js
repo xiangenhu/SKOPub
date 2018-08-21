@@ -103,7 +103,7 @@
 		
 		
 		
-		flashvars.ServerType = qs("ServerType","GAE");
+		flashvars.ServerType = qs("ServerType","NONEGAE");
 		flashvars.LoadProfile = qs("LoadProfile","0");  //=1 when GAE is used
 		flashvars.PlayWindow=qs("PlayWindow","_self");		flashvars.RMT = qs("RMT","1"); // Editing Remote SKOs
 		flashvars.MPR = qs("MPR","1"); // Export MPR files
