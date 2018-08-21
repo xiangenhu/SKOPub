@@ -1,0 +1,57 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link href="css/popupmenu.css" rel="stylesheet" type="text/css" >
+	<link href="css/talkinghead.css" rel="stylesheet" type="text/css" >
+	<link href="css/Interface.css" rel="stylesheet" type="text/css" >
+	<script src="js/varDefNew.js" type="text/javascript"></script>
+	<script src="js/varDefLCC.js" type="text/javascript"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-1.12.4.js"></script>
+	<script src="js/jquery-ui.js"></script>	
+	<script src="js/lrsLConfig.js"></script>		
+	<script src="js/msapi.js"></script>			
+	<script src="js/Interface.js"></script>	
+	<script src="js/pixi.min.js"></script>
+	<script src="js/popupmenu.js" type="text/javascript"></script>	
+	<script src="js/xapiwrapper.min.js"></script>
+	<script src="js/SKOConnection.js"></script>	
+	<script src="js/LCC.js"></script>	
+	<script src="js/myxAPIWrapper.js"></script>	
+	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
+</head>
+<style>
+</style>
+<body onLoad="onload()">
+<div id="LCCtargetText">
+Target Question<br/>
+<textarea style="height: 30px; width: 700px;" id="thisTargetQuest">怎么理解样本均值？</textarea>
+<div id="checkBox"><label>看答案</label><input id="CheckAnswer" type="checkbox"/></div>
+<div id="AnswerPanel">
+<textarea style="height: 60px; width: 780px;" id="thisTarget">
+样本均值又叫样本均数。即为样本的均值。均值是表示一组数据集中趋势的量数，是指在一组数据中所有数据之和再除以这组数据的个数。它是反映数据集中趋势的一项指标。
+</textarea>
+</div>
+</div>
+<div id="LCCNotes">
+</div>
+<input id="LCCInput"></input>
+<button type="button" onclick="SubmitLCC()" id="LCCInputBtn">用你的话解释</button>
+<div id="LCCFeedback">
+<table>
+<tr>
+	<td><div id="LCCFeedbackRN" style="height: 150px; width: 405px;"></div></td>
+	<td><div id="LCCFeedbackIN" style="height: 150px; width: 405px;"></div></td>
+</tr>
+<tr>
+	<td><div id="LCCFeedbackRO" style="height: 150px; width: 405px;"></div></td>
+	<td><div id="LCCFeedbackIO" style="height: 150px; width: 405px;"></div></td>
+</tr>
+<tr>
+	<td><div id="LCCFeedbackCC" style="height: 150px; width: 405px;"></div></td>
+	<td><div id="LCCFeedbackCT" style="height: 150px; width: 405px;"></div></td>
+</tr>
+</table>
+</div>
+</body>
+</html>

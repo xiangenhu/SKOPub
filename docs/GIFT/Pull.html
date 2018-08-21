@@ -1,0 +1,72 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="./js/xapiwrapper.min.js"></script>
+<body>
+  Selection: <input type="text"><br />
+  Value to Search: <input type="text" name="searchValue"><br />
+  <input type="button" onclick="search()" value="Submit">&nbsp
+  <input type="button" onclick="clearText()" value="Clear">
+  <p id="output">Output: <br /></p>
+  <pre id="jsonOutput"></pre>
+</body>
+
+<script>
+log = function(msg,pretty=false){
+  console.log(msg);
+  if(pretty){
+    document.getElementById("jsonOutput").innerHTML = JSON.stringify(msg,undefined,2);
+  }else{
+    $("#output").append(msg + "<br />");
+  }
+
+}
+
+clearText = function(){
+  console.log("clearing output");
+  $("#output").text("");
+  $("#jsonOutput").text("");
+}
+
+var wrapper;
+
+window.onload = function(){
+  ADL.launch(setupConfig, true);
+}
+
+setupConfig = function(err, launchdata, xAPIWrapper) {
+    if (!err) {
+      wrapper = ADL.XAPIWrapper = xAPIWrapper;
+      log("--- content launched via xAPI Launch ---\n" + wrapper.lrs + "\n" + launchdata);
+    } else {
+      wrapper = ADL.XAPIWrapper;
+      wrapper.changeConfig({
+        endpoint: "http://tokyo.x-in-y.com/data/xAPI/",
+        user: 'd1d2dcf69c2cdc335aa582a4506cdeea9844e2f5',        password: '1c793683ea1c91b62b71fab3849524493f30b6e1'
+      });
+      log("--- content statically configured ---\n" + JSON.stringify(wrapper));
+    }
+}
+
+
+search = function(){
+
+  log("Get Records");
+  try{
+    var search = ADL.XAPIWrapper.searchParams();
+	
+	 search['agent']=JSON.stringify({"mbox":"mailto:xiangenhu@gmail.com","objectType":"Agent"}); 
+//	 search['verb'] ="https://umiis.github.io/ITSProfile/verbs/SaveKCScore"; 
+//	 search['activity']="d7c993e9-3061-4cf9-a4d2-dd0292d7cc24"; 
+	 search['limit']=1;
+    var ret = ADL.XAPIWrapper.getStatements(search);
+    if(ret){
+      window.ret = ret;
+      log(ret,true);
+      return;
+    }
+  }catch(e){
+    log("error getting records: " + e);
+  }
+}
+</script>
+</html>

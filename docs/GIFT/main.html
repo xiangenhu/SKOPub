@@ -1,0 +1,19 @@
+<html>
+<head>
+	<link href="css/Interface.css" rel="stylesheet" type="text/css" >
+	<script src="js/jquery.min.js"></script>
+</head>
+<body>
+	<iframe scrolling="no" src="Content.html" id="MyWrapper"></iframe></div>	
+	<script>
+		$(document).ready(function()  
+		{  
+    		var loc = window.location.toString(),  
+    	    params = loc.split('?')[1]; 
+    		iframe = document.getElementById("MyWrapper");  
+			iframe.src = iframe.src + "?"+params;    			
+		});
+	</script>
+	
+</body>
+</html>

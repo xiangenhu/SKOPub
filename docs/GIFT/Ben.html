@@ -1,0 +1,73 @@
+<html>
+<head>
+	<script src="js/varDefNew.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-1.12.4.js"></script>
+	<script src="js/jquery-ui.js"></script>		
+	<script src="js/msapi.js"></script>		
+	<script src="js/pixi.min.js"></script>
+	<script src="js/Interface.js"></script>
+</head>
+<body onload="onLoad()">
+<audio id="audio"></audio> 
+<div id="Test" style="position:relative; width:250px; height:200px;"> 
+<div id="TestRenderer" style="position:absolute; top:0px; right:0px; width:250px; height:200px;"></div>
+</div>	
+
+<script>
+var messages=[];
+function getmessage(){
+	messages.push('Hello! Welcome to the AutoTutor Tutorial.');
+	messages.push('You might already know, but AutoTutor is an intelligent tutoring system that holds conversations with humans in natural language. ');
+	messages.push('AutoTutor uses natural language processing, which means students can use their own words when interacting with the system.');
+	messages.push('AutoTutor is based on real life expert human tutoring.'); 
+	messages.push('Expert human tutoring is much more effective than traditional classroom settings.');
+	messages.push('AutoTutor is a very effective intelligent tutoring system. ');
+	messages.push('AutoTutor has been used to teach many different domains.');
+	messages.push('AutoTutor was used to teach physics, mathematics, reading, breast cancer awareness, mass-casualty disaster triage, and several other topics!');
+	messages.push('AutoTutor will first ask a deep-level reasoning question.');
+	messages.push('Depending on student responses, AutoTutor will provide hints, pumps, or prompts.');
+	messages.push('AutoTutor helps students work through fully answering a deep-level reasoning question.');
+	messages.push('There are several ongoing projects using different versions of AutoTutor. ');
+	messages.push('We hope this tutorial will help illustrate the capabilities of AutoTutor.');
+	messages.push('This tutorial will give you detailed background information about AutoTutor.');
+	messages.push('This tutorial will also provide step-by-step instructions for creating your own AutoTutor module!');
+	messages.push('During the tutorial, we will discuss how AutoTutor data is automatically recorded, organized, and how it can be easily analyzed.');
+}
+function onLoad() {
+	getmessage();
+	onSelectChange();
+}
+
+function TestSpeech(){
+	var Words = messages[Math.floor((Math.random() * messages.length) + 1)]
+	console.log(Words);
+	msSpeakQueued("Test",Words +"<bigsmile/>","");
+}
+
+function onSelectChange() {
+	var id="Test";
+	var o = {};
+		var character = qs("C","Ben");
+		var format = qs("F","Head");
+		var voice = qs("V","Paul");
+
+		if (format == "Head") {width = 250; height = 200;}
+		else if (format == "Bust") {width = 375; height = 300;}
+		else if (format == "Body") {width = 500; height = 400;}
+		else if (format == "Cartoon") {width = 307; height = 397;}
+		
+		document.getElementById(id).style.width = width+"px";
+		document.getElementById(id).style.height = height+"px";
+		document.getElementById(id+"Renderer").style.width = width+"px";
+		document.getElementById(id+"Renderer").style.height = height+"px";
+		o[id] = {character:character, format:format, width:width, height:height, voice:voice};
+	msInit(o);
+//	TestSpeech();
+}
+
+</script>
+<p align="center">
+<button onclick="TestSpeech()">Ask Me About AutoTutor</button> </p>
+</body>
+</html>

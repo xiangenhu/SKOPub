@@ -1,0 +1,147 @@
+#Movie2Obj2Inner, #Movie2btn0Back
+{ display: none !important; }
+.tl-agent{
+	width: 200px;
+	height: 250px;
+	top: 0;
+	position: absolute;
+	left: 0;
+	margin-top: -30px;
+	display:block;
+	padding: 35px;
+	text-align: center;
+	vertical-align: middle;
+//	background: url("img/BKG1.png") no-repeat bottom center;
+}
+.tr-agent{
+	width: 200px;
+	top: 0;
+	height: 250px;
+	position: absolute;
+	right: 0;
+	margin-top: -30px;
+	display:block;
+	text-align: center;
+	padding: 35px;
+//	background: url("img/BKG1.png") no-repeat bottom center;
+}
+.bl-agent{
+	width: 200px;
+	height: 250px;
+	bottom: 30;
+	position: absolute;
+	left: 0;
+	margin-bottom: 20px;
+	display:block;
+	text-align: center;
+	padding: 35px;
+//	background: url("img/BKG1.png") no-repeat bottom center;
+}
+.br-agent{
+	width: 200px;
+	height: 250px;
+	bottom: 30;
+	position: absolute;
+	right: 0;
+	display:block;
+	padding: 35px;
+	text-align: center;
+	margin-bottom: 20px;
+//	background: url("img/BKG1.png") no-repeat bottom center;
+}
+
+
+#ShowHistoryC1{
+    display: none;
+	position: absolute;
+	left:20px;
+}
+
+#ShowHistoryAll1{
+    display: none;
+	position: absolute;
+	left:60px;
+}
+
+#ShowHistoryC2{
+    display: none;
+	position: absolute;
+	right:20px;
+}
+#ShowHistoryAll2{
+    display: none;
+	position: absolute;
+	right:60px;
+}
+#ShowHistoryC3{
+    display: none;
+	position: absolute;
+	left:20px;
+}
+#ShowHistoryC4{
+    display: none;
+	position: absolute;
+	right:20px;
+}
+#ShowHistory{
+    display: none;
+}
+#SpeechC1{
+	left: 20px;
+	top: 230px;
+	width:250px;
+	height:150px;
+	position: absolute;
+	opacity:0.95;
+	background:lightGrey; 
+	border-radius: 10px 10px 10px 10px;
+    display: none;
+	padding:10px;
+	overflow:auto;
+	z-index: 100;
+}
+
+#SpeechC2{
+	right: 20px;
+	top: 230px;
+	width:250px;
+	height:150px;
+	position: absolute;
+	opacity:0.95;
+	background:lightGrey; 
+	border-radius: 10px 10px 10px 10px;
+    display: none;
+	padding:10px;
+	overflow:auto;
+	z-index: 100;
+}
+
+#SpeechC3{
+	left: 20px;
+	bottom:290px;
+	width:250px;
+	height:150px;
+	position: absolute;
+	opacity:0.95;
+	background:lightGrey; 
+	border-radius: 10px 10px 10px 10px;
+    display: none;
+	padding:10px;
+	overflow:auto;
+	z-index: 100;
+}
+
+#SpeechC4{
+	right: 20px;
+	bottom: 290px;
+	width:250px;
+	height:150px;
+	position: absolute;
+	opacity:0.95;
+	background:lightGrey; 
+	border-radius: 10px 10px 10px 10px;
+    display: none;
+	padding:10px;
+	overflow:auto;
+	z-index: 100;
+}

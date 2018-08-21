@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<style>
+.btnmic{
+   background:url('img/mic.gif') no-repeat;
+   padding-left:50px;
+   cursor:pointer;
+   width:50px;
+   height:50px;
+   vertical-align:middle;
+}
+</style>
+<body>
+
+<p>Choose a language:</p>
+
+<select id="LanguageSelector">
+	<option value="en-US" selected>English</option>
+	<option value="yue-Hant-HK">Chinese, Cantonese (Traditional, Hong Kong)</option>
+	<option value="cmn-Hant-TW">Chinese, Mandarin (Traditional, Taiwan)</option>
+	<option value="cmn-Hans-HK">Chinese, Mandarin (Simplified, Hong Kong)</option>
+	<option value="cmn-Hans-CN">Chinese, Mandarin (Simplified, China)</option>
+</select>
+
+<p>Say something:</p>
+
+<p>Press the mic once to start, again to stop.</p>
+
+<div id="startBtnAssembly" style="width:75px; height:75px;">
+		<div style="width:75px; position:relative;">
+				<div id="startBtn" onclick="startStopRecording(document.getElementById('LanguageSelector').value)" class="btnmic" style="position:absolute; top:12px; left:12px; width:50px; height:50px"></div>
+				<div style="position:absolute; top:0px; left:0px; width:75px; height:75px; pointer-events: none;"><canvas id="spinner" width="75" height="75" style="width:75px; height:75px"></canvas></div>
+		</div>
+</div>
+
+<p>Result: <span id="resultSpan"></p>
+
+<script>
+function onRecognition(text) {
+	document.getElementById("resultSpan").innerHTML = text;
+}
+</script>
+
+<script src="js/msapisr.js"></script>
+</body>
+</html>
