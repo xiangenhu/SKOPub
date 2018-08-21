@@ -87,6 +87,7 @@
 <script>
 function onRecognition(text) {
 	 $("#inputText").val(text);
+	 $("input#SubmitAnswer").trigger('click');
 }
 </script>
 	<script src="js/msapisr.js"></script>	
