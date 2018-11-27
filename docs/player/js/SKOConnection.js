@@ -398,6 +398,17 @@ function ReplaceTest(MoveID,Text){
 	return Res;
 }
 
+function GetASATPageVideo(jsonOfXml){
+	var ASDATPage=jsonOfXml.SKOSCRIPTS.AutoTutorScript.ASATPageConfigration;
+	if (ASDATPage==null)
+	{
+		StartTutoring("ASAT",jsonOfXml);
+		return;
+	}
+	pageVideo = ASDATPage.ASATPageVideo;
+	$("#video-placeholder").fadeIn();
+//	alert(JSON.stringify(pageVideo));
+}
 
 
 function GetASATPagePnQ(jsonOfXml){
