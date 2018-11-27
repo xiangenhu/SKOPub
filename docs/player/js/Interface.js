@@ -158,6 +158,13 @@ var msg;
 		image("#MediaContainer",MediaBase+cmd.img);
 		
 	}
+	if (cmd.yt!=null){
+		$("#video-placeholder").fadeIn();
+	}
+	
+	if (cmd.mv!=null){
+		$("#video-placeholder").fadeIn();
+	}
 	
 	
 	if (cmd.action!=null){

@@ -220,7 +220,7 @@
 	height:480px;   /* adjust as per your needs */
 	margin-left:-320px;   /* negative half of width above */
 	margin-top:-240px;   /* negative half of height above */
-	z-index: 2;
+	z-index: 0;
 }
 
 
