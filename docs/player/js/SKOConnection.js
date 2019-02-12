@@ -334,9 +334,9 @@ function IDDialog(jsonOfXml) {
 	SpeechArray3=[];
 	var transision="";
 	if (jsonOfXml.SKOSCRIPTS.AutoTutorScript!=null){
-		transision='<cmd NEXT="ASATPageIMG"/>';
+		transision=' <cmd NEXT="ASATPageIMG"/>';
 	}else{
-		transision='<cmd NEXT="END"/>';
+		transision=' <cmd NEXT="END"/>';
 	}
 	if (item.length==null){
 	AddOneSpeech(item,'scene');

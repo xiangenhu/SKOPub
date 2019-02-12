@@ -594,7 +594,7 @@ function UpdateStatementsASAT(data,MyxAPIType){
     for (j = 0; j < trasisionLength; j++) {
 	   if (transActions[j].RuleID!=null) {
 			var transActionsActions=transActions[j].Actions;
-			var transActionsRulesID="follow_rule_"+transActions[j].RuleID+"_when_interact_with";
+			var transActionsRulesID="follow_rule_"+transActions[j].RuleID;
 			if (An_xAPIType>1){ // Total Transaction RuleID
 				var aStatement = ComposeStatement("verbs",Auser,"Agent",transActionsRulesID,Localurl,transActionsActions);
 				sendStatement(aStatement);
@@ -620,7 +620,7 @@ function UpdateStatementsASAT(data,MyxAPIType){
 					CumulatedKCMessage+"<input type='submit' id='Replay' value='Replay'/><input type='submit' id='Restart' value='Restart'/></p>";
 				if (An_xAPIType>2){
 					if (transActionsRulesIDAction!=SaveKCScoreStr){
-						var verbstr="perform_action_"+transActionsRulesIDAction+"_when_interact_with";
+						var verbstr="perform_action_"+transActionsRulesIDAction;
 						var aStatement = ComposeStatement("verbs",Auser,"Agent",verbstr,Localurl,transActionsActions[k]);
 						sendStatement(aStatement);
 					}

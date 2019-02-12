@@ -148,8 +148,8 @@ function ReplayDialog(){
 }
 
 function HandleCMD(id,cmd){
-
 var msg;
+//     alert(JSON.stringify(cmd));
 	 if (cmd.xapinote!=null){
 //		alert(cmd.xapinote);
 	} 
@@ -197,6 +197,7 @@ var msg;
 		UpdateStatementsID(anObj);		
 	}
 	if (cmd.NEXT!=null){
+		
 		if (cmd.NEXT!="END"){
 			StartTutoring(cmd.NEXT,SKOScriptsinJSON);
 		}
