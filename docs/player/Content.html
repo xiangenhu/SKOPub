@@ -2,27 +2,28 @@
 <head>
 	<link href="css/popupmenu.css" rel="stylesheet" type="text/css" >
 	<link href="css/talkinghead.css" rel="stylesheet" type="text/css" >
-	<link href="css/Interface.css" rel="stylesheet" type="text/css" ><!-- 
+	<link href="css/Interface.css" rel="stylesheet" type="text/css" ><!--
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
 	<script src="js/varDefNew.js" type="text/javascript"></script>
 	<script src="js/varDefLCC.js" type="text/javascript"></script>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery-1.12.4.js"></script>
-	<script src="js/jquery-ui.js"></script>	
-	<script src="js/lrsLConfig.js"></script>		
-	<script src="js/msapi.js"></script>			
-	<script src="js/Interface.js"></script>	
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/lrsLConfig.js"></script>
+	<script src="js/msapi.js"></script>
+	<script src="js/Interface.js"></script>
 	<script src="js/pixi.min.js"></script>
-	<script src="js/popupmenu.js" type="text/javascript"></script>	
+	<script src="js/popupmenu.js" type="text/javascript"></script>
 	<script src="js/xapiwrapper.min.js"></script>
-	<script src="js/SKOConnection.js"></script>	
-	<script src="js/myxAPIWrapper.js"></script>		
-	<script src="js/LCC.js"></script>	
+	<script src="js/SKOConnection.js"></script>
+	<script src="js/myxAPIWrapper.js"></script>
+	<script src="js/YouTubescript.js"></script>	
+	<script src="js/LCC.js"></script>
 	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
 	<!-- <script src="https://togetherjs.com/togetherjs-min.js"></script> -->
-	<!-- <script src="js/YouTubescript.js" type="text/javascript"></script>	
+	<!-- <script src="js/YouTubescript.js" type="text/javascript"></script>
 	<script src="https://www.youtube.com/iframe_api"></script> -->
-	
+
 </head>
 <style>
 .btnmic{
@@ -40,14 +41,14 @@
      </form>
 	<audio id="audio"></audio> <!-- only one audio object -->
 	<div id="frame-loader"><iframe src="" id="innerframe"></iframe></div>
-	<div id="TopDiv"></div>	
+	<div id="TopDiv"></div>
 	<div id="video-placeholder"></div>
 	<div id='MediaContainer'></div>
-	<div id="ASATMainQuestion"></div>	
+	<div id="ASATMainQuestion"></div>
 	<div id="DebuggingArea"></div>
-	<div id='SpeechC1'></div>		
+	<div id='SpeechC1'></div>
 	<div id='SpeechC2'></div>
-	<div id='SpeechC3'></div>		
+	<div id='SpeechC3'></div>
 	<div id='SpeechC4'></div>
 	<div id="ASATQuestion"></div>
 	<div id='Coversation'></div>
@@ -72,25 +73,25 @@
 		</tr>
 		</table>
 	</div>
-	
+
 	<div class="row" style="margin-top: 1em"> <div class="col-xs-12"> <div id="results"></div> </div> </div>
 	<div> <input type="button" id="startBtn" value="" style="display: none; margin: 0 auto;"></div>
-	<div id="myProgress"> <div id="myBar"></div></div> 
-	<div id="utilityBar" align="center"> <button id="Debugging">Show Debugging</button> 
-	</div>	
-	<div id="DoneMsg" align="center"><div/>	
+	<div id="myProgress"> <div id="myBar"></div></div>
+	<div id="utilityBar" align="center"> <button id="Debugging">Show Debugging</button>
+	</div>
+	<div id="DoneMsg" align="center"><div/>
 	</div>
 	</div>
 	</div>
-	
-	
+
+
 <script>
 function onRecognition(text) {
 	 $("#inputText").val(text);
 	 $("input#SubmitAnswer").trigger('click');
 }
 </script>
-	<script src="js/msapisr.js"></script>	
+	<script src="js/msapisr.js"></script>
 
 </body>
 </html>

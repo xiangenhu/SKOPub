@@ -3,8 +3,8 @@ $(document).on("cut copy paste","#inputText",function(e) {
 					e.preventDefault();
 				}
 			})
-	
-	
+
+
 $(document).bind('keypress', function(e){
 		  if(e.which === 13) { // return
 			 $("input#SubmitAnswer").trigger('click');
@@ -12,9 +12,9 @@ $(document).bind('keypress', function(e){
 		 })
 
 
-		 
-		 
-		 
+
+
+
 function displayInformation(target,text){
 //	$(target).show();
 	var d = new Date();
@@ -57,10 +57,10 @@ function displayConversation(target,text){
 					$(target).prepend(p)
 				}
 	$(target).scrollTop($(target).prop("scrollHeight"));
-	
+
 }
 
-function displayDebugging(target,text){	
+function displayDebugging(target,text){
 			if (DEBUGGING!=0);
 			{
 				var p = $('<p>').html(text);
@@ -71,10 +71,10 @@ function displayDebugging(target,text){
 						$(target).prepend(p)
 					}
 			}
-			
+
 		}
-		
-		
+
+
 function GenerateImgMap(MapData)
 {
 	var HotSpotLength=MapData[0].MapInfor.length;
@@ -94,12 +94,12 @@ function GenerateImgMap(MapData)
 				                                                    +','+y1.toString()
 																	+','+x2.toString()
 																	+','+y2.toString()
-																	+'" data-popupmenu="popmenu'+i.toString()+'"/>'; 
-				
+																	+'" data-popupmenu="popmenu'+i.toString()+'"/>';
+
 				}
 			var j = 0;
 			ManueInfor = ManueInfor+'<ul id="popmenu'+i.toString()+'" class="jqpopupmenu">';
-			for (j =0; j<MapInforData.Questions.length;j++){			
+			for (j =0; j<MapInforData.Questions.length;j++){
 				var QuestInfor= MapInforData.Questions[j];
 				ManueInfor=ManueInfor+'<li><a href="#">'+MapInforData.Questions[j].Quest+'</a><ul><li><a href="#">'+MapInforData.Questions[j].Answer+'</a><li></ul></li>';
 			}
@@ -115,14 +115,14 @@ function displayMedia(MediaContainer,MediaBase,MediaURL){
 	if (MediaURL.toUpperCase().includes("HTTP")==true) {
 		text='<img align="center" width="400" usemap="#PnQ" src="'+MediaURL+'"/>';
 	}
-	
+
 	if (Status=="ASATPageIMG")
-	{		
+	{
 		GenerateImgMap(IMGgexmlData);
-		text=text+AREAText;	
-		
+		text=text+AREAText;
+
 	}
-	$(MediaContainer).html(text); 
+	$(MediaContainer).html(text);
 	if (Status=="ASATPageIMG") {
 			jQuery(document).ready(function($){
 			var $anchors=$('*[data-popupmenu]')
@@ -130,8 +130,8 @@ function displayMedia(MediaContainer,MediaBase,MediaURL){
 			$(this).addpopupmenu(this.getAttribute('data-popupmenu'))
 			})
 		})
-	} 
-	
+	}
+
 }
 
 function image(Target,MGDFile) {
@@ -152,21 +152,21 @@ var msg;
 //     alert(JSON.stringify(cmd));
 	 if (cmd.xapinote!=null){
 //		alert(cmd.xapinote);
-	} 
-	
+	}
+
 	if (cmd.img!=null){
 		image("#MediaContainer",MediaBase+cmd.img);
-		
+
 	}
 	if (cmd.yt!=null){
 		$("#video-placeholder").fadeIn();
 	}
-	
+
 	if (cmd.mv!=null){
 		$("#video-placeholder").fadeIn();
 	}
-	
-	
+
+
 	if (cmd.action!=null){
 		if (cmd.action=="LCCDone"){
 			LCCObj.style.display = "none";
@@ -175,16 +175,16 @@ var msg;
 			GetLCCHere();	
 		}
 	}
-	
-	
-	
-	
+
+
+
+
 	if (cmd.currentHint!=null){
 		msg=ActiveQuestion;
-		var afontsize=parseInt(qs("hqfs","4"));	
+		var afontsize=parseInt(qs("hqfs","4"));
 		displayMSG("#ASATQuestion",msg.fontsize(afontsize));
 		$("#InputArea").fadeIn();
-		
+
 		$("#inputText").val("");
 		$("#inputText").prop('disabled', (InReplay==true));
 		$("#SubmitAnswer").prop('disabled', (InReplay==true));
@@ -194,28 +194,28 @@ var msg;
 		var captionText=msg.replace(rex , "").trim();
 		anObj.action=captionText;
 		anObj.note="Hint/Prompt";
-		UpdateStatementsID(anObj);		
+		UpdateStatementsID(anObj);
 	}
 	if (cmd.NEXT!=null){
-		
+
 		if (cmd.NEXT!="END"){
 			StartTutoring(cmd.NEXT,SKOScriptsinJSON);
 		}
 	}
 	if (cmd.currentQuestion!=null){
-		
+
 		// msg=cmd.currentQuestion;
 		 msg=ActiveQuestion;
 	//	alert(msg);
 	   displayDebugging("#DebuggingArea",msg);
-		var afontsize=parseInt(qs("hqfs","5"));	
+		var afontsize=parseInt(qs("hqfs","5"));
 		displayMSG("#ASATMainQuestion",msg.fontsize(afontsize));
 		$("#InputArea").fadeIn();
 		$("#inputText").val("");
 		$("#inputText").val("");
 		$("#inputText").prop('disabled', (InReplay==true));
 		$("#SubmitAnswer").prop('disabled', (InReplay==true));
-		
+
 		var anObj={};
 		anObj.id=id;
 		var rex = /(<([^>]+)>)/ig;
@@ -240,10 +240,10 @@ var msg;
 			ReplayDialog();
 		});
 		$("#Restart").click(function(){
-			location.reload();		
+			location.reload();
 		});
 
-	}	
+	}
 	if (cmd.Sinput!=null){
 		$("#inputText").val(cmd.Sinput);
 	}

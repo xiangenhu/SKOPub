@@ -1,3 +1,9 @@
+/* Added the Youtube API Frame in the page body*/
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
 var player,
     time_update_interval = 0;
 
@@ -5,10 +11,12 @@ function onYouTubeIframeAPIReady() {
     player = new YT.Player('video-placeholder', {
         width: 600,
         height: 400,
-        videoId: 'Xa0Q0J5tOP0',
+        /*Assign the youtube video id in VideoxmlData to the videoId */
+        videoId: VideoxmlData["#text"],
         playerVars: {
             color: 'white',
-            playlist: 'taJ60kskkns,FG0fTKAqZ5g'
+            /*supressed the Playlist*/
+            /*playlist: 'taJ60kskkns,FG0fTKAqZ5g'  */
         },
         events: {
             onReady: initialize

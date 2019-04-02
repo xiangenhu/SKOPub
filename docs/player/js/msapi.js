@@ -12,7 +12,7 @@ if (qs("LoC","0")=="0"){
 
 
 var chars = {}; // indexed by id
-var o = {};	
+var o = {};
 
 var V1=qs("V1","Matthew");
 var V2=qs("V2","Salli");
@@ -35,7 +35,7 @@ var Q1=qs("Q1","0");
 var Q2=qs("Q2","0");
 var Q3=qs("Q3","0");
 var Q4=qs("Q4","0");
-	
+
 
 var idAnimating; // or falsy if none
 var n = 0;
@@ -89,11 +89,11 @@ function ReplaceText(MoveID,Text){
 
 
 function msSpeakQueued(id, text,note) {
-	
+
 	if (id==null) {
 		id=C2;
 	}
-		
+
 	if (InReplay==false)
 	{
 		var SpeechObj={};
@@ -110,6 +110,8 @@ function msSpeakQueued(id, text,note) {
 	else {
 		playTTS(id, action,note);
 	}
+
+
 }
 
 function startShieldDown() {
@@ -129,45 +131,57 @@ function playTTS(id, action,note) {
 	console.log("playTTS("+id+", "+action+")");
 	var char = chars[id];
   	var audio = document.getElementById("audio");
-    audio.oncanplaythrough = function() { 
-        audio.pause(); 
+    audio.oncanplaythrough = function() {
+        audio.pause();
         execute(id, action,note)
     }
-    var audioURL = animateBase + "?character=" + char.character + 
-								 "&format=" + char.format + 
-								 "&voice=" + char.voice + 
+    var audioURL = animateBase + "?character=" + char.character +
+								 "&format=" + char.format +
+								 "&voice=" + char.voice +
 								 "&backimage="+avatarBKIMG+
-								 "&action=" + encodeURIComponent(action) + 
-								 "&state=" + char.state + 
-								 "&audio=true"; 
+								 "&action=" + encodeURIComponent(action) +
+								 "&state=" + char.state +
+								 "&audio=true";
     audio.src = audioURL;
     audio.play();
+		/*added Lister to the audio play, if the audio play is ended
+		and Youtube Video ID on server is got, play youtube video*/
+		audio.addEventListener("ended", function(){
+			AudioEND = true;
+			console.log("################## Audio play end    --- >      " + AudioEND);
+			if(AudioEND == true && typeof VideoxmlData != 'undefined'){
+				player.cueVideoById(VideoxmlData["#text"], -1, -1, null);
+				AudioEND = false;
+				console.log("########## play the youtube video    ------->" + AudioEND);
+			}
+
+ 		});
 }
 
 function printoutDialogHistory(id,Target,action){
 	if ($(Target)==null){
 		return;
 	}
-	
+
 	var rex = /(<([^>]+)>)/ig;
-	var captionText=action.replace(rex , "").trim();	
+	var captionText=action.replace(rex , "").trim();
 	if (captionText!="")
 	{
 		var caption="<b>"+id+"</b>: "+captionText;
 		displayConversation(Target,caption);
 	}
-	 
+
 }
 
 function execute(id, action,note) {
 	console.log("execute("+id+", "+action+")");
 	var char = chars[id];
-	
-	savedURL = animateBase + "?character=" + char.character  + 
-							 "&format=" + char.format + 
-							 "&voice=" + char.voice + 
+
+	savedURL = animateBase + "?character=" + char.character  +
+							 "&format=" + char.format +
+							 "&voice=" + char.voice +
 							 "&backimage="+avatarBKIMG+
-							 "&action=" + encodeURIComponent(action) + 
+							 "&action=" + encodeURIComponent(action) +
 							 "&state=" + char.state;
     var xhr = new XMLHttpRequest();
     xhr.open("GET", savedURL, true);
@@ -217,7 +231,7 @@ function execute(id, action,note) {
 				}
 			}
 		});
-    }, false);  
+    }, false);
     xhr.send();
 }
 
@@ -228,9 +242,9 @@ function animate(timestamp) {
 	if (!char.start)
 		char.start = timestamp;
 	var progress = timestamp - char.start;
-	
+
 	// exit case (or not loaded)
-	if (char.frame == -1 || !char.data) 
+	if (char.frame == -1 || !char.data)
 	{
         animateComplete();
 	}
@@ -244,7 +258,7 @@ function animate(timestamp) {
 		{
 			char.frame = frameNew;
 
-			if (char.frame >= char.data.frames.length) 
+			if (char.frame >= char.data.frames.length)
 			{
 				animateComplete();
 			}
@@ -258,7 +272,7 @@ function animate(timestamp) {
 					sprite.x = recipe[i][0]+(i==0?0:1);
 					sprite.y = recipe[i][1]+(i==0?0:1);
 					char.stage.addChild(sprite);
-				}	
+				}
 
 				// third arg is an extensible side-effect string that is triggered when a given frame is reached
 				if (char.data.frames[char.frame][2])
@@ -268,7 +282,7 @@ function animate(timestamp) {
 					char.frame = -1;
 				else if (char.stopping && char.data.frames[char.frame][1])
 					char.frame = char.data.frames[char.frame][1];
-				
+
 				//Render the stage to see the animation
 				char.renderer.render(char.stage);
 				requestAnimationFrame(animate);
@@ -314,14 +328,14 @@ function renderStartShield(divId, widthEmbed, heightEmbed)
 	div.style.display = "block";
 	div.innerHTML = '<canvas id="'+divId+'StartShield" style="position:absolute; left:0px; top:0px;" width="'+widthEmbed+'px" height="'+heightEmbed+'px"/></canvas>';
 	var e = document.getElementById(divId+"StartShield")
-	if (e) 
+	if (e)
 	{
 		// Background
 		var ctx = e.getContext('2d');
 		ctx.fillStyle= "#000000";
 		ctx.globalAlpha=0.5;
 		ctx.fillRect(0,0,widthEmbed,heightEmbed);
-		
+
 		var x = widthEmbed/2;
 		var y = heightEmbed/2;
 
@@ -331,7 +345,7 @@ function renderStartShield(divId, widthEmbed, heightEmbed)
 		ctx.fillStyle = "#999999";
 		ctx.globalAlpha = 0.5;
 		ctx.fill();
-		
+
 		// Outer
 		ctx.beginPath();
 		ctx.arc(x, y , 27, 0 , 2*Math.PI, false);
@@ -339,7 +353,7 @@ function renderStartShield(divId, widthEmbed, heightEmbed)
 		ctx.lineWidth = 5;
 		ctx.globalAlpha = 1;
 		ctx.stroke();
-		
+
 		// Triangle
 		ctx.beginPath();
 		x -= 12; y -= 15;
@@ -359,18 +373,18 @@ function LoadChara(id,character,format,voice){
 	var width;
 	var height;
 	if (id=="") return;
-	
+
 	if (format == "Head") {width = 250; height = 200;}
 	else if (format == "Bust") {width = 375; height = 300;}
 	else if (format == "Body") {width = 500; height = 400;}
 	else if (format == "Cartoon") {width = 307; height = 397;}
-	
+
 	document.getElementById(id).style.width = width+"px";
 	document.getElementById(id).style.height = height+"px";
 	document.getElementById(id+"Renderer").style.width = width+"px";
 	document.getElementById(id+"Renderer").style.height = height+"px";
 	o[id] = {character:character, format:format, width:width, height:height, voice:voice};
-	
+
 }
 
 
@@ -392,7 +406,7 @@ function onLoad() {
 			$("#RecordBtn").css("display", "none");
 		}
 	ConnectAndGetScriptsFromSKOServer();
-	
+
 }
 
 var iPad = navigator.userAgent.match(/iPad/i);
@@ -434,7 +448,7 @@ function loadCharas(){
 			s += addQuestion(C1)
 		}
 		s +='</div>';
-		
+
 	}
 	if (C2.length>1)	{
 		s += '<div id="'+C2+'" class="tr-agent"><div id="'+C2+'Renderer"></div>';
@@ -447,7 +461,7 @@ function loadCharas(){
 			s += addQuestion(C2)
 		}
 		s +='</div>';
-		
+
 	}
 	if (C3.length>1)	{
 		s += '<div id="'+C3+'" class="bl-agent">';
@@ -460,10 +474,10 @@ function loadCharas(){
 			s += addQuestion(C3);
 		}
 		s += '</div>';
-		
+
 	}
 	if (C4.length>1)	{
-		
+
 		s += '<div id="'+C4+'" class="br-agent">';
 		if (ShowIndividualDialogHistor=="1"){
 			s += '<input type="submit" id="ShowHistoryC4" value="+"/>';
@@ -475,7 +489,7 @@ function loadCharas(){
 		}
 		s += '</div>';
 	}
-	Avatars.innerHTML = s; 
+	Avatars.innerHTML = s;
 	if (C1.length>1)
 	LoadChara(C1,C1,F1,V1);
 	if (C2.length>1)
@@ -485,28 +499,28 @@ function loadCharas(){
 	if (C4.length>1)
 	LoadChara(C4,C4,F4,V4);
 	msInit(o);
-   
-	
+
+
 	 $("#ShowHistoryC1").click(function(){
 			$("#SpeechC1").slideToggle();
 		});
 	 $("#ShowHistoryAll1").click(function(){
 			$("#Coversation").slideToggle();
 		});
-		 
-    if (Q1=="1"){ 
+
+    if (Q1=="1"){
 		$("#ShowQuestion1").show();
 	}
-		 
-    if (Q2=="1"){ 
+
+    if (Q2=="1"){
 		$("#ShowQuestion2").show();
 	}
-	
-	  if (Q3=="1"){ 
+
+	  if (Q3=="1"){
 		$("#ShowQuestion3").show();
 	}
-		 
-    if (Q4=="1"){ 
+
+    if (Q4=="1"){
 		$("#ShowQuestion4").show();
 	}
 	 $("#ShowQuestion1").click(function(){
@@ -514,42 +528,42 @@ function loadCharas(){
 		});
 	$("#ShowQuestion2").click(function(){
 			$("#"+C2+"Question").slideToggle();
-		});	
+		});
 	$("#ShowQuestion3").click(function(){
 			$("#"+C3+"Question").slideToggle();
 		});
 	$("#ShowQuestion4").click(function(){
 			$("#"+C4+"Question").slideToggle();
-		});	
-	
+		});
 
-	
+
+
 	 $("#"+C1+"_SubmitAnswer").click(function(){
 			rivescriptRespond(C1)
 		});
-		
+
 	 $("#"+C2+"_SubmitAnswer").click(function(){
 			rivescriptRespond(C2)
 		});
-		
+
 	 $("#"+C3+"_SubmitAnswer").click(function(){
 			rivescriptRespond(C3)
 		});
 	 $("#"+C4+"_SubmitAnswer").click(function(){
 			rivescriptRespond(C4)
 		});
-			
-	
-		
+
+
+
 	 $("#ShowHistoryC2").click(function(){
 			$("#SpeechC2").slideToggle();
 		});
-		
+
 	 $("#ShowHistoryAll2").click(function(){
 			$("#Coversation").slideToggle();
 		});
 
-	
+
 	 $("#ShowHistoryC3").click(function(){
 			$("#SpeechC3").slideToggle();
 		});
@@ -557,8 +571,8 @@ function loadCharas(){
 	 $("#ShowHistoryC4").click(function(){
 			$("#SpeechC4").slideToggle();
 		});
-		
-	
+
+
 }
 
 function ShowComponent(Comp,Show){
@@ -569,14 +583,14 @@ function ShowComponent(Comp,Show){
 	}
 }
 
-function embeddedCommand(id, cmd) { 
+function embeddedCommand(id, cmd) {
 	HandleCMD(id,cmd);
 }
 
 function rivescriptRespond(Character) {
 	var InputField="#"+Character+"inputText";
 	var InputText=$(InputField).val();
-	
+
 	var SpeechObj={};
 	SpeechObj.id=Character;
 	SpeechObj.text='You ansked me a question question : '+InputText+'<cmd QuestionC1="'+InputText+'"/>';
@@ -597,14 +611,14 @@ function rivescriptRespond(Character) {
 		SpeechObj.id=Character;
 		SpeechObj.text='I responded : '+text;
 		dialogHistory.push(SpeechObj);
-		
+
 		var xAPIRecord={};
 	    xAPIRecord.Question=InputText;
 		xAPIRecord.Answer=text;
 		xAPIRecord.AnsweredBy=Character;
 		xAPIRecord.ChatEngine="RiveScript";
 		UpdateStatementsAnswerFromChatScripts("QnA",xAPIRecord);
-		
+
 		$(InputField).val("");
 		msSpeakQueued(Character, text+"<blink/>","");
 	});
@@ -612,7 +626,7 @@ function rivescriptRespond(Character) {
 function chatscriptTest(Character) {
 	var InputField="#"+Character+"inputText";
 	var InputText=$(InputField).val();
-	
+
 	var SpeechObj={};
 	SpeechObj.id=Character;
 	SpeechObj.text='You ansked me a question question : '+InputText+'<cmd QuestionC1="'+InputText+'"/>';
@@ -628,14 +642,14 @@ function chatscriptTest(Character) {
 		SpeechObj.id=Character;
 		SpeechObj.text='I responded : '+text;
 		dialogHistory.push(SpeechObj);
-		
+
 		var xAPIRecord={};
 	    xAPIRecord.Question=InputText;
 		xAPIRecord.Answer=text;
 		xAPIRecord.AnsweredBy=Character;
 		xAPIRecord.ChatEngine="RiveScript";
 		UpdateStatementsAnswerFromChatScripts("QnA",xAPIRecord);
-		
+
 		$(InputField).val("");
 		msSpeakQueued(Character, text+"<blink/>"),"";
 	});
@@ -646,7 +660,7 @@ function respondRiveScript(userid, userText, botid, fn) {
     xhr.open("GET", rivescriptBase + "?userid=" + encodeURIComponent(userid) + "&botid=" + botid + "&text=" + encodeURIComponent(userText), true);
     xhr.addEventListener("load", function() {
 		fn(JSON.parse(xhr.response).text);
-    }, false);  
+    }, false);
     xhr.send();
 }
 
@@ -655,6 +669,6 @@ function respondChatScript(userid, userText, botid, fn) {
     xhr.open("GET", chatscriptBase + "?userid=" + encodeURIComponent(userid) + "&botid=" + botid + "&text=" + encodeURIComponent(userText), true);
     xhr.addEventListener("load", function() {
 		fn(JSON.parse(xhr.response).text);
-    }, false);  
+    }, false);
     xhr.send();
 }

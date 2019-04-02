@@ -8,11 +8,11 @@ function qs(search_for,defaultstr) {
 			}
 		}
 		return defaultstr;
-	}
+}
 
 if (Location=="China")
 {
-	
+
 	var UserStudent=qs("UserStudent","小明");
 	var SKOGuid=qs("guid","50ed8af1-3fd1-4ca2-ab1d-3b5cc97fbfbf");
 	var SKOSchool=qs("school","https://ccnu.x-in-y.com:8889");
@@ -80,18 +80,18 @@ var RetriveSKOObj={
 		return:"scriptContent",
 		authorname:"xiangenhu"
 	};
-	
+
 var S1=false;
 var S2=false;;
 var S3=false;;
 var S4=false;;
-	
+
 
 var language=qs("lang","english");
 var LSASpaceName=qs("LSAS","English_TASA");
 var ProjectName=qs("ProjN","ET");
 var UseDB=qs("UseDB","true");
-	
+
 var Auser="mailto:"+decodeURIComponent(qs("user","xhu@memphis.edu"));
 var MoodleID=qs("MID","4");
 
@@ -136,7 +136,7 @@ var ShowIndividualChat=qs("SIC","0");
 var ChatVerb1="Listen from";
 var ChatVerb2="Ask";
 var ListenVerStr="listen";
-// Verbs 
+// Verbs
 var matchAnswer_of="matchAnswer";
 var SaveKCScoreStr="SaveKCScore";
 var viewPnQStr="view";
@@ -147,4 +147,5 @@ var jsonOfXml;
 var LCCObj;
 var LCCFrame;
 var LCCRules;
-var ListOfLCCActions = []
+var ListOfLCCActions = [];
+var AudioEND = false;
