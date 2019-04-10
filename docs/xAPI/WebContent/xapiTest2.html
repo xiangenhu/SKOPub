@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="xapiwrapper.min.js"></script>
+</head>
+<body>
+      <div id="content">
+            <p id="count"></p>
+            <p id="verbs"></p>
+        </div>
+        <script>
+            ADL.XAPIWrapper.changeConfig({"endpoint":"https://lrs.adlnet.gov/xapi/"});
+            // var verblist = [];
+            var total = 0;
+            ADL.XAPIWrapper.getStatements(null, null,
+                function getMore(r) {
+                    var res = JSON.parse(r.response);
+                    var stmts = res.statements;
+                    total += stmts.length;
+                    // stmts.reduce(getVerbs, verblist);
+                    // updateUI(verblist);
+                    addStmtsToUI(stringifyStatements(stmts));
+                    if (res.more && res.more !== ""){
+                        ADL.XAPIWrapper.getStatements(null, res.more, getMore);
+                    }
+            });
+            function getVerbs(val, cur) {
+                var verb = cur.verb.id;
+                if (!val.includes(verb)) val.push(verb);
+                return val;
+            }
+            function stringifyStatements(stmts) {
+                var strings = [];
+                for (var idx in stmts) {
+                    var stmt = stmts[idx];
+                    var actor = "";
+                    if (stmt.actor.name) actor = stmt.actor.name;
+                    else if (stmt.actor.mbox) actor = stmt.actor.mbox;
+                    else if (stmt.actor.openid) actor = stmt.actor.openid;
+                    else if (stmt.actor.account && stmt.actor.account.name) actor = stmt.actor.account.name;
+                    else actor = "unknown";
+                    var verb = stmt.verb.id;
+                    if (stmt.verb.display) {
+                        if (stmt.verb.display['en']) verb = stmt.verb.display['en'];
+                        else if (stmt.verb.display['en-US']) verb = stmt.verb.display['en-US'];
+                    }
+                    var activity = stmt.object.id;
+                    if (stmt.object.definition && stmt.object.definition.name) {
+                        if (stmt.object.definition.name['en']) activity = stmt.object.definition.name['en'];
+                        else if (stmt.object.definition.name['en-US']) activity = stmt.object.definition.name['en-US'];
+                    }
+                    strings.push(actor + " " + verb + " " + activity);
+                }
+                return strings;
+            }
+            function addStmtsToUI(strings) {
+                var newp = document.createElement('p');
+                for (var idx in strings) {
+                    newp.innerHTML = strings.join('<br>');
+                }
+                document.getElementById('content').appendChild(newp);
+            }
+            function updateUI(verblist) {
+                var countUI = document.getElementById('count');
+                countUI.innerHTML = verblist.length + " unique verbs in " + total + " statements";
+                document.getElementById('verbs').innerHTML = verblist.join('<br>');
+            }
+        </script>
+</body>
+</html>

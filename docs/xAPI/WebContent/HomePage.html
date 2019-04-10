@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>xAPI Retriever</title>
+	<script src="jquery-3.3.1.js"></script>
+	<script src="cryptojs_v3.1.2.js"></script>
+	<script src="xapiwrapper.min.js"></script>
+	<script src="xapiwrapper.js"></script>
+	<script src="verbs.js"></script>
+	<script src="xapistatement.js"></script>
+	<script src="xapi-launch.js"></script>
+	
+	<style type="text/css">
+		.div2{
+		width: 700px;
+		height:200px;
+		float:left;
+		border-style:solid;
+		border-width:1px;
+		margin-left:50px;
+		}
+	
+		.div3{
+		width: 600px;
+		height:200px;
+		float:right;
+		border-style:solid;
+		border-width:1px;
+		margin-right:50px;
+		}
+	   
+	   .div4_1{
+		width: 500px;
+		height:50px;
+		float:left;
+		border-style:solid;
+		border-width:1px;
+		margin-top:10px;
+		margin-left:50px;
+		}
+		
+		.div4_2{
+		width: 800px;
+		height:50px;
+		float:right;
+		border-style:solid;
+		border-width:1px;
+		margin-top:10px;
+		margin-right:50px;
+		}
+		
+		.div5{
+		width: 500px;
+		height:600px;
+		float:left;
+		border-style:solid;
+		border-width:1px;
+		margin-top:2.5px;
+		margin-left:50px;
+		}
+
+		ul, #myUL {
+		  list-style-type: none;
+		}
+		
+		#myUL {
+		  margin: 10;                                <!--Decide the distance of 1st box from the border of tree-structure option area-->
+		  padding: 20;
+		}
+		
+		.box {
+		  cursor: pointer;                            <!--Decide mouse cursor--> 
+		  -webkit-user-select: none; /* Safari 3.1+ */
+		  -moz-user-select: none; /* Firefox 2+ */
+		  -ms-user-select: none; /* IE 10+ */
+		  user-select: none;
+		}
+		
+		.box::before {
+		  content: "\2610";
+		  color: black;
+		  display: inline-block;
+		  margin-right: 6px;
+		}
+		
+		.check-box::before {
+		  content: "\2611"; 
+		  color: dodgerblue;
+		}
+		
+		.nested {
+		  display: none;
+		}
+		
+		.active {
+		  display: block;
+		}
+		
+		.div6{
+		width: 800px;
+		height:600px;
+		float:right;
+		border-style:solid;
+		border-width:1px;
+		margin-top:2.5px;
+		margin-right:50px;
+		overflow:auto;
+		}
+		
+		.div7{
+		width: 1300px;
+		height:50px;
+		float:left;
+		border-style:solid;
+		border-width:1px;
+		margin-top:2.5px;
+		margin-left:50px;
+		}
+		
+		.div8{
+		width: 1300px;
+		height:80px;
+		float:left;
+		border-style:solid;
+		border-width:1px;
+		margin-top:2.5px;
+		margin-left:50px;
+		}
+		
+		li{
+		margin-top:5px;
+		}
+	</style>
+</head>
+
+<body>           <!--  -->
+
+	<div class="div1">
+		<h1 align="center"; size="30">xAPI Retriever</h1>
+	</div>
+	
+	<div class="div2" align="center">
+		<h4 >Assisting in developing statements and communicating with a Learning Record Store (LRS)</h4>
+	</div>
+
+	<div class="div3">
+	    <p align="center" style="font-size:20px;">LRS Basic Auth Setup</p>
+		<p align="center"> Endpoint:  <input type="text" id="endpoint" size="30"></input></p>
+		<p align="center"> Username:  <input type="text" id="username" size="30"></input></p>
+		<p align="center"> Password: <input type ="password" id="password" size="30"></p>
+ 
+		<div align="center">
+			<button onclick="loadValue()"> OK </button>
+			<input type="reset" value="Reset">
+		</div>
+	</div>
+	
+	   <script>
+		    var endpoint;
+		    var user;
+		    var password;
+			function loadValue(){
+				endpoint=document.getElementById("endpoint").value;
+				user=document.getElementById("username").value;
+				password=document.getElementById("password").value;
+
+				if(endpoint.length !=0 && user.length !=0 && password.length !=0){
+				    alert("Information for LRS Basic Auth Setup are Ready");
+				} else {
+					alert("Please fill the Information for LRS Basic Auth Setup")
+				}
+			}
+		</script>
+
+	<div class="div4_1">
+		<p align="center" style="font-size:20px;">Query Options</p>
+	</div>
+	
+	<div class="div4_2">
+		<p align="center"><button onclick="getStatement()"> Get Statements </button>
+		<button onclick="openInNewTab('ViewStatements.html')">xAPI Statements Viewer</button>
+		<button onclick="clearReceivedStatements()"> Clear Received Statements </button>
+		</p>
+		<script>
+		function openInNewTab(url) {
+			  var win = window.open(url, '_blank');
+			  win.focus();
+			}
+		</script>
+	</div>
+	
+	<div class="div5">
+		<ul id="myUL">
+		  <li><span class="box">Who</span>
+		    <ul class="nested">
+		      <li>Actor &nbsp <input type="text" id="actor"></li>
+		    </ul>
+		  </li>
+		</ul>
+		
+		<ul id="myUL">
+		  <li><span class="box">Did</span>
+		    <ul class="nested">
+		      <li>Verb &nbsp <input type="text" id="did"></li>
+		    </ul>
+		  </li>
+		</ul>
+		
+		<ul id="myUL">
+		  <li><span class="box">What</span>
+		    <ul class="nested">
+		      <li>Activity &nbsp <input type="text" id="activity"></li>
+		      <li>relatedActivities &nbsp <input type="text" id="relatedActivities"></li>		       
+		    </ul>
+		  </li>
+		</ul>
+		
+		<ul id="myUL">
+		  <li><span class="box">When</span>
+		    <ul class="nested">
+		      <li>untilDate &nbsp <input type="text" id="untilDate"></li> 
+              <li>sinceDate &nbsp <input type="text" id="sinceDate"></li>
+		    </ul>
+		  </li>
+		</ul>
+		
+	    <ul id="myUL">
+		  <li><span class="box">Where</span>
+		    <ul class="nested">
+		      <li>relatedAgents &nbsp <input type="text" id="relatedAgents"></li>
+		      <li>statementId &nbsp <input type="text" id="statementId"></li>
+		    </ul>
+		  </li>
+		</ul>
+
+		<script>
+		var toggler = document.getElementsByClassName("box");
+		var i;
+		
+		for (i = 0; i < toggler.length; i++) {
+		  toggler[i].addEventListener("click", function() {
+		    this.parentElement.querySelector(".nested").classList.toggle("active");
+		    this.classList.toggle("check-box");
+		  });
+		}
+		</script>
+		
+	</div>
+	
+	<div class=div5_2> </div>
+	
+	<div class="div6">
+	    <pre id="out_pre"></pre>
+	</div>
+	
+		<script>
+		
+		var actor;
+		var did;
+		var activity;
+		var relatedActivities;
+		var sinceDate;
+		var untilDate;
+		var relatedAgents;
+		var statementId;
+		
+		var scaled;
+		var complete;
+		var success;
+		var raw;
+		var max;
+		var min; 
+		var result;
+		
+		function getStatement(){
+			
+			actor=document.getElementById("actor").value;
+			did=document.getElementById("did").value;
+			activity=document.getElementById("activity").value;
+			relatedActivities=document.getElementById("relatedActivities").value;
+			sinceDate=document.getElementById("sinceDate").value;
+			untilDate=document.getElementById("untilDate").value;
+			relatedAgents=document.getElementById("relatedAgents").value;			
+			statementId=document.getElementById("statementId").value;
+			
+			var wrapper;
+			ADL.launch(function(err, launchdata, xAPIWrapper) {
+			    if (!err) {
+			        wrapper = xAPIWrapper;
+			        console.log("--- content launched via xAPI Launch ---\n", wrapper.lrs, "\n", launchdata);
+			    } else {
+			        wrapper = ADL.XAPIWrapper;
+			        wrapper.changeConfig({
+			            endpoint: endpoint,
+			            user: user,
+			            password: password
+			        });
+			        console.log("--- content statically configured ---\n", wrapper.lrs);
+			    }
+			    $('#endpoint').text(wrapper.lrs.endpoint);
+			}, true);
+		    
+			
+			//Put together the xAPI Query
+			
+			if(actor.length!=0 || did.length!=0 || activity.length!=0 || relatedActivities.length!=0 || sinceDate.length!=0 || untilDate!=0 ||relatedAgents!=0 ||statementId!=0){
+				
+				//Build Search from LRS
+				var search=ADL.XAPIWrapper.searchParams();
+				if (did != "") { search['verb'] = did; }   //works
+				if (actor != "") { search['agent'] = JSON.stringify({ "mbox": "mailto:" + actor}); }  //works, there is also two actorTypes: Agent, Group.
+				if (activity != "") { search['activity'] = activity; }  //only works if object:type is Activity. There are total four objectTypes: Activity, Agent, Group, statementRef, and SubStatement. 
+			    if (relatedActivities != "") { search['related_activities'] = relatedActivities; }	
+				if (relatedAgents != "") { search['related_agents'] = relatedAgents; }
+				if (statementId != "") { search['statementId'] = statementId; }	
+			    if (sinceDate != "") { search['since'] = sinceDate; }
+			    if (untilDate != "") { search['until'] = untilDate; }
+			    
+				//Put together the xAPI Query
+				var urlparams = new Array();
+				var url = endpoint+"statements";
+				
+		        for (s in search) {
+		            urlparams.push(s + "=" + encodeURIComponent(search[s]));
+		          }
+				
+		        if (urlparams.length > 0)
+		            url = url + "?" + urlparams.join("&");
+				
+				ADL.XAPIWrapper.getStatements(search, null, function(r) {
+		            var response = $.parseJSON(r.response);
+		            var stmts;
+		            var stmt;
+					
+		            if (r.status == 200) {
+		                if (response.hasOwnProperty('statements')) {
+		                    stmts = response.statements;
+		                    var length = stmts.length;
+		                  } else {
+		                    stmt = response;
+		                    var length = 1;
+		                  }
+		                
+		                if (response.more != "") {
+		                    gmore = response.more;
+		                  } else {
+		                    gmore = null;
+		                  }		                
+		                
+		                if (length > 0) {
+		                    if (stmt) {
+		                      stmts = $.parseJSON("[" + JSON.stringify(stmt) + "]");
+		                    } else {
+		                      stmts = $.parseJSON(JSON.stringify(stmts));
+		                      //console.log(stmts);
+		                    }
+		                  }
+		                
+						result=JSON.stringify(stmts,null,4);
+						document.getElementById('out_pre').innerHTML= result;
+						//save stmts
+						localStorage.setItem("vOneLocalStorage", result);
+		            }
+				});
+				
+			}else{
+			//Use the more property to get more Statements with callback
+			ADL.XAPIWrapper.getStatements(null, null, function getmore(r){
+				var res = JSON.parse(r.response);
+				if (res.more && res.more !==""){
+					ADL.XAPIWrapper.getStatements(null, res.more, getmore);
+					result=JSON.stringify(res.statements,null,4);
+					document.getElementById('out_pre').innerHTML= result;
+				}
+			  });
+			}
+			//Get all Statements with callback
+			//ADL.XAPIWrapper.getStatements(null, null, function(r){
+			//    var res = JSON.parse(r.response);
+			//	result=JSON.stringify(res.statements,null,4);
+			//    document.getElementById('out_pre').innerHTML= result;
+			//  });
+			
+		}
+
+		</script>
+	
+	<div class="div7">
+		<div style="margin-top:10px;margin-left:10px">
+			<button onclick="exportXAPI()"> Export </button>			
+		</div>
+	</div>
+	
+	<script>
+	function exportXAPI(){
+		const filename = 'xapiStatements.json';
+		const jsonStr = result;
+		let element = document.createElement('a');
+		element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(jsonStr));
+		element.setAttribute('download', filename);
+		element.style.display = 'none';
+		document.body.appendChild(element);
+		element.click();
+		document.body.removeChild(element);
+	}
+	
+	// Clear Statements received from the LRS
+	function clearReceivedStatements() {
+		document.getElementById('out_pre').innerHTML= "";
+	}
+
+	</script>
+	
+	<div class="div8">
+	    <p> ABOUT </p>
+	    <p> This tools help generate valid statement and demonstrates various interactions with an LRS. Feel free to contact me for help, Email: lzhang13@memphis.edu . </p>
+	</div>
+	
+	
+
+</body>
+</html>

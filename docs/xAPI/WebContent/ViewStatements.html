@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>xAPI Statements Viewer</title>
+    <script src="jquery-3.3.1.js"></script>
+    <script src="jquery.json-viewer.js"></script>
+    <link href="jquery.json-viewer.css" rel="stylesheet" type="text/css"/> 
+    <script src="jsonQ.js"> </script>
+    <script src="jsonQ.min.js"> </script>
+	<link href="datatables.min.css" rel="stylesheet" type="text/css"></link>
+    <script src="datatables.min.js"></script>
+    
+   	<style type="text/css">
+   	
+   	.div1{
+	width: 900px;
+	height:600px;
+	float:left;
+	border-style:solid;
+	border-width:1px;
+	margin-top:2.5px;
+	margin-right:20px;
+	overflow:auto;
+	}
+
+   	.div1-1{
+	width: 400px;
+	height:600px;
+	float:left;
+	border-style:solid;
+	border-width:1px;
+	margin-top:2.5px;
+	margin-right:10px;
+	overflow:auto;
+	}	
+	
+	.div2{
+	width: 1200px;
+	height:10px;
+	float:left;
+	border-style:solid;
+	border-width:1px;
+	margin-top:2.5px;
+	margin-right:50px;
+	overflow:auto;
+	visibility:hidden;
+	}
+	
+	.div3{
+	width: 1323px;
+	height:1000px;
+	float:left;
+	border-style:solid;
+	border-width:1px;
+	margin-top:2.5px;
+	margin-right:50px;
+	overflow:auto;
+	}
+	
+   	</style>
+    
+</head>
+
+<body>
+	<div class="div0">
+		<h1 align="center"; size="25">xAPI Statement Viewer</h1>
+	</div>
+	
+	<div class="div1">
+		<pre id="json-renderer"></pre>
+	</div>
+	
+	<div class="div1-1" id="find_pre" style="position:relative">
+		<div> 
+			<p align="center" style="font-size:20px;">Query Specific Information</p>
+		</div>
+			
+		<div style="margin-left:80px;">
+			<form id="myForm" method="get" style="line-height:25px"/>
+			  <label>Query Level #1: <input type="text" name="txt1" id="txt1" /></label>
+			  	<p>
+				    <input type="button" value="Add" onClick="addTextBox(this.form,this.parentNode)" />
+				    <input type="button" value="Remove" onClick="removeTextBox(this.form)" />
+			  	</p>
+			</form>
+		</div>
+		
+		<div name="queryButn" id="queryButn" style="position:absolute;left:150px;top:500px">
+			<button onclick="querySpeInfor()" style="font-size:15px">Get the Information</button>
+		</div>
+	</div>
+	
+	<div class="div2" >
+	</div>
+	
+	<div class="div3">
+	    <div>
+	    	<p>Tabular Data</p>
+	    </div>
+		<div id="my_table" style="margin-top:20px;margin-left:10px;margin-right:10px;">
+			<table id="example" class="display" width="100%" >
+			</table>
+		</div>
+	</div>
+<script>
+
+var vOneLS = localStorage.getItem("vOneLocalStorage");
+var result_2=JSON.stringify(JSON.parse(vOneLS), null, 4);
+//document.getElementById('out_pre').innerHTML=result_2;
+//document.getElementById('out_pre').innerHTML=JSON.stringify(data);
+$('#json-renderer').jsonViewer(JSON.parse(vOneLS), {collapsed: true, withQuotes: true, withLinks: true});
+
+//Get the information from "query specific information"
+//To adding query specific information from xAPI statements
+//Design responsive text field
+var textNumber=1;
+function addTextBox(form, afterElement){
+	textNumber++;
+	var label= document.createElement("label");
+	var textField=document.createElement("input");
+	textField.setAttribute("type","text");
+	textField.setAttribute("name","txt"+textNumber);
+	textField.setAttribute("id","txt"+textNumber);
+	label.appendChild(document.createTextNode("Query Level #"+textNumber+": "));
+	label.appendChild(textField);
+	form.insertBefore(label,afterElement);
+	return false;
+}
+
+function removeTextBox(form) {
+	  if (textNumber > 1) { // If there's more than one text box
+	    // Remove the last one added
+	    form.removeChild(document.getElementById("txt"+textNumber).parentNode);
+	    textNumber--;
+	  }
+	}
+
+//Design Table
+
+
+// then use the jsonQ to process the data. 
+var queryNumber=0;
+var headers=new Array();
+var contents=[[],[]];
+
+function querySpeInfor(){
+	queryNumber++;
+	var myStatements=jsonQ(JSON.stringify(JSON.parse(vOneLS))),
+	levelValue=document.getElementById("txt1").value
+	findSec=".find"+"('"+levelValue+"')";
+	if(textNumber>1){
+		var j;
+		for (j=1;j<=textNumber;j++){
+			levelValue=document.getElementById("txt"+j).value
+			findSec=findSec+".find"+"('"+levelValue+"')"
+		}
+	}
+	eval("qInfor=myStatements"+findSec);
+    //document.getElementById('my_table').innerHTML=qInfor.value();
+    var x;
+	for(x=0; x < qInfor.length; x++){
+		contents[x]=[];
+    	var a=(qInfor.value())[x];
+		contents[x][queryNumber-1]=a;
+	}
+	
+
+	$(document).ready(function() {
+	    $('#example').DataTable( {
+	        data: contents,
+	        columns: [
+	            { title: "name" },
+	        ]
+	    } );
+	} );
+//Create a
+	
+//Desin table
+}
+
+//get headers table
+
+</script>
+</body>
+</html>

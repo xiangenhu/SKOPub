@@ -1,0 +1,47 @@
+<!doctype html>  
+<head>  
+  <title>xAPI sample page</title>  
+    <!-- Includes for ADL's xAPI Wrapper -->  
+    <!-- Download the files from: -->  
+    <!-- https://github.com/adlnet/xAPIWrapper -->   
+    <script src="xapiwrapper.js"></script> 
+    <!------------------------------------->  
+      
+    <script>  
+        function config_LRS(){  
+            
+              var conf = {  
+                  "endpoint" : "https://lrs.x-in-y.com/data/xAPI",  
+                  "auth" : "Basic " + toBase64('17e055b6235655b9893e27fe877fa5f46ef3f6cd:0a0e8ad3df11b173b7eea1593f4ba3cea441429d'),  
+              };  
+              ADL.XAPIWrapper.changeConfig(conf);  
+        }  
+                              
+        function get_statements(){  
+            config_LRS();  
+              
+            // Set the query parameters  
+            var myparams = ADL.XAPIWrapper.searchParams()  
+            var d = new Date("July 19, 2017 12:00:00");  
+            myparams['since'] = d.toISOString();  
+            myparams['verb'] = 'http://adlnet.gov/expapi/verbs/answered';  
+            myparams['activity'] = 'http://adlnet.gov/expapi/activities/example';  
+            myparams['agent'] = '{"mbox": "mailto:aa_altieri@outlook.com"}';  
+    //      ** NOTE: For agent search, it must send as an object.  You MUST include the   
+    //      **  outer single quotes!!!  
+    //      **********  
+// End of query paramaters  
+  
+            //send the query  
+            var ret = ADL.XAPIWrapper.getStatements(myparams);  
+             
+        }  
+    </script>  
+</head>  
+  
+<body>  
+    <button type="button" onclick="get_statements()">Get Statements</button>  
+    <br/><br/><br/>  
+    <div id="results"> </div>  
+</body>  
+</html>  
