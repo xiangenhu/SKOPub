@@ -1,0 +1,8 @@
+<itemType label="TIMSS: Knowing" HelpURL="skoscripttype3"> 
+<item value="Recall" name="Recall" note="add note here" selected="false" hint="Recall definitions; terminology; number properties; geometric properties; and notation (e.g., a x b = ab, a + a + a = 3a)."/> 
+<item value="Recognize" name="Recognize" note="add note here" selected="false" hint="Recognize mathematical objects, e.g., shapes, numbers, expressions, and quantities. Recognize mathematical entities that are mathematically equivalent (e.g., equivalent familiar fractions, decimals and percents; different orientations of simple geometric figures)."/> 
+<item value="Compute" name="Compute" note="add note here" selected="false" hint="Carry out algorithmic procedures for +, -, x, /, or a combination of these with whole numbers, fractions, decimals and integers. Approximate numbers to estimate computations. Carry out routine algebraic procedures."/> 
+<item value="Retrieve" name="Retrieve" note="add note here" selected="false" hint="Retrieve information from graphs, tables, or other sources; read simple scales."/> 
+<item value="Measure" name="Measure" note="add note here" selected="false" hint="Use measuring instruments; choose appropriate units of measurement."/> 
+<item value="Classify/Order" name="Classify/Order" note="add note here" selected="false" hint="Classify/group objects, shapes, numbers, and expressions according to common properties; make correct decisions about class membership; and order numbers and objects by attributes."/> 
+</itemType>
