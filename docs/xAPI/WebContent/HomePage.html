@@ -153,7 +153,7 @@
  
 		<div align="center">
 			<button onclick="loadValue()"> OK </button>
-			<input type="reset" value="Reset">
+			<button onclick="clearLrsAuth()"> Reset </button>
 		</div>
 	</div>
 	
@@ -409,6 +409,16 @@
 	// Clear Statements received from the LRS
 	function clearReceivedStatements() {
 		document.getElementById('out_pre').innerHTML= "";
+		
+	}
+	
+	//Clear LRS Basic Auth Setup
+	function clearLrsAuth(){
+		document.getElementById("endpoint").value="";
+		document.getElementById("username").value="";
+		document.getElementById("password").value="";
+		result=null;
+		localStorage.setItem("vOneLocalStorage", result);
 	}
 
 	</script>
