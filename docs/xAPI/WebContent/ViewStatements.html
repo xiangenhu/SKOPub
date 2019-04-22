@@ -11,6 +11,14 @@
     <script src="jsonQ.min.js"> </script>
 	<link href="datatables.min.css" rel="stylesheet" type="text/css"></link>
     <script src="datatables.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)'></script>
+	<script src='https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js'></script>
+	<script src='https://cdn.datatables.net/buttons/1.5.6/js/buttons.flash.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js'></script>
+	<script src='https://cdn.datatables.net/buttons/1.5.6/js/buttons.html5.min.js'></script>
+	<script src='https://cdn.datatables.net/buttons/1.5.6/js/buttons.print.min.js'></script>
     
    	<style type="text/css">
    	
@@ -75,19 +83,19 @@
 	<div class="div1-1" id="find_pre" style="position:relative">
 		<div> 
 			<p align="center" style="font-size:20px;">Query Specific Information</p>
-		</div>
-			
-		<div style="margin-left:80px;">
+	    </div>
+		
+		<div style="margin-left:80px;margin-top:30px;">
 			<form id="myForm" method="get" style="line-height:25px"/>
-			  <label>Query Level #1: <input type="text" name="txt1" id="txt1" /></label>
+			  <label>Query #1: <input type="text" name="txt1" id="txt1" size="26"/></label>
 			  	<p>
-				    <input type="button" value="Add" onClick="addTextBox(this.form,this.parentNode)" />
+				    <input type="button" value="Add" onClick="addTextBox(this.form,this.parentNode)"/>
 				    <input type="button" value="Remove" onClick="removeTextBox(this.form)" />
 			  	</p>
 			</form>
 		</div>
 		
-		<div name="queryButn" id="queryButn" style="position:absolute;left:150px;top:500px">
+		<div name="queryButn" id="queryButn" style="position:absolute;left:150px;top:550px">
 			<button onclick="querySpeInfor()" style="font-size:15px">Get the Information</button>
 		</div>
 	</div>
@@ -96,8 +104,11 @@
 	</div>
 	
 	<div class="div3">
-	    <div>
-	    	<p>Tabular Data</p>
+	    <div style="">
+	    	
+	    </div>
+	    <div align="center">
+	    	<p>Tabular Data</p>  
 	    </div>
 		<div id="my_table" style="margin-top:20px;margin-left:10px;margin-right:10px;">
 			<table id="example" class="display" width="100%" >
@@ -123,7 +134,8 @@ function addTextBox(form, afterElement){
 	textField.setAttribute("type","text");
 	textField.setAttribute("name","txt"+textNumber);
 	textField.setAttribute("id","txt"+textNumber);
-	label.appendChild(document.createTextNode("Query Level #"+textNumber+": "));
+	textField.setAttribute("size", 26)
+	label.appendChild(document.createTextNode("Query #"+textNumber+": "));
 	label.appendChild(textField);
 	form.insertBefore(label,afterElement);
 	return false;
@@ -137,51 +149,269 @@ function removeTextBox(form) {
 	  }
 	}
 
-//Design Table
-
-
 // then use the jsonQ to process the data. 
 var queryNumber=0;
 var headers=new Array();
 var contents=[[],[]];
 
-function querySpeInfor(){
-	queryNumber++;
-	var myStatements=jsonQ(JSON.stringify(JSON.parse(vOneLS))),
-	levelValue=document.getElementById("txt1").value
-	findSec=".find"+"('"+levelValue+"')";
-	if(textNumber>1){
-		var j;
-		for (j=1;j<=textNumber;j++){
-			levelValue=document.getElementById("txt"+j).value
-			findSec=findSec+".find"+"('"+levelValue+"')"
-		}
-	}
-	eval("qInfor=myStatements"+findSec);
-    //document.getElementById('my_table').innerHTML=qInfor.value();
-    var x;
-	for(x=0; x < qInfor.length; x++){
-		contents[x]=[];
-    	var a=(qInfor.value())[x];
-		contents[x][queryNumber-1]=a;
-	}
-	
+//start-test section
 
-	$(document).ready(function() {
-	    $('#example').DataTable( {
-	        data: contents,
-	        columns: [
-	            { title: "name" },
-	        ]
-	    } );
-	} );
-//Create a
+//find the same level
+//qInfor=myStatements.find('score',function () {     // works
+//    return this.raw = 1;}).find('scaled');
+//document.getElementById('my_table').innerHTML=qInfor.value();
+
+//qInfor=myStatements.find('score',function () {    // works 
+//    return this.raw = 1;}).find('raw');
+//document.getElementById('my_table').innerHTML=qInfor.value();
+
+//qInfor=myStatements.find('actor',function () {     //works
+//    return this.name == 'Bob Smith';}).find('mbox');
+//document.getElementById('my_table').innerHTML=qInfor.value();
+
+//query same two levels data
+//qInfor=myStatements.find('https://umiis.github.io/ITSProfile/System/matchAnswer',function () {     //works
+//    return this.TargetID == 'Prompt 2';}).find('AnswerType');
+//document.getElementById('my_table').innerHTML=qInfor.value();
+
+//query same two levels data
+//qInfor=myStatements.find('actor',function () {     //works
+ //   return this.TargetID == 'Prompt 2';}).find('AnswerType');
+
+var mySts=JSON.parse(vOneLS); //Object
+lenObj=Object.keys(mySts).length;
+
+//var myStatements=jsonQ(JSON.stringify(JSON.parse(vOneLS)))
+
+//alert(mySts().name)
+
+//document.getElementById('my_table').innerHTML=result_2;
+
+//test section-end
+//This function helps us to access the different fields by keys. 
+var header=[];
+var findSecArr =[];
+//Create the array to store the qery items and statementid
+var r=1;
+var p;
+var rowArr = [];
+var stsIdArr = [];
+var qInforArr = [];
+var actorArr =[];
+var verbArr=[];
+var stringPathArr=[];
+
+function querySpeInfor(){
+	var myStatements=jsonQ(JSON.stringify(JSON.parse(vOneLS)))
+	if (textNumber==1){   
+	levelValue=document.getElementById("txt1").value
+	findSec=".find('"+levelValue.replace(/,/g,"').find('")+"')"
+    
+	//alert(class(textNumber))
+
+	//for(var j=1; j<textNumber+1;j++){
+	//	levelValue=document.getElementById("txt"+j).value
+	//	findSec=".find('"+levelValue.replace(/,/g,"').find('")+"')"
+	//	findSecArr.push(findSec)
+	//}
 	
-//Desin table
+	//alert(findSecArr[0])
+	//findSec=".find('"+levelValue+"')";
+	//if(textNumber>1){
+	//	var j;
+	//	for (j=1;j<=textNumber;j++){
+	//		levelValue=document.getElementById("txt"+j).value
+	//		findSec=findSec+".find"+"('"+levelValue+"')"
+	//	}
+	//}
+	
+	//alert("qInfor=myStatements"+findSec)
+	
+	eval("qInfor=myStatements"+findSec);
+    lenValue=(qInfor).length
+    
+	//Find the statement id by the path
+    var stringPath0=JSON.stringify(qInfor.path()).replace(/0/,"")
+    var stringPath1=stringPath0.replace(/\[|]/g,"") 
+    var stringPath2=stringPath1.replace(/\"/g,"")
+    var stringPath=stringPath2.replace(/,/g,".")
+    
+	    for (p=0; p<lenObj;p++){
+	    	var nthItem=Object.keys(mySts)[p];      // target the specific statement by loop (order).
+	    	var stsTemp=jsonQ(JSON.stringify(mySts[nthItem]))
+	    	eval("pathValue=(stsTemp"+findSec+").value()")  //find the pathValue of corresponding statements, and mySts[nthItem] is the p-th statement. 
+	    	//alert(pathValue)
+	    	var count=0;
+	    	for (q=0;q<lenValue;q++){
+	    		if(qInfor.value()[q]==pathValue){
+	    			count++
+	    		}
+	    	}
+	    	if(count>0){
+	    		rowArr.push(r++);
+				stsIdArr.push(mySts[nthItem].id);
+				actorArr.push(mySts[nthItem].actor.mbox);
+				verbArr.push(mySts[nthItem].verb.id);
+				qInforArr.push(pathValue);
+	    	}
+	    }
+    
+		header[0]="Row";
+		header[1]="Statement Id"
+		header[2]="Actor Mbox";
+		header[3]="Verb Id";
+		header[4]=stringPath;
+		
+		//document.getElementById('my_table').innerHTML=qInfor.value();
+		var x;
+		for(x=0; x < lenValue; x++){
+			contents[x]=[];
+			//var a=(qInfor.value())[x];
+			contents[x][0]=rowArr[x];
+			contents[x][1]=stsIdArr[x];
+			contents[x][2]=actorArr[x];
+			contents[x][3]=verbArr[x];
+			contents[x][4]=qInforArr[x];
+		}
+		
+		//headersStr="{title:"+header[0]+"},"
+		//for(var b=1;b<4;b++){
+		//	headersStr=headersStr+"{title:"+header[b]+"},"
+		//}
+		
+		//var columnsStr="columns:["+headersStr+"]";
+		//alert(columnsStr)
+
+		var columns=[];
+		for (var v=0; v<5;v++){
+			columns.push({title:header[v]});
+		}
+		
+		//alert(columns[4].title)
+		
+		$(document).ready(function() {
+			if ( $.fn.dataTable.isDataTable( '#example' ) ) {
+				table.destroy();
+				table = $('#example').DataTable({
+								data: contents,
+								columns: columns,   
+	  // Include the headers for the basic information: statementId, actor name, timestamp, stored, 
+												
+							})		
+			}
+			else {
+				table = $('#example').DataTable({
+					search:false,
+					scrollY: 600,
+					responsive: true,
+					data: contents,
+					columns: columns,
+					dom:'Bfrtip',
+					buttons:[
+						'copy','csv','excel','pdf','print'
+					]
+				} );
+			}
+		} );
+
+		
+	} else {
+	    contents=[[],[]];
+		var stsIdArrM=[[],[]];
+		var qInforArrM=[[],[]];
+		for (var j=1; j<textNumber+1;j++) {
+			
+			levelValue=document.getElementById("txt"+j).value
+			findSec=".find('"+levelValue.replace(/,/g,"').find('")+"')"
+			eval("qInfor=myStatements"+findSec);
+			
+			lenValue=(qInfor).length
+			
+			//Find the statement id by the path
+		    var stringPath0=JSON.stringify(qInfor.path()).replace(/0/,"")
+		    var stringPath1=stringPath0.replace(/\[|]/g,"") 
+		    var stringPath2=stringPath1.replace(/\"/g,"")
+		    var stringPath=stringPath2.replace(/,/g,".")
+		    
+		    stringPathArr.push(stringPath);
+			
+			stsIdArrM[j-1]=[];
+			qInforArrM[j-1]=[];
+			
+			for (p=0; p<lenObj;p++){
+				var nthItem=Object.keys(mySts)[p];      // target the specific statement by loop (order).
+				var stsTemp=jsonQ(JSON.stringify(mySts[nthItem]))
+				eval("pathValue=(stsTemp"+findSec+").value()")  //find the pathValue of corresponding statements, and mySts[nthItem] is the p-th statement. 
+				
+				stsIdArrM[j-1][p]=mySts[nthItem].id;
+				
+				if(pathValue.length>0){
+					qInforArrM[j-1][p]=pathValue;
+				}else{
+					qInforArrM[j-1][p]="null";
+				}
+			}
+		}
+		
+		var q;
+		for (q=0;q<lenObj;q++){
+		    rowArr.push(r++);
+			contents[q]=[];
+			contents[q][0]=rowArr[q];
+			contents[q][1]=stsIdArrM[0][q];
+			for (var j=1;j<textNumber+1;j++){
+				contents[q][j+1]=qInforArrM[j-1][q];
+			}
+		}
+		
+		//add headers for the contents (used for creating table)
+	    header[0]="Row";    
+		header[1]="Statement Id"
+		for (var j=1;j<textNumber+1;j++){
+			header[j+1]=stringPathArr[j-1];
+		}
+		
+		var columns=[];
+		for (var v=0; v<textNumber+2;v++){
+			columns.push({title:header[v]});
+		}
+
+		$(document).ready(function() {
+			if ( $.fn.dataTable.isDataTable( '#example' ) ) {
+				//table.destroy();
+				table = $("example").DataTable();
+				table.clear();
+				table = $('#example').DataTable({
+								data: contents,
+								columns: columns,
+								
+							})
+			}
+			else {
+				table = $('#example').DataTable({
+					search:false,
+					scrollY: 600,
+					data: contents,
+					columns: columns,
+					dom:'Bfrtip',
+					buttons:[
+						'copy','csv','excel','pdf','print'
+					]
+				} );
+				
+			}
+		} );
+		
+	}
+    //document.getElementById('my_table').innerHTML=qInfor.value();
+	
 }
 
-//get headers table
-
 </script>
+
+
 </body>
 </html>
+
+
+
