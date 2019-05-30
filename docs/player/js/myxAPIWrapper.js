@@ -152,9 +152,11 @@ function ComposeActor(ActorName,homePage,ambox){
 		actorObj.mbox=AString;
 		return actorObj;
 	}else{
+	//	actorObj.mbox="mailto:"+AString;
 		actorAccountObj.name=ambox;
 		actorAccountObj.homePage=decodeURIComponent(homePage);
 		actorObj.account=actorAccountObj;
+	return actorObj;
 	}
 	displayDebugging("#DebuggingArea",JSON.stringify(actorObj)+"==========");
 	return actorObj;
@@ -289,7 +291,7 @@ function ComposeStatementRef(typeofStatement,actormbx,actorType,verbID,ObjectID,
 		var TName=TutorName+" "+SKOTitle;
 		var ATLink=window.location.href;
 		SchoolName=SKOSchool.split("//")[1];
-		TutorEmail=SKOGuid+"@"+SchoolName;
+		TutorEmail="mailto:"+SKOGuid+"@"+SchoolName;
 		actorObj=ComposeActor(TName,ATLink,TutorEmail);
 		GetResultScore.response=data.Data.split(":")[0];
 		displayDebugging("#DebuggingArea",JSON.stringify(GetResultScore));
@@ -333,7 +335,7 @@ function composeViewHintsStatement(Question,Answer,StartTime,Duration){
 	var verbObj={};
 	verbObj.id=ITProfile+"Activity/"+viewPnQStr;
 	verbObj.display={"en-US":viewPnQStr};
-	TutorEmail=SKOGuid+"@"+SchoolName;
+	TutorEmail="mailto:"+SKOGuid+"@"+SchoolName;
 
 	var ObjectObj={};
 	ObjectObj.id= "http://"+SchoolName+"/ with guid "+SKOGuid;
@@ -418,7 +420,7 @@ function ComposeStatement(typeofStatement,actormbx,actorType,verbID,ObjectID,dat
 			var TName=TutorName+" "+SKOTitle;
 			var ATLink=window.location.href.split("?")[0];
 			SchoolName=SKOSchool.split("//")[1];
-			TutorEmail=SKOGuid+"@"+SchoolName;
+			TutorEmail="mailto:"+SKOGuid+"@"+SchoolName;
 			actorObj=ComposeActor(TName,ATLink,TutorEmail);
 			var Question=FindTarget(data);
 			if (Question==""){
@@ -442,7 +444,7 @@ function ComposeStatement(typeofStatement,actormbx,actorType,verbID,ObjectID,dat
 				var TName=TutorName+" "+SKOTitle;
 				var ATLink=window.location.href.split("?")[0];
 				SchoolName=SKOSchool.split("//")[1];
-				TutorEmail=SKOGuid+"@"+SchoolName;
+				TutorEmail="mailto:"+SKOGuid+"@"+SchoolName;
 				actorObj=ComposeActor(TName,ATLink,TutorEmail);
 			//	GetResultScore=Compose_matchScore(data);
 				xAPIObject=GetObjective3(actormbx,verbID,FindTarget(data));
@@ -484,7 +486,7 @@ function ComposeStatement(typeofStatement,actormbx,actorType,verbID,ObjectID,dat
 				var TName=TutorName+" "+SKOTitle;
 				var ATLink=window.location.href.split("?")[0];
 				SchoolName=SKOSchool.split("//")[1];
-				TutorEmail=SKOGuid+"@"+SchoolName;
+				TutorEmail="mailto:"+SKOGuid+"@"+SchoolName;
 				actorObj=ComposeActor(fullname,Auser,MoodleID);
 				// actorObj=ComposeActor(fullname,HomePage,MoodleID);
 			   //	actorObj=ComposeActor(TName,ATLink,TutorEmail);
@@ -506,7 +508,7 @@ function ComposeStatement(typeofStatement,actormbx,actorType,verbID,ObjectID,dat
 			var TName=TutorName+" "+SKOTitle;
 				var ATLink=window.location.href.split("?")[0];
 				SchoolName=SKOSchool.split("//")[1];
-				TutorEmail=SKOGuid+"@"+SchoolName;
+				TutorEmail="mailto:"+SKOGuid+"@"+SchoolName;
 				actorObj=ComposeActor(TName,ATLink,TutorEmail);
 			var statement={
 				actor:actorObj,
