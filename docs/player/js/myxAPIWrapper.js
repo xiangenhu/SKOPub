@@ -146,13 +146,16 @@ function ComposeActor(ActorName,homePage,ambox){
 	var actorObj={};
 	var actorAccountObj={};
 	var AString=decodeURIComponent(homePage);
+	var mboxStr=decodeURIComponent(ambox);
 	actorObj.name=ActorName;
 	actorObj.objectType="Agent";
 	if (AString.toLowerCase().indexOf("mailto")==0){
 		actorObj.mbox=AString;
 		return actorObj;
-	}else{
-	//	actorObj.mbox="mailto:"+AString;
+	}else if(mboxStr.toLowerCase().indexOf("mailto")==0){
+		actorObj.mbox=mboxStr;
+		return actorObj;
+	}else {
 		actorAccountObj.name=ambox;
 		actorAccountObj.homePage=decodeURIComponent(homePage);
 		actorObj.account=actorAccountObj;
