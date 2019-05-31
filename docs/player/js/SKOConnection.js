@@ -774,9 +774,9 @@ function GetMainQuestion(data) {
 
 function processingReturn(data) {
   displayInformation("#DebuggingArea", JSON.stringify(data));
-  GetMainQuestion(data);
-  AvatarsAction(data);
-  UpdateStatementsASAT(data, xAPIType); //xAPI LRS
+	GetMainQuestion(data);
+	AvatarsAction(data);
+	UpdateStatementsASAT(data, xAPIType); //xAPI LRS
 }
 
 
