@@ -4,7 +4,7 @@ var inputBaseObj={
 			guid:"ea8308d1-f93c-457d-84c8-1fa4457c7148",
 			type:2,
 			include_ttop:true,
-			text:"习",
+			text:"happy",
 			minRankby:parseFloat(qs("mr","0.0")),
 			etop:parseInt(qs("et","50")),
 			format:"json",
