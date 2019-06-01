@@ -1,0 +1,50 @@
+<component name="libraryTable">
+  <library name="com.google.cloud.tools:endpoints-framework-gradle-plugin:2.0.1" type="repository">
+    <properties maven-id="com.google.cloud.tools:endpoints-framework-gradle-plugin:2.0.1" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/endpoints-framework-gradle-plugin-2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/endpoints-framework-tools-2.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/endpoints-framework-2.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-annotations-2.9.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-core-2.9.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-databind-2.9.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/appengine-api-1.0-sdk-1.9.60.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/google-http-client-jackson2-1.25.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/google-http-client-1.25.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/httpclient-4.5.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/httpcore-4.4.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-codec-1.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/j2objc-annotations-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/google-api-client-1.25.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/google-oauth-client-1.25.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/google-api-client-appengine-1.25.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/google-oauth-client-appengine-1.25.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/google-oauth-client-servlet-1.25.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/google-http-client-jdo-1.25.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/google-api-client-servlet-1.25.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/servlet-api-2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jdo2-api-2.3-eb.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/transaction-api-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/google-http-client-appengine-1.25.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jsr305-3.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-fileupload-1.3.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-io-2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/swagger-models-1.5.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/slf4j-api-1.6.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/swagger-annotations-1.5.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/swagger-core-1.5.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-lang3-3.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-datatype-joda-2.4.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/joda-time-2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-dataformat-yaml-2.4.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/snakeyaml-1.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/validation-api-1.1.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/slf4j-nop-1.7.21.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/appengine-tools-sdk-1.9.60.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/guava-21.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

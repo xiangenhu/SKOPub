@@ -148,11 +148,11 @@ function playTTS(id, action,note) {
 		and Youtube Video ID on server is got, play youtube video*/
 	 	audio.addEventListener("ended", function(){
 			AudioEND = true;
-			console.log("################## Audio play end    --- >      " + AudioEND);
+//			console.log("################## Audio play end    --- >      " + AudioEND);
 			if(AudioEND == true && typeof VideoxmlData != 'undefined'){
 				player.cueVideoById(VideoxmlData["#text"], -1, -1, null);
 				AudioEND = false;
-				console.log("########## play the youtube video    ------->" + AudioEND);
+//				console.log("########## play the youtube video    ------->" + AudioEND);
 			}
 
  		});
