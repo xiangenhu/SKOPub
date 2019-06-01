@@ -337,9 +337,9 @@ function IDDialog(jsonOfXml) {
   SpeechArray3 = [];
   var transision = "";
   if (jsonOfXml.SKOSCRIPTS.AutoTutorScript != null) {
-    transision = ' <cmd NEXT="ASATPageIMG"/>';
+    transision = ' <cmd next="ASATPageIMG" />';
   } else {
-    transision = ' <cmd NEXT="END"/>';
+    transision = ' <cmd next="END" />';
   }
   if (item.length == null) {
     AddOneSpeech(item, 'scene');
@@ -369,7 +369,7 @@ function IDDialog(jsonOfXml) {
       msSpeakQueued(SpeechArray1[i], SpeechArray2[i] + transision, SpeechArray3[i]);
     } else msSpeakQueued(SpeechArray1[i], SpeechArray2[i], SpeechArray3[i]);
   }
-  //	msSpeakQueued(C1,transision,"End_Of_Speech");
+  
 
 
 }

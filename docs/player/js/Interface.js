@@ -149,12 +149,12 @@ function ReplayDialog(){
 
 function HandleCMD(id,cmd){
 var msg;;
-	 console.log("########## Got Command" + JSON.stringify(cmd));
+	
+	console.log("########## Got Command" + JSON.stringify(cmd));
 	 
-	if (cmd.NEXT!=null){
-		alert(cmd.NEXT)
-		if (cmd.NEXT!="END"){
-			StartTutoring(cmd.NEXT,SKOScriptsinJSON);
+	if (cmd.next!=null){
+		if (cmd.next!="END"){
+			StartTutoring(cmd.next,SKOScriptsinJSON);
 		}
 	}
 	
