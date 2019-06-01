@@ -1,0 +1,19 @@
+<html>
+<head>
+	<link href="https://autotutor.x-in-y.com/AT/css/Interface.css" rel="stylesheet" type="text/css" >
+	<script src="https://autotutor.x-in-y.com/AT/js/jquery.min.js"></script>
+</head>
+<body>
+	<iframe scrolling="no" src="https://autotutor.x-in-y.com/AT/Content.html" id="MyWrapper"></iframe></div>	
+	<script>
+		$(document).ready(function()  
+		{  
+    		var loc = window.location.toString(),  
+    	    params = loc.split('?')[1]; 
+    		iframe = document.getElementById("MyWrapper");  
+    		iframe.src = iframe.src + "?school=https://asat.x-in-y.com&bkg=&SIHD=1&"+params; 
+		});
+	</script>
+	
+</body>
+</html>

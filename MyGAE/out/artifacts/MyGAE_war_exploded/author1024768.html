@@ -1,0 +1,45 @@
+<html>
+	<head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    </head>
+	<body>
+		<center>
+			<iframe id="ChildPanel" src="https://xiangenhu.github.io/SKOPub/general/author.html?AvatarList=https://asat.x-in-y.com/avatars.xml&skoserver=https://asat.x-in-y.com&BURLA=https://asat.x-in-y.com/author1024768.html&BURLP=https://asat.x-in-y.com/player1024768.html&LN=1&PlayWindow=_top&AllowStop=0"
+				width="1024" height="768" seamless frameboard="0"></iframe>
+		</center>  
+	</body>
+	<script>
+		$(document).ready(function()  
+		{  
+    		var loc = window.location.toString();  
+    		params = loc.split('?')[1];  
+    		specialSet="&ASAT=1&ID=1&MC=0&TU=1&FIB=0&MA=0&ll=1&"+
+            "BURLA=https://asat.x-in-y.com/author1024768.html&"+
+            "BURLP=https://asat.x-in-y.com/player1024768.html&"+
+            "ServerType=GAE&SASATguid=f5145dd8-938d-43df-901c-9ca2b091391f&"+
+            "asatAT=1&asatRL=1&asatRP=1&asatSA=1&ll=1&Advanced=1&saveas=1&";
+    		
+    		iframe = document.getElementById("ChildPanel");  
+			iframe.src =iframe.src+specialSet+params; 
+		});
+		
+		
+		
+		
+		function listener(event){
+  			var jsonObj = JSON.parse(event.data);
+  			var msgObj = JSON.parse(jsonObj.msg);
+  			var result = msgObj.Message.result;
+  			console.log(result);
+
+
+
+		}
+
+		if (window.addEventListener){
+  			addEventListener("message", listener, false)
+		} else {
+  			attachEvent("onmessage", listener)
+		}
+	</script>
+</html>

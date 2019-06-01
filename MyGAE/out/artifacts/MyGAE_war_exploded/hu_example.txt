@@ -1,0 +1,63 @@
+{"SRT":"Speak&Listen","SKOid":"02740d85-ef3d-49d7-a66a-4a65dce67c42","timestamp":"Wed May 21 15:23:48 GMT-0400 2014","Response":{"action":"listen","agent":"Learner"},"SID":"","Stimulus":{"type":"verbal","agent":"Angela","value":"Here is a brief introduction video to the Institute for Intelligent Systems at the University of Memphis. When you are done, click on the blue right arrow to move forward. "}}
+ =============== 
+
+{"SRT":"Information Delivery","SKOid":"02740d85-ef3d-49d7-a66a-4a65dce67c42","timestamp":"Wed May 21 15:23:48 GMT-0400 2014","Response":{"type":"passive","agent":"leaner","value":"Default"},"SID":"","Stimulus":{"SKOMsg":{"json":{}},"agent":"SKO","Presentation":{"NOTES":"","playStyle":"manual","MediaType":"MovieOnly","MediaSource":"http://www.youtube.com/embed/obaDpHgbjGY","DisplayText":"","BKIMGSource":"","SpokenText":"Here is a brief introduction video to the Institute for Intelligent Systems at the University of Memphis. When you are done, click on the blue right arrow to move forward. ","Title":"Slide 9"}}}
+ =============== 
+
+{"SRT":"Speak&Listen","SKOid":"02740d85-ef3d-49d7-a66a-4a65dce67c42","timestamp":"Wed May 21 15:23:17 GMT-0400 2014","Response":{"action":"listen","agent":"Learner"},"SID":"","Stimulus":{"type":"verbal","agent":"Ben","value":"
+At this point, you may either continue listening to us to understand more about SKO, or click the [create and share] button to create your own. <lookdown/>"}}
+ =============== 
+
+{"SRT":"Speak&Listen","SKOid":"02740d85-ef3d-49d7-a66a-4a65dce67c42","timestamp":"Wed May 21 15:23:14 GMT-0400 2014","Response":{"action":"listen","agent":"Learner"},"SID":"","Stimulus":{"type":"verbal","agent":"Ben","value":"Many thanks _NAMES1_  and  _NAMES2_ "}}
+ =============== 
+
+{"SRT":"Information Delivery","SKOid":"02740d85-ef3d-49d7-a66a-4a65dce67c42","timestamp":"Wed May 21 15:23:14 GMT-0400 2014","Response":{"type":"passive","agent":"leaner","value":"Default"},"SID":"","Stimulus":{"SKOMsg":{"json":{}},"agent":"SKO","Presentation":{"NOTES":"","playStyle":"manual","MediaType":"","MediaSource":"","DisplayText":"","BKIMGSource":"","SpokenText":"Many thanks _NAMES1_  and  _NAMES2_ &
+At this point, you may either continue listening to us to understand more about SKO, or click the [create and share] button to create your own. <lookdown/>","Title":"Slide X"}}}
+ =============== 
+
+{"SRT":"Speak&Listen","SKOid":"02740d85-ef3d-49d7-a66a-4a65dce67c42","timestamp":"Wed May 21 15:22:08 GMT-0400 2014","Response":{"action":"listen","agent":"Learner"},"SID":"","Stimulus":{"type":"verbal","agent":"James","value":"I am _NAME_, I am available for help, too.<bigsmile/>"}}
+ =============== 
+
+{"SRT":"Information Delivery","SKOid":"02740d85-ef3d-49d7-a66a-4a65dce67c42","timestamp":"Wed May 21 15:22:08 GMT-0400 2014","Response":{"type":"passive","agent":"leaner","value":"Default"},"SID":"","Stimulus":{"SKOMsg":{"json":{}},"agent":"SKO","Presentation":{"NOTES":"Slide 3","playStyle":"auto","MediaType":"","MediaSource":"","DisplayText":"Then separate those sheets into 8 sheets per stack, and fold each stack of papers once. 
+We need 5 folded stacks at least. ","BKIMGSource":"","SpokenText":"I am _NAME_, I am available for help, too.<bigsmile/>","Title":"Slide 3"}}}
+ =============== 
+
+{"SRT":"Speak&Listen","SKOid":"02740d85-ef3d-49d7-a66a-4a65dce67c42","timestamp":"Wed May 21 15:22:03 GMT-0400 2014","Response":{"action":"listen","agent":"Learner"},"SID":"","Stimulus":{"type":"verbal","agent":"Angela","value":"I am _NAME_, I will help you in case you have any questions."}}
+ =============== 
+
+{"SRT":"Information Delivery","SKOid":"02740d85-ef3d-49d7-a66a-4a65dce67c42","timestamp":"Wed May 21 15:22:03 GMT-0400 2014","Response":{"type":"passive","agent":"leaner","value":"Default"},"SID":"","Stimulus":{"SKOMsg":{"json":{}},"agent":"SKO","Presentation":{"NOTES":"Slide 2","playStyle":"auto","MediaType":"","MediaSource":"","DisplayText":"First, we need to cut the papers an into identical size, to make sure they can be held together trimly. Hint: the size here should be about 50% larger than the size you want, thus you will be able to amend. ","BKIMGSource":"","SpokenText":"I am _NAME_, I will help you in case you have any questions.","Title":"Slide 2"}}}
+ =============== 
+
+{"SRT":"Speak&Listen","SKOid":"02740d85-ef3d-49d7-a66a-4a65dce67c42","timestamp":"Wed May 21 15:21:57 GMT-0400 2014","Response":{"action":"listen","agent":"Learner"},"SID":"","Stimulus":{"type":"verbal","agent":"Ben","value":" I am _NAME_. I will help you understand what SKO's are and how to use them. "}}
+ =============== 
+
+{"SRT":"Speak&Listen","SKOid":"02740d85-ef3d-49d7-a66a-4a65dce67c42","timestamp":"Wed May 21 15:21:51 GMT-0400 2014","Response":{"action":"listen","agent":"Learner"},"SID":"","Stimulus":{"type":"verbal","agent":"Ben","value":" Welcome to this SKO! SKO stands for sharable knowledge object. "}}
+ =============== 
+
+{"SRT":"Speak&Listen","SKOid":"02740d85-ef3d-49d7-a66a-4a65dce67c42","timestamp":"Wed May 21 15:21:48 GMT-0400 2014","Response":{"action":"listen","agent":"Learner"},"SID":"","Stimulus":{"type":"verbal","agent":"Ben","value":"Hello!"}}
+ =============== 
+
+{"SRT":"Information Delivery","SKOid":"02740d85-ef3d-49d7-a66a-4a65dce67c42","timestamp":"Wed May 21 15:21:48 GMT-0400 2014","Response":{"type":"passive","agent":"leaner","value":"Default"},"SID":"","Stimulus":{"SKOMsg":{"json":{}},"agent":"SKO","Presentation":{"NOTES":"Slide 1","playStyle":"auto","MediaType":"","MediaSource":"","DisplayText":"Today, we are going to make an extra small notebook. These materials are necessary in this process: bible paper, 60# nylon wire, 10# needle, tweezers, scissors, gauze, cloth , glue and paper knife. If possible, you can find a cut-off knife to help you cut papers trimly, and a thimble to protect your finger. ","BKIMGSource":"","SpokenText":"Hello!|Hi!|Hi there!& Welcome to this SKO! SKO stands for sharable knowledge object. |Thanks for using this SKO. & I am _NAME_. I will help you understand what SKO's are and how to use them. ","Title":"Slide 1"}}}
+ =============== 
+
+ actor - response.agent
+
+ verb - experienced
+
+ object - id - someurl/sko/SKOid/Stimulus.presentation.title
+
+ 		 name - stimulus.presentation.title
+
+ 		 desc - stimulus.presentation.spokentext
+ 		 extension - stimulus.presentation.displaytext
+
+ 		 
+ timestamp - timestamp
+
+ watched, listened, heard
+
+ send slides to dr.hu
+
+ host new sko exmaples and send to dr. hu	
+Xiangen Hu	3:20 PM
+901-359-9056
