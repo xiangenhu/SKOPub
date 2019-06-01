@@ -4,7 +4,7 @@
     </head>
 	<body>
 		<center>
-			<iframe id="ChildPanel" src="/SKOPub/player/Content.html?ServerType=NONGAE&school=https://backup.x-in-y.com"
+			<iframe id="ChildPanel" src="../player/Content.html?ServerType=NONGAE&school=https://backup.x-in-y.com"
 				width="1024" height="768" seamless frameboard="0"></iframe>
 		</center>  
 	</body>
@@ -14,7 +14,7 @@
     		var loc = window.location.toString(),  
     		params = loc.split('?')[1],  
     		iframe = document.getElementById("ChildPanel");  
-			iframe.src = iframe.src + '&EXPID=EXP_ATT&xAPI=1&fullname=Test User&user=Test@arandomEmail.com&' + params;  
+			iframe.src = iframe.src + params;  
 		});
 	</script>
 </html>
