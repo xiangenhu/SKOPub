@@ -148,10 +148,17 @@ function ReplayDialog(){
 }
 
 function HandleCMD(id,cmd){
-var msg;
-//     alert(JSON.stringify(cmd));
+var msg;;
+	 console.log("########## Got Command" + JSON.stringify(cmd));
+	 
+	if (cmd.NEXT!=null){
+		alert(cmd.NEXT)
+		if (cmd.NEXT!="END"){
+			StartTutoring(cmd.NEXT,SKOScriptsinJSON);
+		}
+	}
+	
 	 if (cmd.xapinote!=null){
-//		alert(cmd.xapinote);
 	}
 
 	if (cmd.img!=null){
@@ -195,12 +202,6 @@ var msg;
 		anObj.action=captionText;
 		anObj.note="Hint/Prompt";
 		UpdateStatementsID(anObj);
-	}
-	if (cmd.NEXT!=null){
-
-		if (cmd.NEXT!="END"){
-			StartTutoring(cmd.NEXT,SKOScriptsinJSON);
-		}
 	}
 	if (cmd.currentQuestion!=null){
 

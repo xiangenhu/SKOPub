@@ -146,7 +146,7 @@ function playTTS(id, action,note) {
     audio.play();
 		/*added Lister to the audio play, if the audio play is ended
 		and Youtube Video ID on server is got, play youtube video*/
-		audio.addEventListener("ended", function(){
+	 	audio.addEventListener("ended", function(){
 			AudioEND = true;
 			console.log("################## Audio play end    --- >      " + AudioEND);
 			if(AudioEND == true && typeof VideoxmlData != 'undefined'){
@@ -273,10 +273,12 @@ function animate(timestamp) {
 					sprite.y = recipe[i][1]+(i==0?0:1);
 					char.stage.addChild(sprite);
 				}
-
+				
 				// third arg is an extensible side-effect string that is triggered when a given frame is reached
-				if (char.data.frames[char.frame][2])
+				if (char.data.frames[char.frame][2]) {
+					console.log("########## Got Command" + JSON.stringify(char.data.frames[char.frame][2]));
 					embeddedCommand(idAnimating, char.data.frames[char.frame][2]);
+				}
 				// second arg is -1 if this is the last frame to show, or a recovery frame to go to if stopping early
 				if (char.data.frames[char.frame][1] == -1)
 					char.frame = -1;
