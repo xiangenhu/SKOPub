@@ -1,5 +1,7 @@
 <ServerList>
-<item name="Select Server" value="Select Server" note=""/> 
-<item name="Amazon Tokyo" value="http://54.238.157.164:8889" note=""/> 
+<item name="Amazon Tokyo" value="https://ccnusko.x-in-y.com" note="" AT="NonGAE"/> 
+<item name="asat" value="http://asat.skoonline.org" note="" AT="GAE"/> 
+<item name="onrstem" value="http://onrstem.skoonline.org" note="" AT="GAE"/> 
+<item name="ARL" value="http://dsspp.gifttutoring.org" note="" AT="NonGAE"/> 
 <item name="Gifttutoring.org" value="http://dsspp.gifttutoring.org" note=""/> 
 </ServerList>
