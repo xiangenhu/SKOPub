@@ -127,23 +127,23 @@ function loadLRS(alrsL){
 		return;
 	}else if  (EXPID=="EXP_ITS2019_TJT"){
 		LRSURL=qs("lrs","https://tokyo.x-in-y.com/data/xAPI/");
-		LRSLogin=qs("lrslogin","7b16399fc80e456a3b051afc022c4a0502ae0ce6");
-		LRSPassword=qs("lrspassword","3cc672e085a89bc227c36421d17ef37a7bb9c32a");
+		LRSLogin=qs("lrslogin","04d4ec31ffd7e167b0554b6172efde4be35aac52");
+		LRSPassword=qs("lrspassword","7aa6f832b074e65d02040cfa9e9e080dd84f9226");
 		return;
 	}else if  (EXPID=="EXP_ITS2019_AM"){
 		LRSURL=qs("lrs","https://tokyo.x-in-y.com/data/xAPI/");
-		LRSLogin=qs("lrslogin","7b16399fc80e456a3b051afc022c4a0502ae0ce6");
-		LRSPassword=qs("lrspassword","3cc672e085a89bc227c36421d17ef37a7bb9c32a");
+		LRSLogin=qs("lrslogin","f9579d0915ba60e1aab6c6d04f58feaa44fbd076");
+		LRSPassword=qs("lrspassword","4d33dc4eebd3f13e04de05f7c7b874fc6b6f95fd");
 		return;
 	}else if  (EXPID=="EXP_ITS2019_RMUIR"){
 		LRSURL=qs("lrs","https://tokyo.x-in-y.com/data/xAPI/");
-		LRSLogin=qs("lrslogin","7b16399fc80e456a3b051afc022c4a0502ae0ce6");
-		LRSPassword=qs("lrspassword","3cc672e085a89bc227c36421d17ef37a7bb9c32a");
+		LRSLogin=qs("lrslogin","be7a34ecd58c9a83316df8c249902a72fd6c1e21");
+		LRSPassword=qs("lrspassword","51e07941f783c55d01c32f0cbe2ba990dfdae662");
 		return;
 	}else if  (EXPID=="EXP_ITS2019_ALAM"){
 		LRSURL=qs("lrs","https://tokyo.x-in-y.com/data/xAPI/");
-		LRSLogin=qs("lrslogin","7b16399fc80e456a3b051afc022c4a0502ae0ce6");
-		LRSPassword=qs("lrspassword","3cc672e085a89bc227c36421d17ef37a7bb9c32a");
+		LRSLogin=qs("lrslogin","13a0dac66c9745d649b30ddedeab5fb91a76ecb0");
+		LRSPassword=qs("lrspassword","c72e74601a1ae7c6cbfa7bfb4db6b578e84f24b5");
 		return;
 	}
 	if (SKOSchool.indexOf("ccnu")>0){
