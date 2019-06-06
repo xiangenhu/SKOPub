@@ -2,5 +2,5 @@
 <item name="Amazon Tokyo" value="https://ccnusko.x-in-y.com" note="" AT="NonGAE"/> 
 <item name="asat" value="http://asat.skoonline.org" note="" AT="GAE"/> 
 <item name="onrstem" value="https://onrstem.x-in-y.com" note="" AT="GAE"/> 
-<item name="Gifttutoring.org" value="https://dsspp.gifttutoring.org" note="NonGAE"/> 
+<item name="Gifttutoring.org(https)" value="https://dsspp.gifttutoring.org" note="NonGAE"/> 
 </ServerList>
