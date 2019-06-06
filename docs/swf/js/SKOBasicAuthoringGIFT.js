@@ -57,8 +57,8 @@
 	    flashvars.CBSever=qs("CBserver",CBurl);
 	    flashvars.SKOT =qs("SKOT","baseurl");
 	    flashvars.LOM = qs("LOM","1");
-		flashvars.skoserver = qs("skoserver","http://dsspp.gifttutoring.org");  
-        flashvars.DSSPP = qs("DSSPP","http://dsspp.gifttutoring.org");
+		flashvars.skoserver = qs("skoserver","https://dsspp.gifttutoring.org");  
+        flashvars.DSSPP = qs("DSSPP","https://dsspp.gifttutoring.org");
 		flashvars.ServerType = qs("ServerType","NonGAE");
 		flashvars.UNLIMITED = qs("UNLIMITED","1");
         flashvars.DEBUGGING = qs("DEBUGGING","1");
