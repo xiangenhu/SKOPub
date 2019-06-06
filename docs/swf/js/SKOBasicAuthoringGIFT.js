@@ -21,7 +21,16 @@
 					c_value = unescape(c_value.substring(c_start,c_end));
 				}
 				return c_value;
-			}
+			}
+	  function javascriptxAPIListener(s) 
+        	{
+             //	alert("Operation is: "+s);
+                var old=document.getElementById( "LogFile" ).innerHTML;
+             	document.getElementById( "LogFile" ).innerHTML = s + "\n =============== \n\n"+ old;
+             	document.getElementById( "MSG" ).innerHTML =s;
+             	
+             	return "successful";
+         	}		
 	function qs(search_for,defaultstr) {
             var query = window.location.search.substring(1);
 			var parms = query.split('&');
