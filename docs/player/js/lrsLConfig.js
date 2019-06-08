@@ -145,6 +145,11 @@ function loadLRS(alrsL){
 		LRSLogin=qs("lrslogin","13a0dac66c9745d649b30ddedeab5fb91a76ecb0");
 		LRSPassword=qs("lrspassword","c72e74601a1ae7c6cbfa7bfb4db6b578e84f24b5");
 		return;
+	}else if  (EXPID=="EXP_ALLS"){
+		LRSURL=qs("lrs","https://tokyo.x-in-y.com/data/xAPI/");
+		LRSLogin=qs("lrslogin","b7fa82a584536faeea79ac0a3900c7488a158ddc");
+		LRSPassword=qs("lrspassword","d242d58f3ec5fa40264668c7ba84a56249df4549");
+		return;
 	}
 	if (SKOSchool.indexOf("ccnu")>0){
 		alrsL="alttaiCCNU";
