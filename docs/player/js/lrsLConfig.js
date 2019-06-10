@@ -101,52 +101,52 @@ function loadLRS(alrsL){
 		LRSPassword=qs("lrspassword","19ac1669e834ab177addb58cc610994352cebebc");
 		return;
 	}else if  (EXPID=="EXP_WBT"){
-		LRSURL=qs("lrs","https://tokyo.x-in-y.com/data/xAPI/");
+		LRSURL=qs("lrs","https://ccnu.x-in-y.com/data/xAPI/");
 		LRSLogin=qs("lrslogin","0a1ead37ee6d63da46523c749676e8d452e77c25");
 		LRSPassword=qs("lrspassword","3af56d676c5be8c78c2d64488471d6a416ea01a7");
 		return;
 	}else if  (EXPID=="EXP_XSW"){
-		LRSURL=qs("lrs","https://tokyo.x-in-y.com/data/xAPI/");
+		LRSURL=qs("lrs","https://ccnu.x-in-y.com/data/xAPI/");
 		LRSLogin=qs("lrslogin","cc520e45555e36e32c388d7e4cf062a7c0d679ad");
 		LRSPassword=qs("lrspassword","1068c36f17a03f57814a824dc367efcb5510e3e0");
 		return;
 	}else if  (EXPID=="EXP_CMC"){
-		LRSURL=qs("lrs","https://tokyo.x-in-y.com/data/xAPI/");
+		LRSURL=qs("lrs","https://ccnu.x-in-y.com/data/xAPI/");
 		LRSLogin=qs("lrslogin","75ff2c34b9153bc47ffe98bcbf53cb91622ad907");
 		LRSPassword=qs("lrspassword","d2ea49f739c9fab3d415bf907ff2881c344bb4d8");
 		return;
 	}else if  (EXPID=="EXP_LAK"){
-		LRSURL=qs("lrs","https://tokyo.x-in-y.com/data/xAPI/");
+		LRSURL=qs("lrs","https://ccnu.x-in-y.com/data/xAPI/");
 		LRSLogin=qs("lrslogin","43f164f60ad3e7ac828879708e9600d283f52d51");
 		LRSPassword=qs("lrspassword","b9480876dce901071087fda7ae00c94c91786a21");
 		return;
 	}else if  (EXPID=="EXP_ITS2019"){
-		LRSURL=qs("lrs","https://tokyo.x-in-y.com/data/xAPI/");
+		LRSURL=qs("lrs","https://ccnu.x-in-y.com/data/xAPI/");
 		LRSLogin=qs("lrslogin","7b16399fc80e456a3b051afc022c4a0502ae0ce6");
 		LRSPassword=qs("lrspassword","3cc672e085a89bc227c36421d17ef37a7bb9c32a");
 		return;
 	}else if  (EXPID=="EXP_ITS2019_TJT"){
-		LRSURL=qs("lrs","https://tokyo.x-in-y.com/data/xAPI/");
+		LRSURL=qs("lrs","https://ccnu.x-in-y.com/data/xAPI/");
 		LRSLogin=qs("lrslogin","04d4ec31ffd7e167b0554b6172efde4be35aac52");
 		LRSPassword=qs("lrspassword","7aa6f832b074e65d02040cfa9e9e080dd84f9226");
 		return;
 	}else if  (EXPID=="EXP_ITS2019_AM"){
-		LRSURL=qs("lrs","https://tokyo.x-in-y.com/data/xAPI/");
+		LRSURL=qs("lrs","https://ccnu.x-in-y.com/data/xAPI/");
 		LRSLogin=qs("lrslogin","f9579d0915ba60e1aab6c6d04f58feaa44fbd076");
 		LRSPassword=qs("lrspassword","4d33dc4eebd3f13e04de05f7c7b874fc6b6f95fd");
 		return;
 	}else if  (EXPID=="EXP_ITS2019_RMUIR"){
-		LRSURL=qs("lrs","https://tokyo.x-in-y.com/data/xAPI/");
+		LRSURL=qs("lrs","https://ccnu.x-in-y.com/data/xAPI/");
 		LRSLogin=qs("lrslogin","be7a34ecd58c9a83316df8c249902a72fd6c1e21");
 		LRSPassword=qs("lrspassword","51e07941f783c55d01c32f0cbe2ba990dfdae662");
 		return;
 	}else if  (EXPID=="EXP_ITS2019_ALAM"){
-		LRSURL=qs("lrs","https://tokyo.x-in-y.com/data/xAPI/");
+		LRSURL=qs("lrs","https://ccnu.x-in-y.com/data/xAPI/");
 		LRSLogin=qs("lrslogin","13a0dac66c9745d649b30ddedeab5fb91a76ecb0");
 		LRSPassword=qs("lrspassword","c72e74601a1ae7c6cbfa7bfb4db6b578e84f24b5");
 		return;
 	}else if  (EXPID=="EXP_ALLS"){
-		LRSURL=qs("lrs","https://tokyo.x-in-y.com/data/xAPI/");
+		LRSURL=qs("lrs","https://ccnu.x-in-y.com/data/xAPI/");
 		LRSLogin=qs("lrslogin","b7fa82a584536faeea79ac0a3900c7488a158ddc");
 		LRSPassword=qs("lrspassword","d242d58f3ec5fa40264668c7ba84a56249df4549");
 		return;
@@ -175,7 +175,7 @@ function loadLRS(alrsL){
 		LRSLogin=qs("lrslogin","d7189fdf90ec4c94b4e9ebbae59a94e1");
 		LRSPassword=qs("lrspassword","5990dc30472640c687828d9dad545e12");
 	}else{
-		LRSURL=qs("lrs","https://tokyo.x-in-y.com/data/xAPI/");
+		LRSURL=qs("lrs","https://ccnu.x-in-y.com/data/xAPI/");
 		LRSLogin=qs("lrslogin","4f88781d5cbb14651f0b62237cc88acae405acf1");
 		LRSPassword=qs("lrspassword","1ea428fb86b9f0a901434eb82034abe773e21487");
 	}
