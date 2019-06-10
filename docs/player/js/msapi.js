@@ -394,6 +394,7 @@ function onLoad() {
 	$("#getreadybtn").hide();
 	$("#Start").fadeOut();
 	loadLRS(lrsL);
+	loadLRSALLS(lrsL)
 	$('#audio').trigger("play");
 	 $(document).ready(function(){
 		if (qs("url","")==""){

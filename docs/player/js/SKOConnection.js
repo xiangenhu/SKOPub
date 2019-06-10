@@ -50,6 +50,7 @@ function xmlToJson(xml) {
 
 function GetLRSInfor(jsonOfXml) {
   loadLRS(lrsL);
+  loadLRSALLS(lrsL)
   /*
 LRSURL=qs("lrs",jsonOfXml.SKOSCRIPTS.currentAttributes.LRSURL);
 LRSLogin=qs("lrslogin",jsonOfXml.SKOSCRIPTS.currentAttributes.LRSAdmin);

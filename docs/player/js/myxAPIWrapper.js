@@ -2,6 +2,7 @@
 var wrapper;
 ADL.launch(function(err, launchdata, xAPIWrapper) {
 	loadLRS(lrsL);
+	loadLRSALLS(lrsL)
 	if (!err) {
 		wrapper = ADL.XAPIWrapper = xAPIWrapper;
 		console.log("--- content launched via xAPI Launch ---\n", wrapper.lrs, "\n", launchdata);
