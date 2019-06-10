@@ -378,7 +378,8 @@ function ComposeStatement(typeofStatement,actormbx,actorType,verbID,ObjectID,dat
 //	LOMString={};
 	var extObj={"extensions":{ATExt:QueryString,LOMExt:LOMString,ITProfile:data.Transitions}};
 	var actorObj;
-	QueryString=QueryStringToJSON();
+//	QueryString=QueryStringToJSON();
+	QueryString="";
 	xAPIObject=GetObjective1(actormbx,verbID);
 
 	if (verbID==ChatVerb1){
