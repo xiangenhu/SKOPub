@@ -1,11 +1,11 @@
 
 <html>
 	<head>
-        <script src="../swf/js/jquery.min.js"></script>
+        <script src="../../swf/js/jquery.min.js"></script>
     </head>
 	<body>
 		<center>
-			<iframe id="ChildPanel" src="authorOriginal.html?DEBUGGING=1"
+			<iframe id="ChildPanel" src="../../swf/authoring.html?DEBUGGING=1&Advanced=1"
 				width="1024" height="768" seamless frameboard="0"></iframe>
 		</center>  
 	</body>
@@ -13,12 +13,11 @@
 		$(document).ready(function()  
 		{  
     		var loc = window.location.toString();  
-    		params = loc.split('?')[1];  
-    		specialSet="&ll=1&"+
-            "Advanced=1&saveas=1&";
+    		params = loc.split('?')[1];
+			specialSet="&ll=1&DSSPP=http://dsspp.skoonline.org&ServerType=GAE&skoserver=http://asat.skoonline.org&"
     		
     		iframe = document.getElementById("ChildPanel");  
-			iframe.src =iframe.src+specialSet+params; 
+			iframe.src =iframe.src+specialSet+params;
 		});
 		
 		

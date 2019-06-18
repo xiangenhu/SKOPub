@@ -149,11 +149,11 @@ function playTTS(id, action,note) {
 	 	audio.addEventListener("ended", function(){
 			AudioEND = true;
 //			console.log("################## Audio play end    --- >      " + AudioEND);
-			if(AudioEND == true && typeof VideoxmlData != 'undefined'){
-				player.cueVideoById(VideoxmlData["#text"], -1, -1, null);
-				AudioEND = false;
+//			if(AudioEND == true && typeof VideoxmlData != 'undefined'){
+//				player.cueVideoById(VideoxmlData["#text"], -1, -1, null);
+//				AudioEND = false;
 //				console.log("########## play the youtube video    ------->" + AudioEND);
-			}
+//			}
 
  		});
 }

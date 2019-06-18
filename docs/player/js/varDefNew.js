@@ -19,8 +19,8 @@ if (Location=="China")
 	var MediaBase=qs("MediaBase","https://xiangenhu.github.io/ATMedia/IMG/CAT/")
 }else{
 	var UserStudent=qs("UserStudent","Carl");
-	var SKOGuid=qs("guid","df365267-1fc9-485b-8918-fb926757369c");
-	var SKOSchool=qs("school","https://class.x-in-y.com");
+	var SKOGuid=qs("guid","19c59e14-035e-4c82-9c55-02a651f72d70");
+	var SKOSchool=qs("school","http://asat.skoonline.org");
 	if (SKOSchool.indexOf("onrstem")>0){
 		SKOSchool=qs("school","https://onrstem.x-in-y.com");
 	}
